@@ -31,11 +31,11 @@ landometerBuild:
     canonicalUrl: "https://montri-th.github.io/Landometer-in-Brief/"
   destination:
     required: false
-    url: ""
-    readiness: blocked_by_pages_enablement
+    url: "https://montri-th.github.io/Landometer-in-Brief/"
+    readiness: ready
     publicSafe: true
-    status: unavailable
-    qrOrLinkTest: "GitHub Pages URL returned 404 on 2026-08-06. Workflow run 31060167493 could not create the initial Pages site because GitHub blocks GITHUB_TOKEN from first-time enablement; repository-owner Settings → Pages action remains required."
+    status: available
+    qrOrLinkTest: "GitHub Pages opened successfully in Chrome on 2026-08-06 after workflow run 31060167493 completed Configure Pages, Upload site and Deploy. TH/EN URL and metadata switching were verified against the live bytes."
   audience:
     primary: "New joiners of Landometer"
     role: "Any role that creates, reviews, builds or communicates brand and product work"
