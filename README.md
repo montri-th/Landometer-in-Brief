@@ -30,6 +30,8 @@ For a working Product Statement, keep the four-question strategy core to one or 
 - Website: <https://montri-th.github.io/Landometer-in-Brief/>
 - Thai companion guide: [`docs/New-Joiner-Guide-Brand-and-Product-Documents.md`](./docs/New-Joiner-Guide-Brand-and-Product-Documents.md)
 
+Release `2026-08-06` is live and verified in Thai and English. The page is public; its four Drive destinations remain private to the approved named-viewer allowlist and the account that owns the copies.
+
 ## Files
 
 - `index.html` — bilingual single-page guide with no external runtime dependency.
