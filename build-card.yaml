@@ -5,7 +5,7 @@ landometerBuild:
     manifest: "2.0"
     tokens: 6
   artifact:
-    name: "Landometer in Brief — Brand and Product Documents"
+    name: "Landometer in Brief — Product Statement Is the Winning Strategy Every Work Item Must Carry"
     product: landometer
     profile: brand.public
     pageKind: onboarding_utility_reference
@@ -23,19 +23,25 @@ landometerBuild:
     exportScale: not_applicable
     format: not_applicable
     altOrCaptionPackage: "HTML alt text and visible captions"
-    deliveredSizeTest: "HTML structure, bilingual interaction state and release metadata were tested before publication; live visual viewport results are recorded in qa/qa.md"
+    deliveredSizeTest: "The 163,882-byte public source (38,417 bytes gzip) includes four restricted Drive destinations and is tested in TH/EN across responsive, theme, Strategy Spine, all five scenario, disclosure, registry and interaction states. Results are recorded in qa/qa.md."
   publication:
     evidenceStatus: source_limited
     visibility: public
     indexable: false
     canonicalUrl: "https://montri-th.github.io/Landometer-in-Brief/"
+    projections:
+      - id: public-with-restricted-destinations
+        delivery: deployable_public
+        visibility: public
+        restrictedSourceUrls: "Four clean Drive copies; named-viewer allowlist only; not domain-wide; authority status unchanged"
+        output: "index.html"
   destination:
     required: false
     url: "https://montri-th.github.io/Landometer-in-Brief/"
-    readiness: ready
+    readiness: reference_ready
     publicSafe: true
-    status: available
-    qrOrLinkTest: "GitHub Pages opened successfully in Chrome on 2026-08-06 after workflow run 31060167493 completed Configure Pages, Upload site and Deploy. TH/EN URL and metadata switching were verified against the live bytes."
+    status: provisional
+    qrOrLinkTest: "Publication is explicitly approved. The destination remains provisional until the matching bytes, TH/EN behavior, four restricted destinations and metadata are rechecked on the live URL."
   audience:
     primary: "New joiners of Landometer"
     role: "Any role that creates, reviews, builds or communicates brand and product work"
@@ -51,7 +57,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.8.8 owner-approved authoring master"
         authoringBasisRef: "Current Master Brand Brief + Brand Owner clarification 2026-08-06 + companion guide"
         fixtureSetRef: thai-voice-fixtures-v0.8.7-v1
-        copyHash: b7e9454aafcd13e9c94824672de24c3ed07c802367ed0ca41681adb8cb7d485e
+        copyHash: 7cd14cf4b8ad74b0e6df857161be96aafda26aad260095f38b7b9105ca445749
         naturalnessReviewRef: "qa/qa.md#thai-copy-review"
         parityReviewRef: "qa/qa.md#bilingual-parity"
       - locale: en
@@ -59,54 +65,54 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.8.8 owner-approved authoring master"
         authoringBasisRef: "Current Master Brand Brief + Brand Owner clarification 2026-08-06 + companion guide"
         fixtureSetRef: english-source-copy-v1
-        copyHash: b7e9454aafcd13e9c94824672de24c3ed07c802367ed0ca41681adb8cb7d485e
+        copyHash: 5deab1e7e19131344c550b54a7624f1f49110c1cbf9b74aaece0b5e9ed6d4318
         naturalnessReviewRef: "qa/qa.md#english-copy-review"
         parityReviewRef: "qa/qa.md#bilingual-parity"
   experience:
-    trigger: "A new joiner must create or review work but does not know which brand or product document governs it"
-    oneJob: "Choose Master Brand Brief, Product Brief or Product Statement at the correct decision level"
-    promisedOutcome: "The reader can open the right source before creating brand, product or communication work"
-    firstAha: "Who What Which How has two answer levels; Product Statement is the short communication form of approved product truth"
-    ahaEvidenceCue: "Four-question brand/product level switch followed by the static three-document responsibility grid"
-    primaryAction: "Start with the four questions and switch between brand and product levels"
-    nextUsefulAction: "Select the current work situation, then open the latest approved source or ask the named owner"
-    nextTriggerOrCleanCompletion: "Reader can name the correct document and explain why"
-    dominantObject: landometer-document-level-map-v1
-    channelParityKey: landometer-document-level-map-v1
+    trigger: "A contributor is about to create, approve or hand off work and must set a target that advances the product's winning strategy before execution begins"
+    oneJob: "Carry the current Product Statement into the work by naming the strategic choice advanced, the right target and the complete observable conditions for 100% success"
+    promisedOutcome: "The reader can write a three-part Strategy Spine that prevents output-led targets and makes delivery and user-outcome proof distinguishable"
+    firstAha: "Product Statement is not merely a source to cite; it is the product's winning strategy that every downstream document uses to choose the right target and define 100% success for that work"
+    ahaEvidenceCue: "The first viewport names Product Statement as Winning Strategy, followed immediately by a universal Strategy Spine: Strategy ref, right target and 100% success"
+    primaryAction: "Use the Strategy Spine to frame the work in front of you before choosing a task-specific source path"
+    nextUsefulAction: "Cite the exact Product Statement version and link, or stop and ask the named owner when authority is unresolved"
+    nextTriggerOrCleanCompletion: "Reader can state which strategic choice the work advances, what must change for whom, every condition for calling the work successful and whether its user outcome has been proven"
+    dominantObject: strategy-spine-work-contract-v2
+    channelParityKey: strategy-spine-work-contract-v2
     brandSignatures: [Measure, Ground, Cultivate]
-    cleanCompletion: "Reader can start work from the correct authority without inventing product or portfolio claims"
+    cleanCompletion: "Reader can start work from the correct authority, define success within the work's control and avoid inventing product or portfolio claims"
   composition:
     quietRegions:
       - sceneId: hero
-        viewportOrCanvas: desktop-1363x936
-        regionRect: { x: 74, y: 185.44, width: 480.83, height: 480 }
-        sceneVisibleRect: { x: 74, y: 185.44, width: 1200, height: 637.13 }
-        regionAreaRatio: 0.3019
+        viewportOrCanvas: desktop-1440x900
+        regionRect: { x: 120, y: 154, width: 531.09, height: 704.27 }
+        sceneVisibleRect: { x: 120, y: 154, width: 1200, height: 704.27 }
+        regionAreaRatio: 0.4426
         contentInside:
           dominantMessageGroup: true
           dominantProofObject: false
           secondaryUI: false
-        backgroundType: flat
+        backgroundType: gradient
         manualLowDetailReview: pass
         focalObjectPreserved: true
         evidenceRef: "qa/qa.md#perceptual-quiet"
       - sceneId: hero
         viewportOrCanvas: mobile-390x844
-        regionRect: { x: 14, y: 96, width: 347, height: 320 }
-        sceneVisibleRect: { x: 14, y: 96, width: 347, height: 721.52 }
-        regionAreaRatio: 0.4435
+        regionRect: { x: 14, y: 96, width: 362, height: 538.67 }
+        sceneVisibleRect: { x: 14, y: 96, width: 362, height: 792.17 }
+        regionAreaRatio: 0.68
         contentInside:
           dominantMessageGroup: true
           dominantProofObject: false
           secondaryUI: false
-        backgroundType: flat
+        backgroundType: gradient
         manualLowDetailReview: pass
         focalObjectPreserved: true
         evidenceRef: "qa/qa.md#perceptual-quiet"
       - sceneId: closing
-        viewportOrCanvas: desktop-1363x936
-        regionRect: { x: 0, y: 6882.2, width: 1348, height: 378.73 }
-        sceneVisibleRect: { x: 0, y: 6882.2, width: 1348, height: 378.73 }
+        viewportOrCanvas: desktop-1440x900
+        regionRect: { x: 0, y: 9756.69, width: 1440, height: 483.13 }
+        sceneVisibleRect: { x: 0, y: 9756.69, width: 1440, height: 483.13 }
         regionAreaRatio: 1.0
         contentInside:
           dominantMessageGroup: true
@@ -118,8 +124,8 @@ landometerBuild:
         evidenceRef: "qa/qa.md#perceptual-quiet"
       - sceneId: closing
         viewportOrCanvas: mobile-390x844
-        regionRect: { x: 0, y: 10504.06, width: 375, height: 393.31 }
-        sceneVisibleRect: { x: 0, y: 10504.06, width: 375, height: 393.31 }
+        regionRect: { x: 0, y: 15360.81, width: 390, height: 740.14 }
+        sceneVisibleRect: { x: 0, y: 15360.81, width: 390, height: 740.14 }
         regionAreaRatio: 1.0
         contentInside:
           dominantMessageGroup: true
@@ -130,22 +136,34 @@ landometerBuild:
         focalObjectPreserved: true
         evidenceRef: "qa/qa.md#perceptual-quiet"
     gradientSurfaces:
+      - sceneId: hero
+        role: entry
+        recipe: measure
+        sourceTokenRefs: [atmosphere.measure.light, css.--measure]
+        angle: "135deg"
+        focalTarget: "one-rule message and task-first action"
+        readingDirection: "left to right"
+        foregroundStrategy: bare_tested
+        logoPairing: none
+        contrastEvidence: "Stop-by-stop foreground ratios and the gradient-safe 3px focus treatment are recorded in qa/qa.md"
+        evidenceRef: "qa/qa.md#gradient-surface"
+        deletionTest: improves
       - sceneId: closing
         role: closure
         recipe: measure
-        sourceTokenRefs: [signature.gradient.closing.light, signature.gradient.closing.dark]
+        sourceTokenRefs: [atmosphere.measure.light, css.--measure]
         angle: "135deg"
         focalTarget: "final decision rule"
         readingDirection: "left to right"
         foregroundStrategy: bare_tested
         logoPairing: none
-        contrastEvidence: "foreground contrast review recorded in qa/qa.md"
+        contrastEvidence: "White foreground minimum 5.55:1 across all declared stops; exact ratios and focus treatment are recorded in qa/qa.md"
         evidenceRef: "qa/qa.md#gradient-surface"
         deletionTest: improves
     connectors: []
   brandAlignment:
-    productStatement: "Landometer is the decision-intelligence layer between raw urban data and real local action."
-    proofObject: landometer-document-level-map-v1
+    productStatement: "Every downstream work item must carry the product's current Winning Strategy by stating the strategic choice it advances, the right target and the complete observable conditions for 100% success."
+    proofObject: strategy-spine-work-contract-v2
     ahaProvesPromise: true
     networkAdvancesObjective: false
   investment:
@@ -153,9 +171,9 @@ landometerBuild:
     userBenefit: not_applicable
   proof:
     kind: documentary
-    object: landometer-document-level-map-v1
+    object: strategy-spine-work-contract-v2
     sourceStatus: observed
-    limitation: "The approved Master Brand Brief canonical file and approved Product Brief or Statement for every product were not supplied; unresolved links are labelled and routed to owners"
+    limitation: "The Strategy Spine is the Brand Owner's operating clarification for this onboarding guide. It does not turn an output, launch or KPI into proof of user outcome; every product still requires its own owner-confirmed Product Statement. No registry row is owner-confirmed authoritative yet. The public page exposes four restricted destination URLs, while Drive ACLs—not the page—protect the files. Access is a named allowlist, not a domain-wide grant."
   assets:
     officialLogo: available
     officialLogoAsset:
@@ -222,7 +240,7 @@ landometerBuild:
     map: false
     dataVisualization: false
     coCreation: false
-    persistence: true
+    persistence: false
     externalSideEffect: false
     authentication: false
     permissions: false
