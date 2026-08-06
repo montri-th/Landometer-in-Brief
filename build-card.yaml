@@ -1,0 +1,282 @@
+landometerBuild:
+  dsVersion: 0.8.8
+  schemas:
+    buildCard: 0.8.8
+    manifest: "2.0"
+    tokens: 6
+  artifact:
+    name: "Landometer in Brief — Brand and Product Documents"
+    product: landometer
+    profile: brand.public
+    pageKind: onboarding_utility_reference
+    pageKindSourceRef: "User requests in the current conversation authorize this new-joiner explainer and public repository publication"
+    delivery: deployable_public
+    language: th
+    additionalLanguages: [en]
+    generationMode: not_applicable
+    outputType: webpage
+  export:
+    platform: not_applicable
+    canvasPx: not_applicable
+    aspectRatio: not_applicable
+    safeArea: not_applicable
+    exportScale: not_applicable
+    format: not_applicable
+    altOrCaptionPackage: "HTML alt text and visible captions"
+    deliveredSizeTest: "HTML structure, bilingual interaction state and release metadata were tested before publication; live visual viewport results are recorded in qa/qa.md"
+  publication:
+    evidenceStatus: source_limited
+    visibility: public
+    indexable: false
+    canonicalUrl: "https://montri-th.github.io/Landometer-in-Brief/"
+  destination:
+    required: false
+    url: ""
+    readiness: release_ready
+    publicSafe: true
+    status: ready
+    qrOrLinkTest: "No destination-dependent CTA; internal anchors and document links tested separately"
+  audience:
+    primary: "New joiners of Landometer"
+    role: "Any role that creates, reviews, builds or communicates brand and product work"
+    adoptionRoleRegistry:
+      owner: not_applicable_brand_public_profile
+      version: not_applicable
+      roles: []
+  voice:
+    applies: true
+    locales:
+      - locale: th
+        ruleRefs: [VOICE-01, COPY-01, LOCALE-TH-01, LDM-VOICE-01]
+        normativeSourceRef: "Landometer Design System v0.8.8 owner-approved authoring master"
+        authoringBasisRef: "Current Master Brand Brief + Brand Owner clarification 2026-08-06 + companion guide"
+        fixtureSetRef: thai-voice-fixtures-v0.8.7-v1
+        copyHash: b7e9454aafcd13e9c94824672de24c3ed07c802367ed0ca41681adb8cb7d485e
+        naturalnessReviewRef: "qa/qa.md#thai-copy-review"
+        parityReviewRef: "qa/qa.md#bilingual-parity"
+      - locale: en
+        ruleRefs: [VOICE-01, COPY-01, LDM-VOICE-01]
+        normativeSourceRef: "Landometer Design System v0.8.8 owner-approved authoring master"
+        authoringBasisRef: "Current Master Brand Brief + Brand Owner clarification 2026-08-06 + companion guide"
+        fixtureSetRef: english-source-copy-v1
+        copyHash: b7e9454aafcd13e9c94824672de24c3ed07c802367ed0ca41681adb8cb7d485e
+        naturalnessReviewRef: "qa/qa.md#english-copy-review"
+        parityReviewRef: "qa/qa.md#bilingual-parity"
+  experience:
+    trigger: "A new joiner must create or review work but does not know which brand or product document governs it"
+    oneJob: "Choose Master Brand Brief, Product Brief or Product Statement at the correct decision level"
+    promisedOutcome: "The reader can open the right source before creating brand, product or communication work"
+    firstAha: "Who What Which How has two answer levels; Product Statement is the short communication form of approved product truth"
+    ahaEvidenceCue: "Four-question brand/product level switch followed by the static three-document responsibility grid"
+    primaryAction: "Start with the four questions and switch between brand and product levels"
+    nextUsefulAction: "Select the current work situation, then open the latest approved source or ask the named owner"
+    nextTriggerOrCleanCompletion: "Reader can name the correct document and explain why"
+    dominantObject: landometer-document-level-map-v1
+    channelParityKey: landometer-document-level-map-v1
+    brandSignatures: [Measure, Ground, Cultivate]
+    cleanCompletion: "Reader can start work from the correct authority without inventing product or portfolio claims"
+  composition:
+    quietRegions:
+      - sceneId: hero
+        viewportOrCanvas: desktop-1363x936
+        regionRect: { x: 74, y: 185.44, width: 480.83, height: 480 }
+        sceneVisibleRect: { x: 74, y: 185.44, width: 1200, height: 637.13 }
+        regionAreaRatio: 0.3019
+        contentInside:
+          dominantMessageGroup: true
+          dominantProofObject: false
+          secondaryUI: false
+        backgroundType: flat
+        manualLowDetailReview: pass
+        focalObjectPreserved: true
+        evidenceRef: "qa/qa.md#perceptual-quiet"
+      - sceneId: hero
+        viewportOrCanvas: mobile-390x844
+        regionRect: { x: 14, y: 96, width: 347, height: 320 }
+        sceneVisibleRect: { x: 14, y: 96, width: 347, height: 721.52 }
+        regionAreaRatio: 0.4435
+        contentInside:
+          dominantMessageGroup: true
+          dominantProofObject: false
+          secondaryUI: false
+        backgroundType: flat
+        manualLowDetailReview: pass
+        focalObjectPreserved: true
+        evidenceRef: "qa/qa.md#perceptual-quiet"
+      - sceneId: closing
+        viewportOrCanvas: desktop-1363x936
+        regionRect: { x: 0, y: 6882.2, width: 1348, height: 378.73 }
+        sceneVisibleRect: { x: 0, y: 6882.2, width: 1348, height: 378.73 }
+        regionAreaRatio: 1.0
+        contentInside:
+          dominantMessageGroup: true
+          dominantProofObject: false
+          secondaryUI: false
+        backgroundType: gradient
+        manualLowDetailReview: pass
+        focalObjectPreserved: true
+        evidenceRef: "qa/qa.md#perceptual-quiet"
+      - sceneId: closing
+        viewportOrCanvas: mobile-390x844
+        regionRect: { x: 0, y: 10504.06, width: 375, height: 393.31 }
+        sceneVisibleRect: { x: 0, y: 10504.06, width: 375, height: 393.31 }
+        regionAreaRatio: 1.0
+        contentInside:
+          dominantMessageGroup: true
+          dominantProofObject: false
+          secondaryUI: false
+        backgroundType: gradient
+        manualLowDetailReview: pass
+        focalObjectPreserved: true
+        evidenceRef: "qa/qa.md#perceptual-quiet"
+    gradientSurfaces:
+      - sceneId: closing
+        role: closure
+        recipe: measure
+        sourceTokenRefs: [signature.gradient.closing.light, signature.gradient.closing.dark]
+        angle: "135deg"
+        focalTarget: "final decision rule"
+        readingDirection: "left to right"
+        foregroundStrategy: bare_tested
+        logoPairing: none
+        contrastEvidence: "foreground contrast review recorded in qa/qa.md"
+        evidenceRef: "qa/qa.md#gradient-surface"
+        deletionTest: improves
+    connectors: []
+  brandAlignment:
+    productStatement: "Landometer is the decision-intelligence layer between raw urban data and real local action."
+    proofObject: landometer-document-level-map-v1
+    ahaProvesPromise: true
+    networkAdvancesObjective: false
+  investment:
+    mode: none_no_honest_investment
+    userBenefit: not_applicable
+  proof:
+    kind: documentary
+    object: landometer-document-level-map-v1
+    sourceStatus: observed
+    limitation: "The approved Master Brand Brief canonical file and approved Product Brief or Statement for every product were not supplied; unresolved links are labelled and routed to owners"
+  assets:
+    officialLogo: available
+    officialLogoAsset:
+      id: landometer-horizontal-lockup-public-v0.8.8
+      variant: transparent_horizontal_lockup
+      sha256: f6ed8748d32d11514c94ce6a639491120489ce8c3ab6fff073d7ca9638a87535
+      canvas: transparent
+      placement: direct_surface
+      surfacePairingRef: header-clean-light-surface-v1
+      identityApproval:
+        id: user-requested-public-release-2026-08-06
+        authorityRole: requesting_repository_owner_and_publication_owner
+        delegatedAuthorityRecordId: none
+        decision: direct_surface
+        assetId: landometer-horizontal-lockup-public-v0.8.8
+        variant: transparent_horizontal_lockup
+        sha256: f6ed8748d32d11514c94ce6a639491120489ce8c3ab6fff073d7ca9638a87535
+        canvas: transparent
+        placement: direct_surface
+        surfaceRef: header-clean-light-surface-v1
+        themesOrBackdrops: [light_clean_fixed_header, dark_clean_fixed_header]
+        recordVersion: public-release-v1
+        validFrom: "2026-08-06"
+        expiresAt: null
+        evidenceRef: "The repository owner explicitly requested publication in this conversation; the exact official logo bytes and fixed clean header treatment are recorded here. Authoring alignment is claimed, not machine conformance."
+    approvedPhotography: [team-on-stage]
+    approvedWorkProof: []
+    mediaAssets:
+      - assetId: team-on-stage
+        variant: original-jpeg
+        sha256: 4f276111f638286cdf83c78fe9ef5054c35f46d9fd4c52c93a05befe976729f0
+        permissionRecordId: user-supplied-publication-2026-08-06
+        sourceOrOwner: "User-supplied Landometer event photograph"
+        creatorCredit: "Creator not supplied; publication requested by the asset-providing owner"
+        context: "Landometer team presenting at a public-facing event"
+        capturedAt: "Date not supplied; event context is visible in the source photograph"
+        dimensionsPx: 1536x1024
+        cropOrRedaction: "CSS responsive crop only; stage message and people remain readable"
+        altText: "สมาชิกทีม Landometer นำเสนอผลงาน Hack Land Value ต่อผู้เข้าร่วมงาน"
+        displayedCredit: none
+        privacyScreenReview: "Public event context; no private screen or personal contact detail visible"
+        approvedUse: "Team collaboration proof for the requested page and named repository"
+    permissionRecords:
+      - id: user-supplied-publication-2026-08-06
+        owner: Montri
+        assetIds: [team-on-stage]
+        permittedUse: "User supplied these images with an explicit request to build and publish this page at montri-th/Landometer-in-Brief"
+        variantsAndHashes:
+          - "team-on-stage/original-jpeg/4f276111f638286cdf83c78fe9ef5054c35f46d9fd4c52c93a05befe976729f0"
+        expiry: null
+  theme:
+    mode: interactive_auto
+    support: dual
+    default: system
+    visibleOverride: true
+  motion:
+    intensity: guided
+  capabilities:
+    analyticalEvidence: false
+    motionEnhancement: true
+    personalization: false
+    search: false
+    share: false
+    map: false
+    dataVisualization: false
+    coCreation: false
+    persistence: true
+    externalSideEffect: false
+    authentication: false
+    permissions: false
+    contextDiscovery: false
+    agentReadable: false
+    boundedAgentAction: false
+    agentActionEffect: none
+    fullLivingReference: false
+  agentAction:
+    targetObjects: []
+    scope: none
+    boundary: none
+    confirmation: none
+    allowedEffects: []
+  referenceFixtures: []
+  privacy:
+    personalData: true
+    sensitivity: public
+    redactedPublicProjection: false
+    governanceRecord:
+      id: user-supplied-team-photo-publication-2026-08-06
+      owner: Montri
+      collectionBasisAndMinimumFields: "One user-supplied existing event photograph; no additional personal data collected"
+      accessAndRetentionDeletion: "Stored in the named GitHub repository; repository owner controls access and deletion"
+      redactionAndExportRules: "No private screen details or contact information exposed; only the approved event photograph is included"
+      reviewStatusAndDate: "User-requested publication; privacy screen review completed 2026-08-06"
+  telemetry:
+    enabled: false
+    scope: none
+    purpose: ""
+    dataClasses: []
+    retention: none
+    privacyBasis: none
+    governanceRecord:
+      id: ""
+      owner: ""
+      accessCorrectionDeletion: ""
+      reviewDate: ""
+  network:
+    mode: reference_ready
+    action: none
+    recipientOutcome: "A new joiner can open the exact explainer and follow its labelled source links"
+    policyReason: "No share control; canonical page remains directly referenceable"
+  projectRequirements:
+    mapAutofit:
+      normativeSource: project_specific_not_v0.8.8
+      requiredExtent: not_applicable
+      padding: not_applicable
+      sidePanelOcclusion: not_applicable
+      resizeBehavior: not_applicable
+      minMaxZoom: not_applicable
+      selectionRefit: not_applicable
+      mobileBehavior: not_applicable
+  qa:
+    evidencePath: qa/qa.md
+    controlInventoryPath: qa/qa.md#control-inventory
+    authoringStatus: source_limited

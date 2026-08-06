@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html
+  lang="th"
+  data-theme="light"
+  data-ds="landometer"
+  data-ds-version="0.8.8"
+  data-build-card-version="0.8.8"
+  data-manifest-version="2.0"
+  data-token-schema-version="6"
+  data-profile="brand.public"
+  data-delivery="deployable_public"
+  data-evidence-status="source_limited"
+  data-indexable="false"
+  data-locale="th"
+>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow,noarchive">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F6F7F3">
+  <title>Landometer in Brief — เริ่มงานให้ถูกระดับ</title>
+  <meta name="description" content="คู่มือ 5 นาทีสำหรับ new joiners: แยก Master Brand Brief, Product Brief และ Product Statement ด้วย Who · What · Which · How">
+  <link rel="canonical" href="https://montri-th.github.io/Landometer-in-Brief/">
+  <link rel="alternate" hreflang="th" href="https://montri-th.github.io/Landometer-in-Brief/?lang=th">
+  <link rel="alternate" hreflang="en" href="https://montri-th.github.io/Landometer-in-Brief/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://montri-th.github.io/Landometer-in-Brief/">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/landometer-symbol-transparent.png">
+  <meta property="og:site_name" content="Landometer">
+  <meta property="og:title" content="4 คำถาม · 2 ระดับ · 1 วิธีเล่า">
+  <meta property="og:description" content="เลือกเอกสารให้ถูกระดับ ก่อนเริ่มสร้างหรืออธิบายงานของ Landometer">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:url" content="https://montri-th.github.io/Landometer-in-Brief/">
+  <meta property="og:image" content="https://montri-th.github.io/Landometer-in-Brief/assets/team-on-stage.jpeg">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="ทีม Landometer นำเสนอผลงาน Hack Land Value">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="4 คำถาม · 2 ระดับ · 1 วิธีเล่า">
+  <meta name="twitter:description" content="เลือกเอกสารให้ถูกระดับ ก่อนเริ่มสร้างหรืออธิบายงานของ Landometer">
+  <meta name="twitter:image" content="https://montri-th.github.io/Landometer-in-Brief/assets/team-on-stage.jpeg">
+  <meta name="twitter:image:alt" content="ทีม Landometer นำเสนอผลงาน Hack Land Value">
+  <script>
+    document.documentElement.classList.add("js");
+    const readStored = key => { try { return localStorage.getItem(key); } catch { return null; } };
+    const themeOptions = ["auto", "light", "dark"];
+    window.__ldmThemeMode = themeOptions.includes(readStored("ldm-brief-theme")) ? readStored("ldm-brief-theme") : "auto";
+    const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+    const initialTheme = window.__ldmThemeMode === "auto" ? (systemDark ? "dark" : "light") : window.__ldmThemeMode;
+    document.documentElement.dataset.themeMode = window.__ldmThemeMode;
+    document.documentElement.dataset.theme = initialTheme;
+    document.documentElement.style.colorScheme = initialTheme;
+
+    const urlLocale = new URLSearchParams(location.search).get("lang");
+    const storedLocale = readStored("ldm-brief-locale");
+    const browserLocale = navigator.language?.toLowerCase().startsWith("th") ? "th" : "en";
+    window.__ldmLocale = ["th", "en"].includes(urlLocale) ? urlLocale : (["th", "en"].includes(storedLocale) ? storedLocale : browserLocale);
+    document.documentElement.dataset.locale = window.__ldmLocale;
+    document.documentElement.lang = window.__ldmLocale;
+    if (window.__ldmLocale === "en") document.documentElement.dataset.localeLoading = "en";
+    window.setTimeout(() => delete document.documentElement.dataset.localeLoading, 1500);
+  </script>
+  <style>
+    @font-face{font-family:"Arvo";src:url("assets/fonts/arvo-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:"Bai Jamjuree";src:url("assets/fonts/bai-jamjuree-thai-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0E00-0E7F}
+    @font-face{font-family:"Bai Jamjuree";src:url("assets/fonts/bai-jamjuree-latin-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:"Bai Jamjuree";src:url("assets/fonts/bai-jamjuree-thai-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;unicode-range:U+0E00-0E7F}
+    @font-face{font-family:"Bai Jamjuree";src:url("assets/fonts/bai-jamjuree-latin-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+    @font-face{font-family:"IBM Plex Sans Thai Looped";src:url("assets/fonts/ibm-plex-thai-looped-thai-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+0E00-0E7F}
+    @font-face{font-family:"IBM Plex Sans Thai Looped";src:url("assets/fonts/ibm-plex-thai-looped-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:"JetBrains Mono";src:url("assets/fonts/jetbrains-mono-latin-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+    @font-face{font-family:"JetBrains Mono";src:url("assets/fonts/jetbrains-mono-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+    :root{
+      --brand-blue:#1D4497;
+      --energy-sky:#59D2FE;
+      --energy-mint:#0AD69C;
+      --energy-coral:#FF5A5F;
+      --energy-yellow:#FFBC1F;
+      --canvas:#F6F7F3;
+      --surface-alt:#EEF1EE;
+      --surface-card:#FCFCFA;
+      --surface-raised:#FFFFFF;
+      --surface-soft:#E5E9E6;
+      --surface-blue-tint:#E2E9ED;
+      --surface-beige:#F2F1DF;
+      --text:#182327;
+      --text-secondary:#5F635A;
+      --text-meta:#686354;
+      --border:#C9D0CB;
+      --hair:#DCE1DD;
+      --interaction:#176B82;
+      --focus:#176B82;
+      --measure:linear-gradient(135deg,#1D4497 0%,#176B82 54%,#08756F 100%);
+      --max:1200px;
+      --header:72px;
+      color-scheme:light;
+    }
+    html[data-theme="dark"]{
+      --canvas:#11191D;
+      --surface-alt:#172126;
+      --surface-card:#20292D;
+      --surface-raised:#293337;
+      --surface-soft:#2B3534;
+      --surface-blue-tint:#18333E;
+      --surface-beige:#2C2A22;
+      --text:#F1F4EF;
+      --text-secondary:#C4CECA;
+      --text-meta:#A6B5B1;
+      --border:#46524F;
+      --hair:#33403D;
+      --interaction:#68C4E2;
+      --focus:#68C4E2;
+      --measure:linear-gradient(135deg,#68C4E2 0%,#15919A 52%,#08756F 100%);
+      color-scheme:dark;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 18px);background:var(--canvas);font-synthesis:none}
+    html[data-locale-loading="en"] body{visibility:hidden}
+    body{margin:0;background:var(--canvas);color:var(--text);font:400 1.05rem/1.68 "Bai Jamjuree",Tahoma,sans-serif;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+    img{display:block;max-width:100%;height:auto}
+    button,a{font:inherit}
+    a{color:var(--interaction);text-underline-offset:.22em}
+    button{color:inherit;min-height:44px;touch-action:manipulation}
+    :focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    h1,h2,h3,h4,p{margin-top:0}
+    h1,h2,h3,h4{font-family:"IBM Plex Sans Thai Looped",Tahoma,sans-serif;font-weight:700;line-height:1.12;letter-spacing:0;text-wrap:balance}
+    html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] h4{font-family:"Arvo",Georgia,serif}
+    p,li{max-width:68ch}
+    .latin{font-family:"Arvo",Georgia,serif}
+    .mono{font-family:"JetBrains Mono",Consolas,monospace}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+    .skip{position:fixed;z-index:500;left:12px;top:8px;transform:translateY(-160%);background:#FFFFFF;color:#182327;padding:9px 14px;border-radius:8px}
+    .skip:focus{transform:none}
+    .js-only{display:none}
+    .js .js-only{display:inline-flex}
+
+    .site-header{position:sticky;top:0;z-index:100;height:var(--header);background:#F6F7F3;border-bottom:1px solid #DCE1DD}
+    .header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand-lockup{display:flex;align-items:center;gap:16px;min-width:0}
+    .brand-lockup img{width:158px;height:auto;object-fit:contain}
+    .header-label{font:500 .68rem/1.3 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:#686354;white-space:nowrap}
+    .utility-controls{display:flex;align-items:center;gap:8px}
+    .language-toggle,.theme-toggle{display:none;min-width:44px;height:44px;padding:0 12px;border:1px solid #C9D0CB;border-radius:999px;background:#FFFFFF;color:#182327;align-items:center;justify-content:center;gap:7px;cursor:pointer;font:600 .78rem/1 "Bai Jamjuree",sans-serif}
+    .js .language-toggle,.js .theme-toggle{display:inline-flex}
+    .language-toggle:hover,.theme-toggle:hover{background:#EEF1EE}
+    .theme-toggle svg{width:19px;height:19px}
+    .theme-value{font:600 .7rem/1 "JetBrains Mono",monospace}
+
+    .hero{min-height:calc(100svh - var(--header));display:flex;align-items:center;padding:clamp(44px,6vw,82px) 0}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(420px,1.14fr);gap:clamp(36px,6vw,82px);align-items:center}
+    .hero-copy{padding-block:18px;min-height:610px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow,.section-kicker{font:700 .72rem/1.4 "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--text-meta);margin:0 0 18px}
+    .closing .section-kicker{color:inherit;opacity:.74}
+    .hero h1{max-width:9ch;margin:0;font-size:clamp(3.25rem,6.6vw,6.7rem);line-height:.98}
+    .hero h1 .count{color:var(--text)}
+    .hero-lede{max-width:35ch;margin:28px 0 0;font-size:clamp(1.06rem,1.7vw,1.35rem);line-height:1.55;color:var(--text-secondary)}
+    .hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:30px}
+    .primary-action{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 21px;border:1px solid var(--interaction);border-radius:999px;background:var(--interaction);color:#FFFFFF;text-decoration:none;font-weight:600}
+    html[data-theme="dark"] .primary-action{color:#11191D}
+    .primary-action:hover{background:var(--surface-blue-tint);color:var(--text)}
+    .primary-action,.language-toggle,.theme-toggle,.level-switch button,.scenario,.trace-toggle{transition:transform 120ms cubic-bezier(.2,0,0,1),background-color 200ms cubic-bezier(.2,0,0,1),color 200ms cubic-bezier(.2,0,0,1),border-color 200ms cubic-bezier(.2,0,0,1)}
+    .primary-action:active,.language-toggle:active,.theme-toggle:active,.level-switch button:active,.scenario:active,.trace-toggle:active{transform:translateY(2px)}
+    .text-action{font-weight:600}
+    .brand-line{margin:auto 0 0;padding-top:42px;color:var(--text-meta);font:700 .78rem/1.5 "Arvo",serif;letter-spacing:.02em}
+    .hero-photo{margin:0}
+    .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 44%;border-radius:24px;border:1px solid var(--hair)}
+    .hero-photo figcaption{padding-top:9px;color:var(--text-meta);font:500 .68rem/1.5 "JetBrains Mono",monospace}
+
+    section{padding:clamp(76px,9vw,124px) 0}
+    .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.48fr);gap:clamp(28px,6vw,72px);align-items:end;margin-bottom:48px}
+    .section-head h2{margin:0;font-size:clamp(2.45rem,5vw,5rem);line-height:1.06}
+    .section-head>p{margin:0;color:var(--text-secondary);font-size:1.08rem}
+
+    .model-section{background:var(--surface-alt)}
+    .model-block+.model-block{margin-top:clamp(88px,11vw,150px);padding-top:clamp(72px,9vw,112px);border-top:1px solid var(--border)}
+    .level-switch{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 24px}
+    .level-switch button{padding:0 15px;border:1px solid var(--border);border-radius:999px;background:var(--surface-card);cursor:pointer;font-weight:600}
+    .level-switch button[aria-pressed="true"]{border-color:var(--interaction);background:var(--surface-blue-tint);color:var(--text)}
+    .four-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .four-grid,.answer-panel{transform-origin:50% 0}
+    .question{min-width:0;padding:30px 22px 34px;border-right:1px solid var(--border)}
+    .question:last-child{border-right:0}
+    .question-word{margin:0 0 16px;color:var(--text);font:700 clamp(2rem,3.8vw,3.6rem)/1 "Arvo",serif}
+    .question-prompt{margin:0 0 12px;font-weight:600}
+    .question-answer{margin:0;color:var(--text-secondary);font-size:.94rem;line-height:1.62}
+    .four-note{margin:24px 0 0;padding-left:16px;border-left:4px solid var(--energy-sky);color:var(--text-secondary)}
+    .positioning{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-top:42px;padding:28px 0;border-top:1px solid var(--hair)}
+    .positioning blockquote{margin:0;max-width:800px;font:700 clamp(1.3rem,2.5vw,2rem)/1.35 "Arvo",Georgia,serif;color:var(--text)}
+    .positioning p{margin:10px 0 0;color:var(--text-secondary);font-size:.92rem}
+    .source-link{white-space:nowrap;font-weight:600}
+
+    .doc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .doc{min-width:0;padding:30px 26px 34px;border-right:1px solid var(--border)}
+    .doc:last-child{border-right:0}
+    .doc-number{display:block;margin-bottom:18px;color:var(--text-meta);font:500 .7rem/1.4 "JetBrains Mono",monospace;letter-spacing:.08em}
+    .doc h3{font-size:clamp(1.55rem,2.6vw,2.4rem);margin-bottom:12px}
+    .doc-purpose{min-height:4.9em;margin:0;color:var(--text-secondary)}
+    .doc dl{margin:26px 0 0}
+    .doc dl>div{padding:12px 0;border-top:1px solid var(--hair)}
+    .doc dt{margin-bottom:5px;color:var(--text-meta);font:500 .68rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
+    .doc dd{margin:0;font-size:.9rem;line-height:1.56}
+    .doc-rule{display:block;width:46px;height:4px;margin-bottom:24px;background:var(--energy-coral)}
+    .doc:nth-child(2) .doc-rule{background:var(--energy-mint)}
+    .doc:nth-child(3) .doc-rule{background:var(--energy-yellow)}
+    .remember{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px;font-size:.92rem}
+    .remember p{margin:0;padding-top:12px;border-top:1px solid var(--border)}
+    .remember strong{display:block;margin-bottom:3px}
+
+    .chooser{background:var(--canvas)}
+    .chooser-grid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(420px,1.22fr);gap:clamp(40px,7vw,88px);align-items:start}
+    .chooser-copy h2{font-size:clamp(2.7rem,5.6vw,5.5rem);margin-bottom:16px}
+    .chooser-copy>p{color:var(--text-secondary);font-size:1.08rem}
+    .scenario-list{display:grid;margin-top:30px;border-top:1px solid var(--border)}
+    .scenario{width:100%;padding:15px 0;border:0;border-bottom:1px solid var(--border);background:transparent;text-align:left;cursor:pointer;font-weight:600}
+    .scenario::before{content:"○";display:inline-block;width:28px;color:var(--text-meta);font-family:"JetBrains Mono",monospace}
+    .scenario[aria-pressed="true"]{color:var(--interaction)}
+    .scenario[aria-pressed="true"]::before{content:"●";color:var(--interaction)}
+    .answer-panel{min-height:480px;padding:clamp(28px,5vw,54px);border:1px solid var(--border);border-radius:20px;background:var(--surface-card)}
+    .answer-label{display:block;color:var(--text-meta);font:500 .7rem/1.4 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+    .answer-panel h3{font-size:clamp(2.1rem,4vw,3.8rem);margin:16px 0 12px}
+    .answer-why{margin:0 0 26px;color:var(--text-secondary);font-size:1.08rem}
+    .answer-steps{list-style:none;margin:0;padding:0;counter-reset:step}
+    .answer-steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:13px 0;border-top:1px solid var(--hair);counter-increment:step}
+    .answer-steps li::before{content:"0" counter(step);color:var(--text-meta);font:700 .76rem/1.8 "JetBrains Mono",monospace}
+    .answer-warning{margin:26px 0 0;padding:14px 16px;border-left:4px solid var(--energy-yellow);background:var(--surface-beige);color:var(--text);font-size:.9rem}
+    .no-js-list{padding-left:1.2rem}
+
+    .example{background:var(--surface-alt)}
+    .example-intro{max-width:860px;margin-bottom:48px}
+    .example-intro h2{font-size:clamp(2.6rem,5.3vw,5.1rem);margin-bottom:20px}
+    .example-intro>p:not(.section-kicker){color:var(--text-secondary);font-size:1.08rem}
+    .teaching-status{display:inline-block;padding:7px 10px;border-left:4px solid var(--energy-yellow);background:var(--surface-beige);font:500 .7rem/1.45 "JetBrains Mono",monospace}
+    .example-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
+    .example-column{padding-top:22px;border-top:4px solid var(--energy-sky)}
+    .example-column:last-child{border-top-color:var(--energy-yellow)}
+    .example-column h3{font-size:clamp(1.75rem,3vw,2.7rem);margin-bottom:20px}
+    .brief-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+    .brief-item{padding:17px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .brief-item b{display:block;margin-bottom:7px;color:var(--text);font:700 1rem/1.2 "Arvo",serif}
+    .brief-item p{margin:0;color:var(--text-secondary);font-size:.88rem;line-height:1.58}
+    .boundary{margin:16px 0 0;padding:14px 0;border-top:1px solid var(--border);font-size:.9rem}
+    .statement{margin:0;font-size:clamp(1.15rem,2vw,1.42rem);line-height:1.65}
+    .trace-toggle{align-items:center;gap:8px;margin-top:22px;padding:0 15px;border:1px solid var(--interaction);border-radius:999px;background:transparent;color:var(--interaction);cursor:pointer;font-weight:600}
+    .trace-toggle[aria-pressed="true"]{background:var(--surface-blue-tint);color:var(--text)}
+    .statement [data-part]{position:relative}
+    .statement.annotated [data-part]{box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:.08em .14em;border-bottom:3px solid var(--interaction);background:var(--surface-blue-tint)}
+    .statement [data-part]{transition:background-color 200ms cubic-bezier(.2,0,0,1),border-color 200ms cubic-bezier(.2,0,0,1)}
+    .statement.annotated [data-part="boundary"]{border-bottom-color:var(--energy-yellow);background:var(--surface-beige)}
+    .trace-legend{display:none;gap:10px;flex-wrap:wrap;margin:18px 0 0;padding:0;list-style:none;color:var(--text-meta);font-size:.78rem}
+    .trace-legend.visible{display:flex}
+    .trace-legend li{display:flex;align-items:center;gap:6px}
+    .trace-legend span{width:18px;height:4px;background:var(--interaction)}
+    .trace-legend li:last-child span{background:var(--energy-yellow)}
+    .downstream{margin-top:26px;padding-top:18px;border-top:1px solid var(--border)}
+    .downstream h4{font-size:1rem;margin-bottom:8px}
+    .downstream p{margin:0;color:var(--text-secondary);font-size:.9rem}
+    .role-list{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .role{padding:22px 18px;border-right:1px solid var(--border)}
+    .role:last-child{border-right:0}
+    .role b{display:block;margin-bottom:8px;color:var(--text-meta);font:500 .66rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.05em}
+    .role h3{font-size:1.18rem;margin-bottom:8px}
+    .role p{margin:0;color:var(--text-secondary);font-size:.85rem;line-height:1.55}
+
+    .resources{padding-bottom:0}
+    .source-gaps{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-bottom:46px;border:1px solid var(--border);background:var(--border)}
+    .source-gap{padding:22px;background:var(--surface-beige)}
+    .source-gap b{display:block;margin-bottom:7px;font-size:1.08rem}
+    .source-gap p{margin:0;color:var(--text-secondary);font-size:.9rem}
+    .status-label{display:inline-block;margin-bottom:10px;color:var(--text-meta);font:500 .65rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.07em}
+    .resource-list{border-top:1px solid var(--border)}
+    .resource{display:grid;grid-template-columns:190px minmax(220px,.7fr) minmax(280px,1.3fr) auto;gap:20px;align-items:center;min-height:92px;padding:18px 0;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none}
+    .resource:hover{background:var(--surface-alt)}
+    .resource-type{color:var(--text-meta);font:500 .65rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
+    .resource strong{font-family:"IBM Plex Sans Thai Looped",sans-serif;font-size:1.05rem}
+    html[lang="en"] .resource strong{font-family:"Arvo",Georgia,serif}
+    .resource p{margin:0;color:var(--text-secondary);font-size:.87rem;line-height:1.5}
+    .resource-open{color:var(--interaction);font-weight:600;white-space:nowrap}
+    .source-note{margin-top:28px;color:var(--text-meta);font-size:.82rem}
+    details{margin-top:22px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    summary{min-height:52px;display:flex;align-items:center;cursor:pointer;font-weight:600}
+    details p{padding-bottom:18px;color:var(--text-secondary);font-size:.88rem}
+    .closing{margin-top:clamp(78px,10vw,130px);padding:clamp(48px,7vw,82px) 0;background:var(--measure);color:#FFFFFF}
+    html[data-theme="dark"] .closing{color:#11191D}
+    .closing-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
+    .closing h2{max-width:14ch;margin-bottom:16px;font-size:clamp(2.5rem,5.5vw,5.2rem);line-height:1.03}
+    .closing p{margin:0;color:inherit;opacity:.88}
+    .closing-rule{font:700 clamp(1.2rem,2.5vw,2rem)/1.5 "JetBrains Mono",monospace;white-space:nowrap;text-align:right}
+
+    footer{padding:26px 0;color:var(--text-meta);font-size:.75rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-inner p{margin:0}
+
+    @media(max-width:980px){
+      .hero{min-height:auto}.hero-grid{grid-template-columns:1fr 1fr;gap:28px}.hero-copy{min-height:520px}.hero h1{font-size:clamp(3.15rem,8vw,5.5rem)}
+      .section-head{grid-template-columns:1fr;gap:18px}.positioning{grid-template-columns:1fr}.source-link{white-space:normal}
+      .four-grid{grid-template-columns:1fr 1fr}.question:nth-child(2){border-right:0}.question:nth-child(-n+2){border-bottom:1px solid var(--border)}
+      .doc-grid{grid-template-columns:1fr}.doc{border-right:0;border-bottom:1px solid var(--border)}.doc:last-child{border-bottom:0}.doc-purpose{min-height:0}
+      .remember{grid-template-columns:1fr}.chooser-grid{grid-template-columns:1fr}.answer-panel{min-height:0}
+      .example-layout{grid-template-columns:1fr}.role-list{grid-template-columns:1fr 1fr}.role:nth-child(2){border-right:0}.role:nth-child(-n+2){border-bottom:1px solid var(--border)}
+      .resource{grid-template-columns:150px minmax(180px,.8fr) 1.2fr auto}
+    }
+    @media(max-width:720px){
+      :root{--header:64px}.wrap{width:min(calc(100% - 28px),var(--max))}.header-label{display:none}.brand-lockup img{width:124px}.utility-controls{gap:6px}.language-toggle,.theme-toggle{padding-inline:10px}.theme-value{font-size:.64rem}
+      .hero{padding:32px 0 54px}.hero-grid{grid-template-columns:1fr;gap:26px}.hero-copy{min-height:0;padding:0}.hero h1{font-size:clamp(2.85rem,14.5vw,4.35rem)}
+      .hero-lede{margin-top:20px;font-size:1rem}.hero-actions{margin-top:22px;align-items:flex-start;flex-direction:column;gap:14px}.brand-line{margin:24px 0 0;padding:0}
+      .hero-photo img{aspect-ratio:16/9;border-radius:18px}.hero-photo figcaption{font-size:.62rem}
+      section{padding:72px 0}.section-head{margin-bottom:34px}.section-head h2{font-size:2.65rem}
+      .model-block+.model-block{margin-top:82px;padding-top:68px}.four-grid{grid-template-columns:1fr}.question{padding:24px 2px;border-right:0;border-bottom:1px solid var(--border)!important}.question:last-child{border-bottom:0!important}
+      .positioning{margin-top:30px;padding-bottom:0}.positioning blockquote{font-size:1.35rem}
+      .doc{padding-inline:2px}.remember{gap:2px}.remember p{padding-block:12px}
+      .chooser-grid{gap:34px}.scenario{padding-block:14px}.answer-panel{padding:24px 18px;border-radius:16px}.answer-panel h3{font-size:2.45rem}
+      .example-intro h2{font-size:2.75rem}.brief-grid{grid-template-columns:1fr}.example-column{padding-top:18px}.role-list{grid-template-columns:1fr}.role{padding-inline:2px;border-right:0;border-bottom:1px solid var(--border)!important}.role:last-child{border-bottom:0!important}
+      .source-gaps{grid-template-columns:1fr}.resource{grid-template-columns:1fr auto;gap:5px 16px;padding:17px 0}.resource-type{grid-column:1/-1}.resource p{grid-column:1/-1}.resource-open{grid-column:2;grid-row:2}
+      .closing-grid{grid-template-columns:1fr}.closing-rule{text-align:left;white-space:normal}.footer-inner{display:block}.footer-inner p+p{margin-top:7px}
+    }
+    @media(max-width:360px){body{font-size:1rem}.hero h1{font-size:2.8rem}.primary-action{width:100%}.level-switch{display:grid;grid-template-columns:1fr}.level-switch button{width:100%}.section-head h2,.example-intro h2{font-size:2.35rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.primary-action,.language-toggle,.theme-toggle,.level-switch button,.scenario,.trace-toggle,.statement [data-part]{transition:none!important}}
+    @media print{.site-header,.language-toggle,.theme-toggle,.hero-actions,.level-switch,.scenario-list,.trace-toggle{display:none!important}section{break-inside:avoid}.hero{min-height:auto}.closing{background:#FFFFFF!important;color:#182327!important;border-top:3px solid #1D4497}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">ข้ามไปเนื้อหาหลัก</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand-lockup">
+        <img src="assets/landometer-logo-banner.png" width="3818" height="1048" alt="Landometer">
+        <span class="header-label">New joiner field guide</span>
+      </div>
+      <div class="utility-controls">
+        <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch to English" title="Switch to English">EN</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="ธีม: อัตโนมัติ กดเพื่อเปลี่ยนเป็นธีมสว่าง" title="เปลี่ยนธีม">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+          <span class="theme-value" id="themeValue">Auto</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy" data-quiet-field="hero-message">
+          <p class="eyebrow">New joiner · ใช้เวลาประมาณ 5 นาที</p>
+          <h1><span class="count">4</span> คำถาม<br><span class="count">2</span> ระดับ<br><span class="count">1</span> วิธีเล่า</h1>
+          <p class="hero-lede"><strong>Master Brand Brief</strong> เก็บคำตอบระดับ Landometer · <strong>Product Brief</strong> ตกลงคำตอบของหนึ่งผลิตภัณฑ์ · <strong>Product Statement</strong> ย่อสิ่งที่ตกลงแล้วให้คนอื่นเข้าใจตรงกัน</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#four-questions">เริ่มจาก 4 คำถาม</a>
+            <a class="text-action" href="#chooser">หรือเลือกจากงานที่กำลังทำ</a>
+          </div>
+          <p class="brand-line" lang="en">Visualize City, Shape Tomorrow.</p>
+        </div>
+        <figure class="hero-photo">
+          <img src="assets/team-on-stage.jpeg" width="1536" height="1024" alt="สมาชิกทีม Landometer นำเสนอผลงาน Hack Land Value ต่อผู้เข้าร่วมงาน">
+          <figcaption>ทีม Landometer ระหว่างนำเสนอผลงาน Hack Land Value</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="model-section" aria-labelledby="model-title">
+      <div class="wrap">
+        <div class="model-block" id="four-questions">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">01 · คำถามเดียวกัน คนละระดับ</p>
+              <h2 id="model-title">Who · What · Which · How</h2>
+            </div>
+            <p>สี่คำนี้ไม่ใช่เอกสารสี่ฉบับ และคำตอบระดับ Landometer ใช้แทนคำตอบของผลิตภัณฑ์หนึ่งตัวไม่ได้</p>
+          </div>
+          <div class="level-switch js-only" role="group" aria-label="เลือกระดับคำตอบ">
+            <button type="button" aria-pressed="true" data-level="brand">ระดับ Landometer</button>
+            <button type="button" aria-pressed="false" data-level="product">ระดับผลิตภัณฑ์</button>
+          </div>
+          <div class="four-grid" id="fourGrid" aria-live="polite">
+            <article class="question"><h3 class="question-word">Who</h3><p class="question-prompt">เราเลือกช่วยใคร และเขาต้องการอะไร</p><p class="question-answer">คนและองค์กรที่ต้องตัดสินใจเกี่ยวกับพื้นที่จริง ซึ่งกระทบเงิน เวลา ความเสี่ยง ชุมชน หรืออนาคตของเมือง พวกเขาต้องการหลักฐานที่มองเห็นและเปรียบเทียบได้ และความมั่นใจว่าการตัดสินใจอธิบายและทบทวนได้</p></article>
+            <article class="question"><h3 class="question-word">What</h3><p class="question-prompt">ผู้ใช้ต้องได้ความก้าวหน้าอะไร</p><p class="question-answer">เปลี่ยนข้อมูลเมืองที่กระจัดกระจายให้เป็นความเข้าใจเชิงพื้นที่ที่มีแหล่งที่มา เพื่อให้ผู้ใช้เห็น เข้าใจ เปรียบเทียบ ตัดสินใจ ลงมือทำ และเรียนรู้จากผลลัพธ์</p></article>
+            <article class="question"><h3 class="question-word">Which</h3><p class="question-prompt">ผู้ใช้มีทางเลือกอะไร และเราตั้งมาตรฐานเทียบกับใคร</p><p class="question-answer">แยกวิธีเดิม ทางเลือกตรงของแต่ละผลิตภัณฑ์ และ aspiring benchmarks ที่ใช้ตั้ง quality bar ด้านความน่าเชื่อถือ ความง่ายในการใช้ intelligence และ workflow โดยไม่เรียกทุก benchmark ว่าคู่แข่งตรง</p></article>
+            <article class="question"><h3 class="question-word">How</h3><p class="question-prompt">เราจะชนะในกรอบ Which ด้วยอะไร</p><p class="question-answer">ชนะด้วยฐานข้อมูลเมืองไทยที่เชื่อม Land · Location · Living, spatial intelligence ที่คนไม่ใช้ GIS ก็เข้าใจได้, visual-first explanation, grounded AI ที่แสดง source และ limitation และ action &amp; learning loop ที่มีหลักฐานรองรับ</p></article>
+          </div>
+          <noscript><p class="four-note">หน้าแบบไม่ใช้ JavaScript แสดงคำตอบระดับ Landometer ไว้ด้านบน ส่วนตัวอย่างระดับผลิตภัณฑ์อยู่ในหัวข้อ “ตัวอย่างเดียว เห็นครบ” ด้านล่าง</p></noscript>
+          <p class="four-note"><strong>จำสั้น ๆ:</strong> Who ต้องการ What — Which กำหนดทางเลือกและ quality bar — How คือวิธีชนะ Product Statement ไม่ใช่ระดับที่สาม แต่เป็นวิธีเล่าคำตอบระดับผลิตภัณฑ์ให้สั้นลง</p>
+          <div class="positioning">
+            <div>
+              <blockquote lang="en">Landometer is the decision-intelligence layer between raw urban data and real local action.</blockquote>
+              <p>กรอบคำถามในหน้านี้ใช้ Master Brand Brief และคำยืนยันของ Brand Owner วันที่ 6 สิงหาคม 2026 ส่วน [POSITION-01] ใน Design System v0.8.8 ยังใช้ framing เดิมและต้องอัปเดตตามภายหลัง</p>
+            </div>
+            <a class="source-link" href="https://github.com/montri-th/Landometer/blob/87bf80edb87c5ffd07d504a4b2d3c87a8fac5601/deployment/assets/downloads/landometer-design-system-v0.8.8.md#L462-L480" target="_blank" rel="noopener">เปิด [POSITION-01] เพื่อเทียบ ↗</a>
+          </div>
+        </div>
+
+        <div class="model-block" id="three-docs">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">02 · เอกสาร 3 ฉบับ</p>
+              <h2>ทำงานต่อกัน<br>แต่ไม่ทำงานแทนกัน</h2>
+            </div>
+            <p>ถ้าจำได้เพียงอย่างเดียว ให้จำว่าเรากำลังตัดสินเรื่องทั้งบริษัท หนึ่งผลิตภัณฑ์ หรือกำลังอธิบายสิ่งที่ตกลงแล้ว</p>
+          </div>
+          <div class="doc-grid">
+            <article class="doc">
+              <span class="doc-rule" aria-hidden="true"></span><span class="doc-number">01 · WHOLE COMPANY</span>
+              <h3>Master Brand Brief</h3>
+              <p class="doc-purpose"><strong>กำหนดทิศของทั้ง Landometer</strong> — purpose, promise, portfolio, ความสามารถร่วม และสิ่งที่พูดในนามแบรนด์ได้</p>
+              <dl>
+                <div><dt>เปิดเมื่อ</dt><dd>ตั้งชื่อผลิตภัณฑ์ เลือก partnership อธิบายบริษัท หรือเช็กว่างานนี้ควรอยู่ใต้ Landometer หรือไม่</dd></div>
+                <div><dt>ช่วยอะไร</dt><dd>ทำให้ Land · Location · Living เดินในทิศเดียวกัน และไม่เอาความจริงของ product เดียวไปพูดแทนทั้งบริษัท</dd></div>
+                <div><dt>ไม่ใช้แทน</dt><dd>feature, data release, workflow หรือ metric ของผลิตภัณฑ์หนึ่งตัว</dd></div>
+              </dl>
+            </article>
+            <article class="doc">
+              <span class="doc-rule" aria-hidden="true"></span><span class="doc-number">02 · ONE PRODUCT</span>
+              <h3>Product Brief</h3>
+              <p class="doc-purpose"><strong>ตกลงความจริงของหนึ่งผลิตภัณฑ์</strong> — ผู้ใช้และความต้องการ ผลลัพธ์ ทางเลือกและ quality bar วิธีชนะ ข้อมูล ขอบเขต และวิธีวัดผล</p>
+              <dl>
+                <div><dt>เปิดเมื่อ</dt><dd>เริ่ม product, วาง roadmap, UX, data, development หรือเมื่อ user, value, scope, workflow และ release เปลี่ยน</dd></div>
+                <div><dt>ช่วยอะไร</dt><dd>ทำให้ Product, Data, Design, Development, Marketing และ Sales กำลังสร้างผลิตภัณฑ์เดียวกัน</dd></div>
+                <div><dt>ไม่ใช้แทน</dt><dd>หน้าเว็บหรือ sales copy สำเร็จรูป และไม่ใช่ความจริงระดับ Landometer ทั้งหมด</dd></div>
+              </dl>
+            </article>
+            <article class="doc">
+              <span class="doc-rule" aria-hidden="true"></span><span class="doc-number">03 · EXPLAIN IT</span>
+              <h3>Product Statement</h3>
+              <p class="doc-purpose"><strong>พูดความจริงนั้นให้สั้น</strong> — คำอธิบาย 1–3 ประโยคจากแหล่งความจริงระดับผลิตภัณฑ์ที่อนุมัติแล้ว</p>
+              <dl>
+                <div><dt>เปิดเมื่อ</dt><dd>เขียนหน้าเว็บ deck, proposal, sales brief, campaign brief หรือแนะนำผลิตภัณฑ์</dd></div>
+                <div><dt>ช่วยอะไร</dt><dd>ทำให้ทุกช่องทางอธิบายผลิตภัณฑ์ตรงกัน โดยไม่ให้ผู้ฟังต้องอ่าน Product Brief ทั้งฉบับ</dd></div>
+                <div><dt>ไม่ใช้แทน</dt><dd>การตัดสินใจเรื่องผู้ใช้ คุณค่า กลไก หรือขอบเขต และห้ามเติม promise ที่ต้นทางไม่รองรับ</dd></div>
+              </dl>
+            </article>
+          </div>
+          <div class="remember" role="group" aria-label="กฎจำสามบรรทัด">
+            <p><strong>ทั้ง Landometer</strong>Master Brand Brief</p>
+            <p><strong>หนึ่งผลิตภัณฑ์</strong>Product Brief</p>
+            <p><strong>หนึ่งคำอธิบาย</strong>Product Statement</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chooser" id="chooser" aria-labelledby="chooser-title">
+      <div class="wrap chooser-grid">
+        <div class="chooser-copy">
+          <p class="section-kicker">03 · เลือกจากงานที่อยู่ตรงหน้า</p>
+          <h2 id="chooser-title">วันนี้คุณกำลังทำอะไร?</h2>
+          <p>เลือกสถานการณ์หนึ่งข้อ แล้วดูว่าควรเปิดเอกสารไหน เหตุผลคืออะไร และทำอะไรต่อ</p>
+          <div class="scenario-list js-only" role="group" aria-label="เลือกสถานการณ์">
+            <button class="scenario" type="button" aria-pressed="true" data-scenario="new-product">กำลังเริ่มผลิตภัณฑ์ หรือสมมติฐานหลักเปลี่ยน</button>
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="copy">กำลังเขียนหน้าเว็บ deck หรือ proposal</button>
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="brand">กำลังอธิบายว่า Landometer คือใคร</button>
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="which">กำลังเลือกคู่แข่งหรือ quality bar</button>
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="gtm">กำลังเลือกช่องทาง ราคา หรือ funnel</button>
+          </div>
+          <noscript>
+            <ul class="no-js-list">
+              <li>ทั้งบริษัท — Master Brand Brief</li>
+              <li>หนึ่งผลิตภัณฑ์ — Product Brief</li>
+              <li>อธิบายสิ่งที่ตกลงแล้ว — Product Statement</li>
+              <li>ทางเลือก คู่แข่ง และ quality bar — Product Brief</li>
+              <li>ช่องทาง ราคา และ funnel — GTM plan ที่ใช้อยู่</li>
+            </ul>
+          </noscript>
+        </div>
+        <article class="answer-panel" id="scenarioAnswer" aria-live="polite">
+          <span class="answer-label">ควรเปิดก่อน</span>
+          <h3>Product Brief</h3>
+          <p class="answer-why">เพราะทีมกำลังตัดสินว่าใครต้องได้ผลลัพธ์อะไร จะเทียบกับทางเลือกและ quality bar ใด และจะชนะอย่างไร</p>
+          <ol class="answer-steps"><li>เปิด Master Brand Brief เพื่อตรวจว่าผลิตภัณฑ์เหมาะกับทิศของ Landometer</li><li>ตกลง Who และ needs, What, current/direct/aspirational choices, How-to-win, ขอบเขต หลักฐาน และวิธีวัดผล</li><li>เมื่อทีมอนุมัติแล้ว ค่อยย่อเป็น Product Statement</li></ol>
+          <p class="answer-warning"><strong>ระวัง:</strong> อย่าเริ่มจากตั้ง tagline แล้วค่อยย้อนหาว่า product ทำได้จริงหรือไม่</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="example" id="example" aria-labelledby="example-title">
+      <div class="wrap">
+        <div class="example-intro">
+          <p class="section-kicker">04 · ตัวอย่างเดียว เห็นครบ</p>
+          <h2 id="example-title">สมมติทีมจะสร้าง “เครื่องมือคัดกรองทำเล”</h2>
+          <p>ทีมพัฒนาธุรกิจมีทำเล 30 แห่ง และต้องเลือก 3 แห่งที่ควรลงพื้นที่ตรวจต่อ</p>
+          <span class="teaching-status">ตัวอย่างเพื่อสอน · ไม่ใช่ Product Statement ที่อนุมัติแล้ว</span>
+        </div>
+        <div class="example-layout">
+          <article class="example-column">
+            <p class="section-kicker">Product Brief · ตกลงให้ครบ</p>
+            <h3>สี่คำตอบ และหนึ่งขอบเขต</h3>
+            <div class="brief-grid">
+              <div class="brief-item"><b>Who</b><p>ทีมพัฒนาธุรกิจต้องคัด 30 ทำเลก่อนลงพื้นที่ และต้องมั่นใจว่าอธิบาย shortlist ต่อผู้บริหารได้ ผู้บริหารการลงทุนเป็นผู้อนุมัติ ไม่ใช่ผู้ใช้หลัก</p></div>
+              <div class="brief-item"><b>What</b><p>ได้ shortlist 3 ทำเลที่ควรลงพื้นที่ต่อ พร้อมเหตุผล หลักฐาน และข้อมูลที่ยังต้องตรวจ</p></div>
+              <div class="brief-item"><b>Which</b><p>วิธีเดิมคือ spreadsheet, map และรายงานคนละฐาน; GIS/consultant เป็นทางเลือกตรง ส่วน Google Maps และ Placer.ai ใช้ตั้ง quality bar เฉพาะด้าน</p></div>
+              <div class="brief-item"><b>How</b><p>ชนะด้วยเกณฑ์ ขอบเขตพื้นที่ และข้อมูลรุ่นเดียวกันทั้ง 30 ทำเล พร้อมแสดง source สัญญาณที่เห็นต่าง ข้อมูลที่ขาด และข้อจำกัด</p></div>
+            </div>
+            <p class="boundary"><strong>ขอบเขต:</strong> ใช้ประกอบการตัดสินใจ ไม่อนุมัติการลงทุนแทนคน และไม่รับประกันยอดขาย</p>
+          </article>
+          <article class="example-column">
+            <p class="section-kicker">Product Statement · เล่าให้สั้น</p>
+            <h3>ความจริงเดิม ในภาษาที่อ่านเร็วขึ้น</h3>
+            <p class="statement" id="workedStatement">เครื่องมือคัดกรองทำเลช่วย <span data-part="who">ทีมพัฒนาธุรกิจ</span> <span data-part="what">คัด 30 ทำเลให้เหลือ 3 ทำเลที่ควรลงพื้นที่ต่อ</span> <span data-part="how">โดยใช้เกณฑ์ ขอบเขตพื้นที่ และข้อมูลรุ่นเดียวกันกับทุกทำเล พร้อมแสดงเหตุผล หลักฐาน และข้อมูลที่ยังต้องตรวจ</span> <span data-part="boundary">ผลลัพธ์ใช้ประกอบการตัดสินใจ ไม่ใช่คำอนุมัติลงทุนหรือการรับประกันยอดขาย</span></p>
+            <button class="trace-toggle js-only" id="traceToggle" type="button" aria-pressed="false" aria-controls="workedStatement traceLegend">ดูว่าแต่ละส่วนมาจากไหน</button>
+            <ul class="trace-legend" id="traceLegend">
+              <li><span aria-hidden="true"></span>Who · What · How</li>
+              <li><span aria-hidden="true"></span>ขอบเขต</li>
+            </ul>
+            <div class="downstream"><h4>Which ไม่ได้หายไปไหน</h4><p>ประโยคสั้นนี้ไม่ยกทางเลือกและ quality bar มาพูด จึงเก็บ Which ไว้ใน Product Brief ส่วน Landing page, sales deck และ campaign จะเพิ่ม Which ได้เมื่อช่วยการตัดสินใจและมีหลักฐานรองรับ</p></div>
+          </article>
+        </div>
+        <div class="role-list" role="group" aria-label="วิธีใช้ตามบทบาท">
+          <article class="role"><b>Brand · Leadership</b><h3>รักษาทิศร่วม</h3><p>ใช้ Master Brand Brief ตัดสินว่าเรื่องใดพูดในนาม Landometer ได้</p></article>
+          <article class="role"><b>Product · Data · Design</b><h3>สร้างของชิ้นเดียวกัน</h3><p>ใช้ Product Brief เพื่อให้เข้าใจผู้ใช้ ข้อมูล ขอบเขต หลักฐาน และสิ่งที่ผลิตภัณฑ์ไม่ทำตรงกัน</p></article>
+          <article class="role"><b>Development</b><h3>ไม่เดาขอบเขตจากหน้าเว็บ</h3><p>ตรวจ requirement กับ Product Brief ไม่ใช้ข้อความสื่อสารเป็น specification</p></article>
+          <article class="role"><b>Marketing · Sales</b><h3>เล่าโดยไม่เกินจริง</h3><p>เริ่มจาก Product Statement แล้วเปิด Product Brief เมื่อต้องอธิบายผู้ใช้ หลักฐาน วิธีทำงาน หรือข้อจำกัดเพิ่ม</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources" aria-labelledby="resources-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">05 · เปิดต้นทาง ไม่เดาจากความจำ</p>
+            <h2 id="resources-title">เอกสารและตัวอย่างที่เปิดได้</h2>
+          </div>
+          <p>แยกเอกสารที่กำกับงานปัจจุบันออกจากตัวอย่างการใช้งาน และบอกตรง ๆ เมื่อยังไม่มีลิงก์ฉบับหลัก</p>
+        </div>
+        <div class="source-gaps" role="group" aria-label="ลิงก์ฉบับหลักที่ยังขาด">
+          <article class="source-gap"><span class="status-label">ยังไม่มี public canonical link</span><b>Master Brand Brief ฉบับหลัก</b><p>กรอบ Who · What · Which · How ในหน้านี้ได้รับการยืนยันจาก Brand Owner แล้ว แต่ยังไม่มีลิงก์ public ของ brief ฉบับหลัก ให้ถาม Brand Owner ก่อนเปลี่ยนคำตอบระดับบริษัท</p></article>
+          <article class="source-gap"><span class="status-label">ยืนยันกับ Product Owner</span><b>Product Brief / Product Statement ฉบับหลัก</b><p>แต่ละผลิตภัณฑ์ต้องยืนยันฉบับที่มีผลใช้งานกับ Product Owner ไม่ควรเดาจากหน้าเว็บหรือ deck รุ่นเก่า</p></article>
+        </div>
+        <div class="resource-list">
+          <a class="resource" href="https://montri-th.github.io/Landometer/" target="_blank" rel="noopener"><span class="resource-type">Design authority</span><strong>Design System v0.8.8</strong><p>Living reference ปัจจุบันสำหรับ visual, voice, evidence boundary และการนำความจริงไปสื่อสาร; [POSITION-01] ยังรอปรับ framing ให้ตรงกับ brief ปัจจุบัน</p><span class="resource-open">เปิด ↗</span></a>
+          <a class="resource" href="https://montri-th.github.io/Landometer/assets/downloads/landometer-design-system-v0.8.8.md" target="_blank" rel="noopener"><span class="resource-type">Markdown source</span><strong>Design System v0.8.8 · .md</strong><p>ไฟล์อ่านและค้นหาได้โดยตรง ใช้ดู [POSITION-01] และกฎต้นทางตามเลขข้อ</p><span class="resource-open">อ่าน ↗</span></a>
+          <a class="resource" href="https://montri-th.github.io/CityMETER/#evidence" target="_blank" rel="noopener"><span class="resource-type">Product-brief-derived example</span><strong>CityMETER explainer</strong><p>ตัวอย่างหน้าอธิบายที่จัดโครงจาก Product Brief v6 ไม่ใช่ตัว Product Brief และไม่ใช้แทนฉบับหลัก</p><span class="resource-open">ดูตัวอย่าง ↗</span></a>
+          <a class="resource" href="https://landometer.com/intro/products" target="_blank" rel="noopener"><span class="resource-type">Published context</span><strong>ภาพรวมผลิตภัณฑ์ Landometer</strong><p>ใช้ดูคำอธิบายที่เผยแพร่แล้วและบริบทของพอร์ต ต้องตรวจสถานะปัจจุบันก่อนนำข้อความไปใช้ต่อ</p><span class="resource-open">เปิด ↗</span></a>
+          <a class="resource" href="https://landometer.com/v3/citymeter" target="_blank" rel="noopener"><span class="resource-type">Live product</span><strong>CityMETER</strong><p>ดูผลิตภัณฑ์ที่เปิดใช้งานจริง แยก capability ปัจจุบันออกจากตัวอย่างหรือ roadmap</p><span class="resource-open">ลองใช้ ↗</span></a>
+          <a class="resource" href="https://github.com/montri-th/Landometer-in-Brief/blob/main/docs/New-Joiner-Guide-Brand-and-Product-Documents.md" target="_blank" rel="noopener"><span class="resource-type">Companion guide</span><strong>คู่มือเวอร์ชัน Markdown</strong><p>ใช้ค้นข้อความ คัดลอก checklist และอ่านโดยไม่ต้องใช้ interaction</p><span class="resource-open">อ่าน ↗</span></a>
+        </div>
+        <details>
+          <summary>เอกสารที่ใช้เป็นบริบท แต่ไม่ได้เผยแพร่ซ้ำจากหน้านี้</summary>
+          <p>Onboarding 260111, Brand Visual Guidelines 2025, Landometer Introduction 250606, Location · Location · Location และ GTM Explore · Execute · Elevate ช่วยตรวจที่มาและความหมาย แต่ไม่ได้เป็น canonical Master Brand Brief หรือ Product Brief และไม่ได้ถูกคัดลอกไป public Pages โดยอัตโนมัติ</p>
+        </details>
+        <p class="source-note">เอกสารที่หน้านี้ยังเข้าถึงไม่ครบระบุไว้ด้านบน หน้านี้ไม่เก็บข้อมูลผู้ใช้ และจะเปิดลิงก์ภายนอกเมื่อคุณกดเท่านั้น</p>
+      </div>
+      <div class="closing" id="closing">
+        <div class="wrap closing-grid">
+          <div><p class="section-kicker">สรุปก่อนเริ่มงาน</p><h2>เริ่มจากระดับที่กำลังตัดสินใจ</h2><p>ใช้ทิศเดียวกัน ตกลงความจริงให้ชัด แล้วอธิบายให้คนอื่นเข้าใจตรงกัน</p></div>
+          <div class="closing-rule" role="group" aria-label="กฎจำสามบรรทัด">ทั้งบริษัท / Master Brand Brief<br>หนึ่งผลิตภัณฑ์ / Product Brief<br>หนึ่งคำอธิบาย / Product Statement</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p>Landometer in Brief · New joiner field guide · 5 สิงหาคม 2026</p>
+      <p>ตัวอย่างผลิตภัณฑ์ใช้สอน ไม่ใช่ข้อความที่อนุมัติแล้ว · <a href="https://github.com/montri-th/Landometer-in-Brief" target="_blank" rel="noopener">Source repository</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const writeStored=(key,value)=>{try{localStorage.setItem(key,value)}catch{/* current session remains usable */}};
+    const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
+    let currentLocale=window.__ldmLocale || "th";
+    let currentLevel="brand";
+    let currentScenario="new-product";
+
+    const fourData={
+      th:{
+        brand:[
+          {q:"Who",p:"เราเลือกช่วยใคร และเขาต้องการอะไร",a:"คนและองค์กรที่ต้องตัดสินใจเกี่ยวกับพื้นที่จริง ซึ่งกระทบเงิน เวลา ความเสี่ยง ชุมชน หรืออนาคตของเมือง พวกเขาต้องการหลักฐานที่มองเห็นและเปรียบเทียบได้ และความมั่นใจว่าการตัดสินใจอธิบายและทบทวนได้"},
+          {q:"What",p:"ผู้ใช้ต้องได้ความก้าวหน้าอะไร",a:"เปลี่ยนข้อมูลเมืองที่กระจัดกระจายให้เป็นความเข้าใจเชิงพื้นที่ที่มีแหล่งที่มา เพื่อให้ผู้ใช้เห็น เข้าใจ เปรียบเทียบ ตัดสินใจ ลงมือทำ และเรียนรู้จากผลลัพธ์"},
+          {q:"Which",p:"ผู้ใช้มีทางเลือกอะไร และเราตั้งมาตรฐานเทียบกับใคร",a:"แยกวิธีเดิม ทางเลือกตรงของแต่ละผลิตภัณฑ์ และ aspiring benchmarks ที่ใช้ตั้ง quality bar ด้านความน่าเชื่อถือ ความง่ายในการใช้ intelligence และ workflow โดยไม่เรียกทุก benchmark ว่าคู่แข่งตรง"},
+          {q:"How",p:"เราจะชนะในกรอบ Which ด้วยอะไร",a:"ชนะด้วยฐานข้อมูลเมืองไทยที่เชื่อม Land · Location · Living, spatial intelligence ที่คนไม่ใช้ GIS ก็เข้าใจได้, visual-first explanation, grounded AI ที่แสดง source และ limitation และ action & learning loop ที่มีหลักฐานรองรับ"}
+        ],
+        product:[
+          {q:"Who",p:"ผู้ใช้คือใคร และเขาต้องการอะไร",a:"ระบุผู้ใช้หลัก trigger moment การตัดสินใจ และ functional / emotional needs แยก buyer, approver และ beneficiary หากไม่ใช่คนเดียวกับผู้ใช้"},
+          {q:"What",p:"ผู้ใช้ต้องได้ความก้าวหน้าอะไร",a:"ระบุผลลัพธ์ที่ผลิตภัณฑ์สัญญากับผู้ใช้ พร้อมตัวชี้วัดหรือหลักฐานที่จะบอกว่าผลลัพธ์เกิดขึ้นแล้ว ไม่ใช้รายการ feature แทนคำตอบ"},
+          {q:"Which",p:"ผู้ใช้มีทางเลือกอะไร และใครตั้ง quality bar",a:"ระบุ workflow เดิม ทางเลือกตรง และ aspiring competitors / benchmarks ที่เลือกมาโดยเฉพาะ พร้อมข้อจำกัดของแต่ละทางเลือกและมิติที่ใช้ตั้งระดับคุณภาพ"},
+          {q:"How",p:"เราจะชนะในกรอบ Which ด้วยอะไร",a:"ระบุ unique insight ข้อได้เปรียบด้านข้อมูลหรือวิธีการ UX, action path และหลักฐานที่ทำให้ผู้ใช้ได้ What ดีกว่า Which พร้อม limitation และ non-goals"}
+        ]
+      },
+      en:{
+        brand:[
+          {q:"Who",p:"Who are we choosing to help, and what do they need?",a:"People and organizations making consequential decisions about real places. They need relevant evidence they can see and compare, and confidence that the decision can be explained and reviewed."},
+          {q:"What",p:"What progress must they make?",a:"Turn fragmented city data into source-grounded spatial understanding, so users can see, understand, compare, decide, act and learn from outcomes."},
+          {q:"Which",p:"What are their choices, and whose quality bar will we aim for?",a:"Separate current workarounds, direct alternatives for each product, and aspirational benchmarks that set the bar for trust, ease of use, intelligence and workflow. A benchmark is not automatically a direct competitor."},
+          {q:"How",p:"How will we win within the Which frame?",a:"Win with a Thailand-first data foundation across Land, Location and Living; spatial intelligence non-GIS users can use; visual-first explanation; grounded AI with visible sources and limits; and an evidence-backed action-and-learning loop."}
+        ],
+        product:[
+          {q:"Who",p:"Who is the user, and what do they need?",a:"Name the primary user, trigger and decision, plus functional and emotional needs. Separate the buyer, approver and beneficiary when they differ from the user."},
+          {q:"What",p:"What progress must the user make?",a:"State the outcome the product promises, with the measure or evidence that will show it happened. Do not substitute a feature list."},
+          {q:"Which",p:"What are the choices, and who sets the quality bar?",a:"Name the current workflow, direct alternatives and specific aspirational competitors or benchmarks. State what each lacks and which dimension sets the quality bar."},
+          {q:"How",p:"How will we win within the Which frame?",a:"State the distinctive insight, data or method advantage, user experience, action path and proof that deliver What better than Which—plus limits and non-goals."}
+        ]
+      }
+    };
+
+    const scenarios={
+      th:{
+        "new-product":{label:"ควรเปิดก่อน",title:"Product Brief",why:"เพราะทีมกำลังตัดสินว่าใครต้องได้ผลลัพธ์อะไร จะเทียบกับทางเลือกและ quality bar ใด และจะชนะอย่างไร",steps:["เปิด Master Brand Brief เพื่อตรวจว่าผลิตภัณฑ์เหมาะกับทิศของ Landometer","ตกลง Who และ needs, What, current/direct/aspirational choices, How-to-win, ขอบเขต หลักฐาน และวิธีวัดผล","เมื่อทีมอนุมัติแล้ว ค่อยย่อเป็น Product Statement"],warning:"อย่าเริ่มจาก tagline แล้วค่อยย้อนหาว่าผลิตภัณฑ์ทำได้จริงหรือไม่"},
+        copy:{label:"ใช้เป็นต้นทางของ copy",title:"Product Statement",why:"เพราะงานนี้กำลังอธิบายสิ่งที่ทีมตกลงแล้วให้ผู้ฟังเฉพาะกลุ่มเข้าใจ",steps:["เริ่มจาก Product Statement ฉบับอนุมัติ","เปิด Product Brief เมื่อต้องขยายผู้ใช้ needs, proof, Which, How หรือ limitation","ตรวจ Master Brand Brief เมื่อข้อความพูดแทน Landometer ทั้งบริษัท"],warning:"ถ้า copy ใหม่ต้องเปลี่ยนผู้ใช้ คุณค่า วิธีชนะ หรือขอบเขต ให้หยุดและย้อนกลับไปแก้ Product Brief"},
+        brand:{label:"คำตอบระดับบริษัท",title:"Master Brand Brief",why:"เพราะคำถามนี้ครอบคลุมทั้งพอร์ต Land · Location · Living และทุกผลิตภัณฑ์",steps:["ใช้ Who · What · Which · How และขอบเขตการกล่าวอ้างฉบับปัจจุบัน","แยกตัวอย่างของผลิตภัณฑ์ออกจาก claim ระดับ Landometer","เมื่อต้องพูดผลิตภัณฑ์ใดต่อ ให้เปลี่ยนไปใช้ Product Statement ของผลิตภัณฑ์นั้น"],warning:"สิ่งที่จริงใน CityMETER, CityWiki, ijji หรืองานลูกค้าหนึ่งราย ไม่ได้จริงกับ Landometer ทั้งหมดโดยอัตโนมัติ"},
+        which:{label:"แก้ใน Product Brief",title:"Which → How-to-win",why:"Which เป็นการตัดสินใจระดับผลิตภัณฑ์ ไม่ใช่เพียงรายชื่อคู่แข่งใน GTM",steps:["เริ่มจาก Who และ What เพื่อรู้ว่าผู้ใช้กำลังเลือกอะไร","แยกวิธีเดิม ทางเลือกตรง และ aspiring benchmarks พร้อมมิติที่ตั้ง quality bar","ใช้หลักฐานกำหนด How-to-win แล้วบันทึกกลับใน Product Brief"],warning:"aspiring benchmark ไม่ได้แปลว่าเป็นคู่แข่งตรง และไม่ควรลอก feature list มาเป็นกลยุทธ์"},
+        gtm:{label:"ใช้เอกสารอีกชุดหนึ่ง",title:"GTM plan ที่ใช้อยู่",why:"ช่องทาง ราคา และ funnel เป็นการตัดสินใจด้าน route-to-market หลังจากรู้ Who, What, Which และ How-to-win แล้ว",steps:["ยืนยันผู้ใช้ คุณค่า และ positioning จาก Product Brief","ใช้ GTM plan ที่ Product Owner และ Business Owner อนุมัติ","ถ้าการทดลองตลาดเปลี่ยน Who, What, Which, How หรือ scope ให้ย้อนกลับไปแก้ Product Brief"],warning:"อย่าใช้ How ใน GTM แทน How-to-win ของผลิตภัณฑ์"}
+      },
+      en:{
+        "new-product":{label:"Open this first",title:"Product Brief",why:"The team is deciding who needs what outcome, which choices and quality bar matter, and how the product will win.",steps:["Check the Master Brand Brief for fit with Landometer","Agree Who and needs, What, current/direct/aspirational choices, How-to-win, scope, evidence and measures","After approval, condense the truth into a Product Statement"],warning:"Do not start with a tagline and work backward to find out whether the product can support it."},
+        copy:{label:"Use as the copy source",title:"Product Statement",why:"This task explains an approved product truth to a specific audience.",steps:["Start with the approved Product Statement","Open the Product Brief when you need the user needs, proof, Which, How or limits","Check the Master Brand Brief when the copy speaks for Landometer as a whole"],warning:"If the copy changes the user, value, way to win or scope, stop and return to the Product Brief."},
+        brand:{label:"Company-level answer",title:"Master Brand Brief",why:"The question spans Land, Location and Living, plus the whole product portfolio.",steps:["Use the current Who, What, Which, How and claim boundary","Keep product examples separate from Landometer-level claims","When you move to one product, use that product's approved Product Statement"],warning:"What is true for CityMETER, CityWiki, ijji or one client project is not automatically true for all of Landometer."},
+        which:{label:"Resolve it in the Product Brief",title:"Which → How-to-win",why:"Which is a product decision, not merely a competitor list in a GTM plan.",steps:["Start from Who and What to define the user's real choice","Separate workarounds, direct alternatives and aspirational benchmarks, then name the quality dimensions","Use evidence to define How-to-win and record it in the Product Brief"],warning:"An aspirational benchmark is not automatically a direct competitor, and a copied feature list is not a strategy."},
+        gtm:{label:"Use a separate document",title:"The current GTM plan",why:"Channels, pricing and the funnel are route-to-market decisions made after Who, What, Which and How-to-win are clear.",steps:["Confirm the user, value and position from the Product Brief","Use the GTM plan approved by the Product Owner and Business Owner","If market learning changes Who, What, Which, How or scope, update the Product Brief"],warning:"Do not use GTM How as a substitute for the product's How-to-win."}
+      }
+    };
+
+    const enStaticCopy=[
+      [".skip","Skip to main content"],
+      [".header-label","New joiner field guide"],
+      [".eyebrow","New joiner · About 5 minutes"],
+      [".hero h1",'<span class="count">4</span> questions<br><span class="count">2</span> levels<br><span class="count">1</span> way to explain'],
+      [".hero-lede",'<strong>Master Brand Brief</strong> holds the Landometer-level answers · <strong>Product Brief</strong> resolves one product · <strong>Product Statement</strong> explains the approved product truth briefly'],
+      [".primary-action","Start with the 4 questions"],
+      [".text-action","Or choose the work in front of you"],
+      ["#four-questions .section-kicker","01 · Same questions, different levels"],
+      ["#four-questions .section-head > p","These are not four documents, and Landometer-level answers cannot replace the answers for one product."],
+      ["[data-level='brand']","Landometer level"],
+      ["[data-level='product']","Product level"],
+      ["#four-questions > .four-note",'<strong>In one line:</strong> Who needs What. Which defines the choices and quality bar. How is the way to win. A Product Statement is not a third level; it is the short form of approved product truth.'],
+      [".positioning p","This page follows the current Master Brand Brief and the Brand Owner's 6 August 2026 clarification. [POSITION-01] in Design System v0.8.8 still uses the earlier framing and needs a later update."],
+      [".positioning .source-link","Open [POSITION-01] to compare ↗"],
+      ["#three-docs .section-kicker","02 · Three documents"],
+      ["#three-docs .section-head h2","They work together<br>but do not replace one another"],
+      ["#three-docs .section-head > p","Ask whether you are deciding for the whole company, one product, or explaining something already agreed."],
+      [".doc-grid",`<article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">01 · WHOLE COMPANY</span><h3>Master Brand Brief</h3><p class="doc-purpose"><strong>Sets direction for Landometer</strong> — purpose, promise, portfolio, shared capabilities and what may be said for the brand.</p><dl><div><dt>Open when</dt><dd>Naming a product, choosing a partnership, explaining the company or testing whether work belongs under Landometer.</dd></div><div><dt>What it resolves</dt><dd>Keeps Land · Location · Living aligned without turning one product's truth into a company-wide claim.</dd></div><div><dt>Not a substitute for</dt><dd>A product's features, data release, workflow or metric.</dd></div></dl></article><article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">02 · ONE PRODUCT</span><h3>Product Brief</h3><p class="doc-purpose"><strong>Resolves one product's truth</strong> — user and needs, outcome, choices and quality bar, way to win, data, scope and measures.</p><dl><div><dt>Open when</dt><dd>Starting a product or changing the user, value, Which, How-to-win, scope, workflow or release.</dd></div><div><dt>What it resolves</dt><dd>Keeps Product, Data, Design, Development, Marketing and Sales building the same product.</dd></div><div><dt>Not a substitute for</dt><dd>Finished web or sales copy, or the truth of Landometer as a whole.</dd></div></dl></article><article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">03 · EXPLAIN IT</span><h3>Product Statement</h3><p class="doc-purpose"><strong>Explains that truth briefly</strong> — one to three sentences drawn from an approved product source.</p><dl><div><dt>Open when</dt><dd>Writing a web page, deck, proposal, sales brief, campaign brief or product introduction.</dd></div><div><dt>What it resolves</dt><dd>Keeps product explanations aligned without asking every reader to open the full Product Brief.</dd></div><div><dt>Not a substitute for</dt><dd>Decisions about user, value, way to win or scope. Never add a promise the source cannot support.</dd></div></dl></article>`],
+      [".remember",'<p><strong>All of Landometer</strong>Master Brand Brief</p><p><strong>One product</strong>Product Brief</p><p><strong>One explanation</strong>Product Statement</p>'],
+      [".chooser .section-kicker","03 · Start from the work in front of you"],
+      ["#chooser-title","What are you working on today?"],
+      [".chooser-copy > p","Choose one situation to see which source to open, why it fits and what to do next."],
+      ["[data-scenario='new-product']","Starting a product, or a core assumption changed"],
+      ["[data-scenario='copy']","Writing a web page, deck or proposal"],
+      ["[data-scenario='brand']","Explaining who Landometer is"],
+      ["[data-scenario='which']","Choosing competitors or a quality bar"],
+      ["[data-scenario='gtm']","Choosing channels, pricing or a funnel"],
+      [".example-intro .section-kicker","04 · One example, end to end"],
+      ["#example-title",'Suppose the team is creating a “location-screening tool”'],
+      [".example-intro > p:not(.section-kicker)","A business development team has 30 sites and must choose the three worth visiting next."],
+      [".teaching-status","Teaching example · Not an approved Product Statement"],
+      [".example-column:first-child .section-kicker","Product Brief · Resolve the full truth"],
+      [".example-column:first-child h3","Four answers and one boundary"],
+      [".brief-grid",'<div class="brief-item"><b>Who</b><p>Business development teams need to screen 30 sites and feel confident they can defend the shortlist. The investment executive approves but is not the primary user.</p></div><div class="brief-item"><b>What</b><p>Produce a shortlist of three sites worth visiting next, with reasons, evidence and remaining data gaps.</p></div><div class="brief-item"><b>Which</b><p>The workaround is separate spreadsheets, maps and reports; GIS and consultants are direct alternatives; Google Maps and Placer.ai set dimension-specific quality bars.</p></div><div class="brief-item"><b>How</b><p>Win with the same criteria, area definitions and data release for all 30 sites, plus visible sources, counter-signals, missing evidence and limits.</p></div>'],
+      [".example-column:first-child .boundary",'<strong>Boundary:</strong> Supports the decision. It does not approve an investment or guarantee sales.'],
+      [".example-column:last-child .section-kicker","Product Statement · Explain it briefly"],
+      [".example-column:last-child h3","The same truth, easier to scan"],
+      [".trace-legend li:last-child","<span aria-hidden=\"true\"></span>Boundary"],
+      [".downstream h4","Which has not disappeared"],
+      [".downstream p","This short statement does not name alternatives or quality benchmarks, so Which stays in the Product Brief. Add it to a landing page, sales deck or campaign only when it helps the decision and the evidence supports it."],
+      [".role-list",'<article class="role"><b>Brand · Leadership</b><h3>Hold the shared direction</h3><p>Use the Master Brand Brief to decide what may be said for Landometer.</p></article><article class="role"><b>Product · Data · Design</b><h3>Build the same product</h3><p>Use the Product Brief to align on users, needs, data, scope, evidence and non-goals.</p></article><article class="role"><b>Development</b><h3>Do not infer scope from web copy</h3><p>Check requirements against the Product Brief; communication copy is not a specification.</p></article><article class="role"><b>Marketing · Sales</b><h3>Explain without overclaiming</h3><p>Start with the Product Statement, then open the Product Brief for needs, proof, Which, How or limits.</p></article>'],
+      [".resources .section-kicker","05 · Open the source; do not work from memory"],
+      ["#resources-title","Documents and examples you can open"],
+      [".resources .section-head > p","Separate current governing sources from examples, and say plainly when a canonical link is unavailable."],
+      [".source-gaps",'<article class="source-gap"><span class="status-label">No public canonical link</span><b>Current Master Brand Brief</b><p>The Brand Owner has confirmed the framework on this page, but the governing brief has no public link. Ask the Brand Owner before changing company-level answers.</p></article><article class="source-gap"><span class="status-label">Confirm with the Product Owner</span><b>Current Product Brief / Product Statement</b><p>Each product must identify the approved version in force. Do not reconstruct it from an old web page or deck.</p></article>'],
+      [".resource-list",'<a class="resource" href="https://montri-th.github.io/Landometer/" target="_blank" rel="noopener"><span class="resource-type">Design authority</span><strong>Design System v0.8.8</strong><p>Current visual, voice and evidence-boundary reference. [POSITION-01] still awaits the framing update described on this page.</p><span class="resource-open">Open ↗</span></a><a class="resource" href="https://montri-th.github.io/Landometer/assets/downloads/landometer-design-system-v0.8.8.md" target="_blank" rel="noopener"><span class="resource-type">Markdown source</span><strong>Design System v0.8.8 · .md</strong><p>Searchable source for the current design rules and numbered sections.</p><span class="resource-open">Read ↗</span></a><a class="resource" href="https://montri-th.github.io/CityMETER/#evidence" target="_blank" rel="noopener"><span class="resource-type">Product-brief-derived example</span><strong>CityMETER explainer</strong><p>An explanation derived from Product Brief v6, not the governing brief itself.</p><span class="resource-open">View ↗</span></a><a class="resource" href="https://landometer.com/intro/products" target="_blank" rel="noopener"><span class="resource-type">Published context</span><strong>Landometer product overview</strong><p>Published portfolio context. Check the current product state before reusing its wording.</p><span class="resource-open">Open ↗</span></a><a class="resource" href="https://landometer.com/v3/citymeter" target="_blank" rel="noopener"><span class="resource-type">Live product</span><strong>CityMETER</strong><p>Inspect the live product and keep current capabilities separate from examples or roadmap.</p><span class="resource-open">Try ↗</span></a><a class="resource" href="https://github.com/montri-th/Landometer-in-Brief/blob/main/docs/New-Joiner-Guide-Brand-and-Product-Documents.md" target="_blank" rel="noopener"><span class="resource-type">Thai companion guide</span><strong>Searchable Markdown guide</strong><p>Use it to search, copy the checklist and read the Thai source without interaction.</p><span class="resource-open">Read ↗</span></a>'],
+      ["details summary","Context sources that this page does not republish"],
+      ["details p","Onboarding 260111, Brand Visual Guidelines 2025, Landometer Introduction 250606, Location · Location · Location and GTM Explore · Execute · Elevate helped establish context. They are not the canonical Master Brand Brief or Product Brief and are not copied to public Pages."],
+      [".source-note","The unavailable sources are labelled above. This page stores no user content and opens external links only when you choose them."],
+      [".closing-grid",'<div><p class="section-kicker">Before you begin</p><h2>Start at the level you are deciding</h2><p>Keep one direction, resolve the product truth, then explain it clearly.</p></div><div class="closing-rule" role="group" aria-label="Three-line rule">Whole company / Master Brand Brief<br>One product / Product Brief<br>One explanation / Product Statement</div>'],
+      [".footer-inner",'<p>Landometer in Brief · New joiner field guide · 6 August 2026</p><p>Product examples teach the method; they are not approved product statements · <a href="https://github.com/montri-th/Landometer-in-Brief" target="_blank" rel="noopener">Source repository</a></p>']
+    ].map(([selector,en])=>({selector,en,th:document.querySelector(selector)?.innerHTML||""}));
+
+    const fourGrid=document.getElementById("fourGrid");
+    const scenarioAnswer=document.getElementById("scenarioAnswer");
+    const traceToggle=document.getElementById("traceToggle");
+    const statement=document.getElementById("workedStatement");
+    const traceLegend=document.getElementById("traceLegend");
+    const languageToggle=document.getElementById("languageToggle");
+    const themeToggle=document.getElementById("themeToggle");
+    const themeValue=document.getElementById("themeValue");
+    const heroImage=document.querySelector(".hero-photo img");
+    const thaiHeroAlt=heroImage.alt;
+    const thaiStatement=statement.innerHTML;
+
+    function animateState(element){
+      if(reduceMotion.matches||!element.animate)return;
+      element.animate([{opacity:.58,transform:"translateY(2px)"},{opacity:1,transform:"translateY(0)"}],{duration:200,easing:"cubic-bezier(.2,0,0,1)"});
+    }
+
+    function renderFour(level,animate=false){
+      currentLevel=level;
+      fourGrid.innerHTML=fourData[currentLocale][level].map(item=>`<article class="question"><h3 class="question-word">${item.q}</h3><p class="question-prompt">${item.p}</p><p class="question-answer">${item.a}</p></article>`).join("");
+      if(animate)animateState(fourGrid);
+    }
+
+    function renderScenario(key,animate=false){
+      currentScenario=key;
+      const item=scenarios[currentLocale][key];
+      const warningLabel=currentLocale==="th"?"ระวัง:":"Watch for:";
+      scenarioAnswer.innerHTML=`<span class="answer-label">${item.label}</span><h3>${item.title}</h3><p class="answer-why">${item.why}</p><ol class="answer-steps">${item.steps.map(step=>`<li>${step}</li>`).join("")}</ol><p class="answer-warning"><strong>${warningLabel}</strong> ${item.warning}</p>`;
+      if(animate)animateState(scenarioAnswer);
+    }
+
+    function updateTraceCopy(){
+      const active=traceToggle.getAttribute("aria-pressed")==="true";
+      traceToggle.textContent=currentLocale==="th"?(active?"ซ่อนที่มาของแต่ละส่วน":"ดูว่าแต่ละส่วนมาจากไหน"):(active?"Hide the source parts":"Show where each part comes from");
+      statement.innerHTML=currentLocale==="th"?thaiStatement:'The location-screening tool helps <span data-part="who">business development teams</span> <span data-part="what">narrow 30 sites to the three worth visiting next</span> <span data-part="how">by using the same criteria, area definitions and data release for every site, while showing the reasons, evidence and remaining gaps</span>. <span data-part="boundary">It supports the decision; it does not approve the investment or guarantee sales.</span>';
+      statement.classList.toggle("annotated",active);
+    }
+
+    function setMeta(name,value,property=false){
+      const selector=property?`meta[property="${name}"]`:`meta[name="${name}"]`;
+      const node=document.querySelector(selector);
+      if(node)node.content=value;
+    }
+
+    function updateControlLabels(){
+      const en=currentLocale==="en";
+      languageToggle.textContent=en?"ไทย":"EN";
+      languageToggle.setAttribute("aria-label",en?"เปลี่ยนเป็นภาษาไทย":"Switch to English");
+      languageToggle.title=en?"เปลี่ยนเป็นภาษาไทย":"Switch to English";
+      document.querySelector(".level-switch").setAttribute("aria-label",en?"Choose answer level":"เลือกระดับคำตอบ");
+      document.querySelector(".scenario-list").setAttribute("aria-label",en?"Choose a situation":"เลือกสถานการณ์");
+      document.querySelector(".remember")?.setAttribute("aria-label",en?"Three-line rule":"กฎจำสามบรรทัด");
+      document.querySelector(".role-list")?.setAttribute("aria-label",en?"How each role uses the documents":"วิธีใช้ตามบทบาท");
+      document.querySelector(".source-gaps")?.setAttribute("aria-label",en?"Canonical links that remain unavailable":"ลิงก์ฉบับหลักที่ยังขาด");
+      updateThemeUI();
+    }
+
+    function applyLocale(locale,{persist=false,updateUrl=true}={}){
+      currentLocale=locale;
+      document.documentElement.lang=locale;
+      document.documentElement.dataset.locale=locale;
+      enStaticCopy.forEach(item=>{const node=document.querySelector(item.selector);if(node)node.innerHTML=locale==="en"?item.en:item.th});
+      heroImage.alt=locale==="en"?"Landometer team members present Hack Land Value to an audience":thaiHeroAlt;
+      document.querySelector(".hero-photo figcaption").textContent=locale==="en"?"The Landometer team presenting Hack Land Value":"ทีม Landometer ระหว่างนำเสนอผลงาน Hack Land Value";
+      document.title=locale==="en"?"Landometer in Brief — Start at the right level":"Landometer in Brief — เริ่มงานให้ถูกระดับ";
+      const description=locale==="en"?"A five-minute guide for new joiners to Master Brand Briefs, Product Briefs and Product Statements through Who · What · Which · How":"คู่มือ 5 นาทีสำหรับ new joiners: แยก Master Brand Brief, Product Brief และ Product Statement ด้วย Who · What · Which · How";
+      const socialTitle=locale==="en"?"4 questions · 2 levels · 1 way to explain":"4 คำถาม · 2 ระดับ · 1 วิธีเล่า";
+      const socialDescription=locale==="en"?"Choose the right source before creating or explaining Landometer work":"เลือกเอกสารให้ถูกระดับ ก่อนเริ่มสร้างหรืออธิบายงานของ Landometer";
+      const socialAlt=locale==="en"?"The Landometer team presenting Hack Land Value":"ทีม Landometer นำเสนอผลงาน Hack Land Value";
+      setMeta("description",description);setMeta("og:title",socialTitle,true);setMeta("og:description",socialDescription,true);setMeta("og:locale",locale==="en"?"en_US":"th_TH",true);setMeta("og:image:alt",socialAlt,true);setMeta("twitter:title",socialTitle);setMeta("twitter:description",socialDescription);setMeta("twitter:image:alt",socialAlt);
+      renderFour(currentLevel);
+      renderScenario(currentScenario);
+      updateTraceCopy();
+      updateControlLabels();
+      if(persist)writeStored("ldm-brief-locale",locale);
+      if(updateUrl){const url=new URL(location.href);url.searchParams.set("lang",locale);history.replaceState(null,"",url)}
+      delete document.documentElement.dataset.localeLoading;
+    }
+
+    document.querySelectorAll("[data-level]").forEach(button=>button.addEventListener("click",()=>{
+      document.querySelectorAll("[data-level]").forEach(item=>item.setAttribute("aria-pressed","false"));
+      button.setAttribute("aria-pressed","true");
+      renderFour(button.dataset.level,true);
+    }));
+
+    document.querySelectorAll("[data-scenario]").forEach(button=>button.addEventListener("click",()=>{
+      document.querySelectorAll("[data-scenario]").forEach(item=>item.setAttribute("aria-pressed","false"));
+      button.setAttribute("aria-pressed","true");
+      renderScenario(button.dataset.scenario,true);
+    }));
+
+    traceToggle.addEventListener("click",()=>{
+      const next=traceToggle.getAttribute("aria-pressed")!=="true";
+      traceToggle.setAttribute("aria-pressed",String(next));
+      statement.classList.toggle("annotated",next);
+      traceLegend.classList.toggle("visible",next);
+      updateTraceCopy();
+      if(next)animateState(statement);
+    });
+
+    languageToggle.addEventListener("click",()=>applyLocale(currentLocale==="th"?"en":"th",{persist:true}));
+
+    const themeModes=["auto","light","dark"];
+    const systemTheme=window.matchMedia("(prefers-color-scheme: dark)");
+    let currentThemeMode=themeModes.includes(window.__ldmThemeMode)?window.__ldmThemeMode:"auto";
+    function resolvedTheme(mode){return mode==="auto"?(systemTheme.matches?"dark":"light"):mode}
+    function updateThemeUI(){
+      if(!themeToggle)return;
+      const labels=currentLocale==="th"?{auto:"Auto",light:"Light",dark:"Dark"}:{auto:"Auto",light:"Light",dark:"Dark"};
+      const next=themeModes[(themeModes.indexOf(currentThemeMode)+1)%themeModes.length];
+      const spoken=currentLocale==="th"?{auto:"อัตโนมัติ",light:"สว่าง",dark:"มืด"}:{auto:"Auto",light:"Light",dark:"Dark"};
+      themeValue.textContent=labels[currentThemeMode];
+      themeToggle.setAttribute("aria-label",currentLocale==="th"?`ธีม: ${spoken[currentThemeMode]} กดเพื่อเปลี่ยนเป็นธีม${spoken[next]}`:`Theme: ${spoken[currentThemeMode]}. Activate to switch to ${spoken[next]}`);
+      themeToggle.title=currentLocale==="th"?"เปลี่ยนธีม":"Change theme";
+    }
+    function setThemeMode(mode,{persist=false}={}){
+      currentThemeMode=mode;
+      const theme=resolvedTheme(mode);
+      document.documentElement.dataset.themeMode=mode;
+      document.documentElement.dataset.theme=theme;
+      document.documentElement.style.colorScheme=theme;
+      document.querySelector('meta[name="theme-color"]').content=theme==="dark"?"#11191D":"#F6F7F3";
+      if(persist)writeStored("ldm-brief-theme",mode);
+      updateThemeUI();
+    }
+    themeToggle.addEventListener("click",()=>setThemeMode(themeModes[(themeModes.indexOf(currentThemeMode)+1)%themeModes.length],{persist:true}));
+    systemTheme.addEventListener?.("change",()=>{if(currentThemeMode==="auto")setThemeMode("auto")});
+
+    setThemeMode(currentThemeMode);
+    applyLocale(currentLocale,{updateUrl:true});
+  </script>
+</body>
+</html>
