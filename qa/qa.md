@@ -7,7 +7,7 @@ Evidence status: `source_limited`
 
 ## Release decision
 
-PASS for the **public release candidate with restricted destinations** after the Product Statement / Strategy Spine correction, new-joiner storytelling, authority registry and access-boundary patch. The first viewport states `Product Statement = Winning Strategy`; the next scene requires `Strategy ref · right target · 100% success` before any task path. The public page contains exactly four links to private Drive copies. Drive ACLs—not the page—protect the files; access is a named-viewer allowlist rather than a domain-wide grant. Publication is approved, but the destination remains provisional until the matching live bytes are rechecked. The page remains intentionally `noindex,nofollow` while no registry row is owner-confirmed authoritative. The artifact claims authoring alignment with Design System v0.8.8; machine validation remains pending and package conformance is not claimed.
+PASS for the **published public release with restricted destinations** after the Product Statement / Strategy Spine correction, new-joiner storytelling, authority registry and access-boundary patch. The first viewport states `Product Statement = Winning Strategy`; the next scene requires `Strategy ref · right target · 100% success` before any task path. The public page contains exactly four links to private Drive copies. Drive ACLs—not the page—protect the files; access is a named-viewer allowlist rather than a domain-wide grant. The deployed TH and EN states match the QA source and the destination is verified. The page remains intentionally `noindex,nofollow` while no registry row is owner-confirmed authoritative. The artifact claims authoring alignment with Design System v0.8.8; machine validation remains pending and package conformance is not claimed.
 
 The public package excludes the supplied onboarding, GTM, company and methodology PDFs, plus the internal Wiki × Landometer planning file.
 
@@ -204,7 +204,9 @@ Both gradient surfaces keep one dominant message group, no secondary control clu
 - `.nojekyll` is present so self-hosted assets are served directly.
 - The site has no analytics, authentication, form submission or external side effect.
 - After the repository owner enabled Pages, workflow run `31060167493` was rerun and completed `Configure Pages`, `Upload site` and `Deploy` successfully.
-- Publication of the current local patch is approved. Destination status remains provisional until the pushed commit, workflow result and live TH/EN bytes are verified.
+- Release records and page source were pushed to `main`; the page commit is `16c6595d972f8571e3530515cfa3f3a797445729` and the deployed `index.html` blob is `e92e7a44050b73b98ccc05c14383c46a51980bd2`.
+- Live browser verification on 6 August 2026 covered both canonical locale URLs. TH and EN each reported the expected title, `brand.public`, `deployable_public`, `named-viewer-allowlist`, `noindex,nofollow,noarchive`, `no-referrer`, seven registry rows, exactly four approved restricted Drive URLs and zero horizontal overflow.
+- The live page contains the access boundary and Strategy Spine text unique to this release, confirming that GitHub Pages serves the published bytes rather than the previous version.
 
 ## Published source package
 
