@@ -32,10 +32,10 @@ landometerBuild:
   destination:
     required: false
     url: ""
-    readiness: release_ready
+    readiness: blocked_by_pages_enablement
     publicSafe: true
-    status: ready
-    qrOrLinkTest: "No destination-dependent CTA; internal anchors and document links tested separately"
+    status: unavailable
+    qrOrLinkTest: "GitHub Pages URL returned 404 on 2026-08-06. Workflow run 31060167493 could not create the initial Pages site because GitHub blocks GITHUB_TOKEN from first-time enablement; repository-owner Settings → Pages action remains required."
   audience:
     primary: "New joiners of Landometer"
     role: "Any role that creates, reviews, builds or communicates brand and product work"
