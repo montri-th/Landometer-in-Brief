@@ -40,8 +40,8 @@ landometerBuild:
     url: "https://montri-th.github.io/Landometer-in-Brief/"
     readiness: reference_ready
     publicSafe: true
-    status: provisional
-    qrOrLinkTest: "Publication is explicitly approved. The destination remains provisional until the matching bytes, TH/EN behavior, four restricted destinations and metadata are rechecked on the live URL."
+    status: verified
+    qrOrLinkTest: "Verified on the live canonical URL in TH and EN on 6 Aug 2026. The deployed index blob e92e7a44050b73b98ccc05c14383c46a51980bd2 matches the 163,882-byte QA source; both locales expose exactly the four approved restricted destinations, seven registry rows, the public/restricted access notice, no-referrer metadata and zero horizontal overflow."
   audience:
     primary: "New joiners of Landometer"
     role: "Any role that creates, reviews, builds or communicates brand and product work"
