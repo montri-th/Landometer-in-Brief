@@ -9,6 +9,7 @@
   data-token-schema-version="6"
   data-profile="brand.public"
   data-delivery="deployable_public"
+  data-restricted-destinations="named-viewer-allowlist"
   data-evidence-status="source_limited"
   data-indexable="false"
   data-locale="th"
@@ -16,19 +17,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,follow,noarchive">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#F6F7F3">
-  <title>Landometer in Brief — เริ่มงานให้ถูกระดับ</title>
-  <meta name="description" content="คู่มือ 5 นาทีสำหรับ new joiners: แยก Master Brand Brief, Product Brief และ Product Statement ด้วย Who · What · Which · How">
+  <title>Landometer in Brief — Product Statement = Winning Strategy</title>
+  <meta name="description" content="คู่มือ 5 นาทีสำหรับ new joiners: ยึด Product Statement ซึ่งเป็น Winning Strategy ตั้งเป้างานให้ถูก และนิยาม 100% success ที่ตรวจได้">
   <link rel="canonical" href="https://montri-th.github.io/Landometer-in-Brief/">
   <link rel="alternate" hreflang="th" href="https://montri-th.github.io/Landometer-in-Brief/?lang=th">
   <link rel="alternate" hreflang="en" href="https://montri-th.github.io/Landometer-in-Brief/?lang=en">
   <link rel="alternate" hreflang="x-default" href="https://montri-th.github.io/Landometer-in-Brief/">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/landometer-symbol-transparent.png">
   <meta property="og:site_name" content="Landometer">
-  <meta property="og:title" content="4 คำถาม · 2 ระดับ · 1 วิธีเล่า">
-  <meta property="og:description" content="เลือกเอกสารให้ถูกระดับ ก่อนเริ่มสร้างหรืออธิบายงานของ Landometer">
+  <meta property="og:title" content="Product Statement = Winning Strategy ที่ทุกงานต้องยึด">
+  <meta property="og:description" content="ยึด Product Statement ฉบับปัจจุบัน ตั้งเป้างานให้ถูก และนิยาม 100% success ที่ตรวจได้">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="th_TH">
   <meta property="og:url" content="https://montri-th.github.io/Landometer-in-Brief/">
@@ -37,8 +39,8 @@
   <meta property="og:image:height" content="1024">
   <meta property="og:image:alt" content="ทีม Landometer นำเสนอผลงาน Hack Land Value">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="4 คำถาม · 2 ระดับ · 1 วิธีเล่า">
-  <meta name="twitter:description" content="เลือกเอกสารให้ถูกระดับ ก่อนเริ่มสร้างหรืออธิบายงานของ Landometer">
+  <meta name="twitter:title" content="Product Statement = Winning Strategy ที่ทุกงานต้องยึด">
+  <meta name="twitter:description" content="ยึด Product Statement ฉบับปัจจุบัน ตั้งเป้างานให้ถูก และนิยาม 100% success ที่ตรวจได้">
   <meta name="twitter:image" content="https://montri-th.github.io/Landometer-in-Brief/assets/team-on-stage.jpeg">
   <meta name="twitter:image:alt" content="ทีม Landometer นำเสนอผลงาน Hack Land Value">
   <script>
@@ -92,7 +94,16 @@
       --hair:#DCE1DD;
       --interaction:#176B82;
       --focus:#176B82;
+      --status-authoritative-fill:#E2F4E5;
+      --status-authoritative-ink:#126B49;
+      --status-candidate-fill:#F3EEDB;
+      --status-candidate-ink:#686354;
+      --status-historical-fill:#ECE4D2;
+      --status-historical-ink:#5F635A;
+      --status-missing-fill:#FCE5DF;
+      --status-missing-ink:#B43A3A;
       --measure:linear-gradient(135deg,#1D4497 0%,#176B82 54%,#08756F 100%);
+      --font-mono:"JetBrains Mono","Bai Jamjuree",Tahoma,monospace;
       --max:1200px;
       --header:72px;
       color-scheme:light;
@@ -112,7 +123,14 @@
       --hair:#33403D;
       --interaction:#68C4E2;
       --focus:#68C4E2;
-      --measure:linear-gradient(135deg,#68C4E2 0%,#15919A 52%,#08756F 100%);
+      --status-authoritative-fill:#17362D;
+      --status-authoritative-ink:#72E8C4;
+      --status-candidate-fill:#2C2A22;
+      --status-candidate-ink:#D8CFB2;
+      --status-historical-fill:#2B3534;
+      --status-historical-ink:#C4CECA;
+      --status-missing-fill:#3A1F21;
+      --status-missing-ink:#FF7C72;
       color-scheme:dark;
     }
     *{box-sizing:border-box}
@@ -124,54 +142,84 @@
     a{color:var(--interaction);text-underline-offset:.22em}
     button{color:inherit;min-height:44px;touch-action:manipulation}
     :focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    .hero :focus-visible{outline-color:#FFFFFF}
     h1,h2,h3,h4,p{margin-top:0}
     h1,h2,h3,h4{font-family:"IBM Plex Sans Thai Looped",Tahoma,sans-serif;font-weight:700;line-height:1.12;letter-spacing:0;text-wrap:balance}
     html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] h4{font-family:"Arvo",Georgia,serif}
     p,li{max-width:68ch}
     .latin{font-family:"Arvo",Georgia,serif}
-    .mono{font-family:"JetBrains Mono",Consolas,monospace}
+    .mono{font-family:var(--font-mono)}
     .wrap{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
     .skip{position:fixed;z-index:500;left:12px;top:8px;transform:translateY(-160%);background:#FFFFFF;color:#182327;padding:9px 14px;border-radius:8px}
     .skip:focus{transform:none}
     .js-only{display:none}
     .js .js-only{display:inline-flex}
+    html:not(.js) .js-only{display:none!important}
+    [data-lang-copy]{display:none}
+    html[lang="th"] [data-lang-copy="th"],html[lang="en"] [data-lang-copy="en"]{display:block}
 
     .site-header{position:sticky;top:0;z-index:100;height:var(--header);background:#F6F7F3;border-bottom:1px solid #DCE1DD}
     .header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand-lockup{display:flex;align-items:center;gap:16px;min-width:0}
     .brand-lockup img{width:158px;height:auto;object-fit:contain}
-    .header-label{font:500 .68rem/1.3 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:#686354;white-space:nowrap}
+    .header-label{font:500 .68rem/1.3 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:#686354;white-space:nowrap}
     .utility-controls{display:flex;align-items:center;gap:8px}
     .language-toggle,.theme-toggle{display:none;min-width:44px;height:44px;padding:0 12px;border:1px solid #C9D0CB;border-radius:999px;background:#FFFFFF;color:#182327;align-items:center;justify-content:center;gap:7px;cursor:pointer;font:600 .78rem/1 "Bai Jamjuree",sans-serif}
     .js .language-toggle,.js .theme-toggle{display:inline-flex}
     .language-toggle:hover,.theme-toggle:hover{background:#EEF1EE}
     .theme-toggle svg{width:19px;height:19px}
-    .theme-value{font:600 .7rem/1 "JetBrains Mono",monospace}
+    .theme-value{font:600 .7rem/1 var(--font-mono)}
 
-    .hero{min-height:calc(100svh - var(--header));display:flex;align-items:center;padding:clamp(44px,6vw,82px) 0}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(420px,1.14fr);gap:clamp(36px,6vw,82px);align-items:center}
+    .hero{min-height:calc(100svh - var(--header));display:flex;align-items:center;padding:clamp(44px,6vw,82px) 0;background:var(--measure);color:#FFFFFF}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,.94fr) minmax(420px,1.06fr);gap:clamp(36px,5vw,70px);align-items:center}
     .hero-copy{padding-block:18px;min-height:610px;display:flex;flex-direction:column;justify-content:center}
-    .eyebrow,.section-kicker{font:700 .72rem/1.4 "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--text-meta);margin:0 0 18px}
+    .eyebrow,.section-kicker{font:700 .72rem/1.4 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--text-meta);margin:0 0 18px}
+    .hero .eyebrow,.hero .brand-line,.hero-photo figcaption{color:#F2F1DF}
     .closing .section-kicker{color:inherit;opacity:.74}
-    .hero h1{max-width:9ch;margin:0;font-size:clamp(3.25rem,6.6vw,6.7rem);line-height:.98}
-    .hero h1 .count{color:var(--text)}
-    .hero-lede{max-width:35ch;margin:28px 0 0;font-size:clamp(1.06rem,1.7vw,1.35rem);line-height:1.55;color:var(--text-secondary)}
+    .hero h1{max-width:12ch;margin:0;font-size:clamp(3.1rem,5.7vw,5.75rem);line-height:1.01}
+    html[lang="en"] .hero h1{max-width:12ch;font-size:clamp(2.7rem,5vw,4.65rem);line-height:1.04;overflow-wrap:normal;word-break:normal;hyphens:none}
+    .hero h1 .count{color:#FFFFFF}
+    .hero-lede{max-width:35ch;margin:28px 0 0;font-size:clamp(1.06rem,1.7vw,1.35rem);line-height:1.55;color:#E2E9ED}
     .hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:30px}
     .primary-action{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 21px;border:1px solid var(--interaction);border-radius:999px;background:var(--interaction);color:#FFFFFF;text-decoration:none;font-weight:600}
-    html[data-theme="dark"] .primary-action{color:#11191D}
+    .hero .primary-action{border-color:#F2F1DF;background:#F2F1DF;color:#182327}
+    .hero .primary-action:hover{border-color:#FFFFFF;background:#FFFFFF;color:#182327}
+    .hero .text-action{color:#FFFFFF}
     .primary-action:hover{background:var(--surface-blue-tint);color:var(--text)}
     .primary-action,.language-toggle,.theme-toggle,.level-switch button,.scenario,.trace-toggle{transition:transform 120ms cubic-bezier(.2,0,0,1),background-color 200ms cubic-bezier(.2,0,0,1),color 200ms cubic-bezier(.2,0,0,1),border-color 200ms cubic-bezier(.2,0,0,1)}
     .primary-action:active,.language-toggle:active,.theme-toggle:active,.level-switch button:active,.scenario:active,.trace-toggle:active{transform:translateY(2px)}
     .text-action{font-weight:600}
-    .brand-line{margin:auto 0 0;padding-top:42px;color:var(--text-meta);font:700 .78rem/1.5 "Arvo",serif;letter-spacing:.02em}
+    .brand-line{margin:auto 0 0;padding-top:42px;font:700 .78rem/1.5 "Arvo",serif;letter-spacing:.02em}
     .hero-photo{margin:0}
-    .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 44%;border-radius:24px;border:1px solid var(--hair)}
-    .hero-photo figcaption{padding-top:9px;color:var(--text-meta);font:500 .68rem/1.5 "JetBrains Mono",monospace}
+    .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 44%;border-radius:24px;border:1px solid rgba(255,255,255,.34)}
+    .hero-photo figcaption{padding-top:9px;font:500 .68rem/1.5 var(--font-mono)}
 
     section{padding:clamp(76px,9vw,124px) 0}
     .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.48fr);gap:clamp(28px,6vw,72px);align-items:end;margin-bottom:48px}
     .section-head h2{margin:0;font-size:clamp(2.45rem,5vw,5rem);line-height:1.06}
     .section-head>p{margin:0;color:var(--text-secondary);font-size:1.08rem}
+
+    .strategy-spine{background:var(--canvas)}
+    .spine-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.55fr);gap:clamp(28px,6vw,72px);align-items:end;margin-bottom:38px}
+    .spine-head h2{max-width:15ch;margin:0;font-size:clamp(2.5rem,5.1vw,5rem);line-height:1.04}
+    html[lang="en"] .spine-head h2{max-width:17ch}
+    .spine-head>div>p:last-child{max-width:760px;margin:20px 0 0;color:var(--text-secondary);font-size:1.05rem}
+    .spine-head>p{margin:0;color:var(--text-secondary);font-size:1.02rem}
+    .spine-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid var(--border);background:var(--border)}
+    .spine-step{min-width:0;padding:clamp(24px,3.2vw,36px);background:var(--surface-card);border-top:5px solid var(--energy-sky)}
+    .spine-step:nth-child(2){border-top-color:var(--energy-mint)}
+    .spine-step:nth-child(3){border-top-color:var(--energy-yellow)}
+    .spine-step .doc-number{margin-bottom:14px}
+    .spine-step h3{margin:0 0 12px;font-size:clamp(1.4rem,2.3vw,2rem)}
+    .spine-step p{margin:0;color:var(--text-secondary);font-size:.94rem;line-height:1.62}
+    .spine-step p+p{margin-top:14px;padding-top:14px;border-top:1px solid var(--hair)}
+    .spine-template{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:1px;margin-top:24px;border:1px solid var(--border);background:var(--border)}
+    .spine-template>div{padding:22px 24px;background:var(--surface-beige)}
+    .spine-template strong{display:block;margin-bottom:7px}
+    .spine-template p{margin:0;color:var(--text-secondary);font-size:.9rem;line-height:1.58}
+    .spine-template .outcome-proof{background:var(--surface-alt)}
+    .spine-template .outcome-proof b{color:var(--text)}
+
 
     .model-section{background:var(--surface-alt)}
     .model-block+.model-block{margin-top:clamp(88px,11vw,150px);padding-top:clamp(72px,9vw,112px);border-top:1px solid var(--border)}
@@ -186,44 +234,86 @@
     .question-prompt{margin:0 0 12px;font-weight:600}
     .question-answer{margin:0;color:var(--text-secondary);font-size:.94rem;line-height:1.62}
     .four-note{margin:24px 0 0;padding-left:16px;border-left:4px solid var(--energy-sky);color:var(--text-secondary)}
+    .strategy-tips{margin-top:clamp(42px,6vw,72px);border:1px solid var(--border);background:var(--surface-card)}
+    .strategy-tips-summary{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 22px;cursor:pointer;list-style:none;font-weight:600}
+    .strategy-tips-summary::-webkit-details-marker{display:none}
+    .strategy-tips-summary::after{content:"+";flex:0 0 auto;color:var(--interaction);font:700 1.7rem/1 var(--font-mono)}
+    .strategy-tips[open]>.strategy-tips-summary::after{content:"−"}
+    .strategy-tips-summary small{display:block;margin-top:4px;color:var(--text-meta);font-weight:400}
+    .strategy-tips-content{padding:clamp(28px,4vw,46px);border-top:1px solid var(--border)}
+    .strategy-tips-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.72fr);gap:clamp(24px,5vw,58px);align-items:end}
+    .strategy-tips h3{margin:0;font-size:clamp(2rem,4vw,3.7rem);line-height:1.08}
+    .strategy-tips-intro{margin:0;color:var(--text-secondary)}
+    .strategy-contract{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:24px;margin:30px 0;padding:22px 24px;border-left:4px solid var(--energy-mint);background:var(--surface-card)}
+    .strategy-contract p{margin:0}
+    .strategy-contract strong{display:block;margin-bottom:6px}
+    .strategy-size{color:var(--text-secondary);font-size:.9rem}
+    .strategy-size b{color:var(--text)}
+    .strategy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid var(--border);background:var(--border)}
+    .strategy-card{min-width:0;padding:clamp(22px,3.2vw,34px);background:var(--surface-card)}
+    .strategy-card-word{display:block;margin-bottom:11px;color:var(--text);font:700 clamp(1.55rem,3vw,2.55rem)/1 "Arvo",serif}
+    .strategy-card h4{margin:0 0 12px;font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.25}
+    .strategy-card>p{margin:0;color:var(--text-secondary);font-size:.93rem;line-height:1.66}
+    .strategy-gate{margin-top:18px;padding-top:16px;border-top:1px solid var(--hair)}
+    .strategy-gate dt{margin:0 0 5px;color:var(--text-meta);font:700 .68rem/1.4 var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
+    .strategy-gate dd{margin:0 0 14px;font-size:.88rem;line-height:1.58}
+    .strategy-gate dd:last-child{margin-bottom:0}
+    .strategy-chain{margin:30px 0 0;padding:24px;border:1px solid var(--border);background:var(--surface-alt)}
+    .strategy-chain strong{display:block;margin-bottom:8px}
+    .strategy-chain p{margin:0;color:var(--text-secondary)}
+    .strategy-chain p+p{margin-top:14px;padding-top:14px;border-top:1px solid var(--hair)}
     .positioning{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-top:42px;padding:28px 0;border-top:1px solid var(--hair)}
     .positioning blockquote{margin:0;max-width:800px;font:700 clamp(1.3rem,2.5vw,2rem)/1.35 "Arvo",Georgia,serif;color:var(--text)}
     .positioning p{margin:10px 0 0;color:var(--text-secondary);font-size:.92rem}
     .source-link{white-space:nowrap;font-weight:600}
 
-    .doc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .doc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     .doc{min-width:0;padding:30px 26px 34px;border-right:1px solid var(--border)}
     .doc:last-child{border-right:0}
-    .doc-number{display:block;margin-bottom:18px;color:var(--text-meta);font:500 .7rem/1.4 "JetBrains Mono",monospace;letter-spacing:.08em}
+    .doc-number{display:block;margin-bottom:18px;color:var(--text-meta);font:500 .7rem/1.4 var(--font-mono);letter-spacing:.08em}
     .doc h3{font-size:clamp(1.55rem,2.6vw,2.4rem);margin-bottom:12px}
     .doc-purpose{min-height:4.9em;margin:0;color:var(--text-secondary)}
     .doc dl{margin:26px 0 0}
     .doc dl>div{padding:12px 0;border-top:1px solid var(--hair)}
-    .doc dt{margin-bottom:5px;color:var(--text-meta);font:500 .68rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
+    .doc dt{margin-bottom:5px;color:var(--text-meta);font:500 .68rem/1.4 var(--font-mono);text-transform:uppercase;letter-spacing:.06em}
     .doc dd{margin:0;font-size:.9rem;line-height:1.56}
     .doc-rule{display:block;width:46px;height:4px;margin-bottom:24px;background:var(--energy-coral)}
     .doc:nth-child(2) .doc-rule{background:var(--energy-mint)}
-    .doc:nth-child(3) .doc-rule{background:var(--energy-yellow)}
+    .strategy-band{margin-top:30px;padding:clamp(24px,4vw,38px);border-left:5px solid var(--energy-yellow);background:var(--surface-beige)}
+    .strategy-band-grid{display:grid;grid-template-columns:minmax(190px,.42fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:start}
+    .strategy-band h3{margin:0;font-size:clamp(1.75rem,3.2vw,2.8rem)}
+    .strategy-band p{margin:0;color:var(--text-secondary)}
+    .strategy-band .strategy-band-rule{margin-top:16px;color:var(--text);font-weight:600}
     .remember{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px;font-size:.92rem}
     .remember p{margin:0;padding-top:12px;border-top:1px solid var(--border)}
     .remember strong{display:block;margin-bottom:3px}
+    .source-design-work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:26px;border:1px solid var(--border);background:var(--border)}
+    .source-design-work p{margin:0;padding:17px 18px;background:var(--surface-beige);color:var(--text-secondary);font-size:.88rem;line-height:1.55}
+    .source-design-work strong{display:block;margin-bottom:4px;color:var(--text)}
 
     .chooser{background:var(--canvas)}
     .chooser-grid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(420px,1.22fr);gap:clamp(40px,7vw,88px);align-items:start}
     .chooser-copy h2{font-size:clamp(2.7rem,5.6vw,5.5rem);margin-bottom:16px}
     .chooser-copy>p{color:var(--text-secondary);font-size:1.08rem}
     .scenario-list{display:grid;margin-top:30px;border-top:1px solid var(--border)}
-    .scenario{width:100%;padding:15px 0;border:0;border-bottom:1px solid var(--border);background:transparent;text-align:left;cursor:pointer;font-weight:600}
-    .scenario::before{content:"○";display:inline-block;width:28px;color:var(--text-meta);font-family:"JetBrains Mono",monospace}
+    .js .scenario-list{display:grid}
+    .scenario{position:relative;width:100%;display:block;padding:15px min(42%,190px) 15px 0;border:0;border-bottom:1px solid var(--border);background:transparent;text-align:left;cursor:pointer;font-weight:600}
+    .scenario::before{content:"○";display:inline-block;width:28px;color:var(--text-meta);font-family:var(--font-mono)}
+    .scenario::after{position:absolute;right:0;top:50%;width:min(40%,180px);transform:translateY(-50%);color:var(--text-meta);font:500 .64rem/1.4 var(--font-mono);letter-spacing:.02em;text-align:right}
+    .scenario[data-scenario="new-product"]::after{content:"Product Brief + Product Statement"}
+    .scenario[data-scenario="copy"]::after{content:"Strategy Spine"}
+    .scenario[data-scenario="brand"]::after{content:"Master Brand Brief"}
+    .scenario[data-scenario="which"]::after{content:"Product Brief · Which → How"}
+    .scenario[data-scenario="gtm"]::after{content:"Statement + Strategy Spine"}
     .scenario[aria-pressed="true"]{color:var(--interaction)}
     .scenario[aria-pressed="true"]::before{content:"●";color:var(--interaction)}
     .answer-panel{min-height:480px;padding:clamp(28px,5vw,54px);border:1px solid var(--border);border-radius:20px;background:var(--surface-card)}
-    .answer-label{display:block;color:var(--text-meta);font:500 .7rem/1.4 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+    .answer-label{display:block;color:var(--text-meta);font:500 .7rem/1.4 var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
     .answer-panel h3{font-size:clamp(2.1rem,4vw,3.8rem);margin:16px 0 12px}
     .answer-why{margin:0 0 26px;color:var(--text-secondary);font-size:1.08rem}
     .answer-steps{list-style:none;margin:0;padding:0;counter-reset:step}
     .answer-steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:13px 0;border-top:1px solid var(--hair);counter-increment:step}
-    .answer-steps li::before{content:"0" counter(step);color:var(--text-meta);font:700 .76rem/1.8 "JetBrains Mono",monospace}
+    .answer-steps li::before{content:"0" counter(step);color:var(--text-meta);font:700 .76rem/1.8 var(--font-mono)}
     .answer-warning{margin:26px 0 0;padding:14px 16px;border-left:4px solid var(--energy-yellow);background:var(--surface-beige);color:var(--text);font-size:.9rem}
     .no-js-list{padding-left:1.2rem}
 
@@ -231,7 +321,22 @@
     .example-intro{max-width:860px;margin-bottom:48px}
     .example-intro h2{font-size:clamp(2.6rem,5.3vw,5.1rem);margin-bottom:20px}
     .example-intro>p:not(.section-kicker){color:var(--text-secondary);font-size:1.08rem}
-    .teaching-status{display:inline-block;padding:7px 10px;border-left:4px solid var(--energy-yellow);background:var(--surface-beige);font:500 .7rem/1.45 "JetBrains Mono",monospace}
+    .teaching-status{display:inline-block;padding:7px 10px;border-left:4px solid var(--energy-yellow);background:var(--surface-beige);font:500 .7rem/1.45 var(--font-mono)}
+    .work-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:32px 0 24px;border:1px solid var(--border);background:var(--border)}
+    .work-step{min-width:0;padding:clamp(22px,3vw,32px);background:var(--surface-card)}
+    .work-step .doc-number{margin-bottom:12px}
+    .work-step h3{margin:0 0 10px;font-size:clamp(1.25rem,2.2vw,1.75rem)}
+    .work-step p{margin:0;color:var(--text-secondary);font-size:.9rem;line-height:1.62}
+    .work-step:last-child{background:var(--surface-beige)}
+    .success-meaning{margin:0 0 34px;padding:15px 18px;border-left:4px solid var(--energy-mint);background:var(--surface-card);font-size:.9rem}
+    .example-deep{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .example-deep>summary{min-height:60px;display:flex;align-items:center;cursor:pointer;font-weight:600}
+    .example-deep>.example-layout{padding-top:30px}
+    .example-contrast{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 38px}
+    .contrast-card{padding:18px 20px;border-top:4px solid var(--energy-coral);background:var(--surface-card)}
+    .contrast-card:last-child{border-top-color:var(--energy-mint)}
+    .contrast-card b{display:block;margin-bottom:7px}
+    .contrast-card p{margin:0;color:var(--text-secondary);font-size:.9rem}
     .example-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
     .example-column{padding-top:22px;border-top:4px solid var(--energy-sky)}
     .example-column:last-child{border-top-color:var(--energy-yellow)}
@@ -241,6 +346,8 @@
     .brief-item b{display:block;margin-bottom:7px;color:var(--text);font:700 1rem/1.2 "Arvo",serif}
     .brief-item p{margin:0;color:var(--text-secondary);font-size:.88rem;line-height:1.58}
     .boundary{margin:16px 0 0;padding:14px 0;border-top:1px solid var(--border);font-size:.9rem}
+    .success-contract{margin:16px 0 0;padding:16px 18px;border-left:4px solid var(--energy-mint);background:var(--surface-card);font-size:.9rem}
+    .success-contract strong{display:block;margin-bottom:6px}
     .statement{margin:0;font-size:clamp(1.15rem,2vw,1.42rem);line-height:1.65}
     .trace-toggle{align-items:center;gap:8px;margin-top:22px;padding:0 15px;border:1px solid var(--interaction);border-radius:999px;background:transparent;color:var(--interaction);cursor:pointer;font-weight:600}
     .trace-toggle[aria-pressed="true"]{background:var(--surface-blue-tint);color:var(--text)}
@@ -259,34 +366,55 @@
     .role-list{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     .role{padding:22px 18px;border-right:1px solid var(--border)}
     .role:last-child{border-right:0}
-    .role b{display:block;margin-bottom:8px;color:var(--text-meta);font:500 .66rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.05em}
+    .role b{display:block;margin-bottom:8px;color:var(--text-meta);font:500 .66rem/1.4 var(--font-mono);text-transform:uppercase;letter-spacing:.05em}
     .role h3{font-size:1.18rem;margin-bottom:8px}
     .role p{margin:0;color:var(--text-secondary);font-size:.85rem;line-height:1.55}
 
     .resources{padding-bottom:0}
-    .source-gaps{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-bottom:46px;border:1px solid var(--border);background:var(--border)}
-    .source-gap{padding:22px;background:var(--surface-beige)}
-    .source-gap b{display:block;margin-bottom:7px;font-size:1.08rem}
-    .source-gap p{margin:0;color:var(--text-secondary);font-size:.9rem}
-    .status-label{display:inline-block;margin-bottom:10px;color:var(--text-meta);font:500 .65rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.07em}
+    .registry-intro{max-width:920px;margin:-16px 0 30px;color:var(--text-secondary)}
+    .registry-meta{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:0 0 16px;padding:13px 16px;border-left:4px solid var(--energy-yellow);background:var(--surface-beige);font-size:.84rem}
+    .registry-meta p{margin:0}
+    .restricted-access-notice{max-width:920px;margin:0 0 22px;padding:18px 20px;border:1px solid var(--border);border-left:5px solid var(--energy-sky);background:var(--surface-card)}
+    .restricted-access-notice strong{display:block;margin-bottom:5px}
+    .restricted-access-notice p{margin:0;color:var(--text-secondary);font-size:.9rem;line-height:1.58}
+    .registry-table{border-top:1px solid var(--border)}
+    .registry-head,.registry-row{display:grid;grid-template-columns:minmax(190px,1.02fr) minmax(220px,1.12fr) minmax(210px,1fr) minmax(170px,.78fr);gap:22px;padding:18px 0;border-bottom:1px solid var(--border);align-items:start}
+    .registry-head{padding-block:11px;color:var(--text-meta);font:700 .65rem/1.4 var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
+    .registry-product strong{display:block;margin-bottom:4px;font-size:1.08rem}
+    .registry-product span,.registry-cell p{display:block;margin:0;color:var(--text-secondary);font-size:.84rem;line-height:1.52}
+    .status-label{display:inline-block;margin-bottom:7px;padding:4px 7px;border-radius:999px;font:700 .62rem/1.35 var(--font-mono);letter-spacing:.03em}
+    .status-label.authoritative{background:var(--status-authoritative-fill);color:var(--status-authoritative-ink)}
+    .status-label.candidate{background:var(--status-candidate-fill);color:var(--status-candidate-ink)}
+    .status-label.historical{background:var(--status-historical-fill);color:var(--status-historical-ink)}
+    .status-label.missing{background:var(--status-missing-fill);color:var(--status-missing-ink)}
+    .registry-link{display:inline-block;font-weight:600}
+    .registry-link-unavailable{display:inline-block;color:var(--text-meta);font-weight:600}
+    .registry-reference-list{display:grid;gap:5px;margin-top:8px}
+    .registry-reference-list a{width:fit-content;font-size:.84rem}
+    .registry-note{margin:24px 0 46px;color:var(--text-meta);font-size:.82rem}
+    .supporting-resources{margin-top:40px}
+    .supporting-resources>summary{min-height:56px;display:flex;align-items:center;cursor:pointer;font-weight:600;border-top:1px solid var(--border)}
     .resource-list{border-top:1px solid var(--border)}
     .resource{display:grid;grid-template-columns:190px minmax(220px,.7fr) minmax(280px,1.3fr) auto;gap:20px;align-items:center;min-height:92px;padding:18px 0;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none}
     .resource:hover{background:var(--surface-alt)}
-    .resource-type{color:var(--text-meta);font:500 .65rem/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
+    .resource-type{color:var(--text-meta);font:500 .65rem/1.4 var(--font-mono);text-transform:uppercase;letter-spacing:.06em}
     .resource strong{font-family:"IBM Plex Sans Thai Looped",sans-serif;font-size:1.05rem}
     html[lang="en"] .resource strong{font-family:"Arvo",Georgia,serif}
     .resource p{margin:0;color:var(--text-secondary);font-size:.87rem;line-height:1.5}
     .resource-open{color:var(--interaction);font-weight:600;white-space:nowrap}
     .source-note{margin-top:28px;color:var(--text-meta);font-size:.82rem}
-    details{margin-top:22px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    summary{min-height:52px;display:flex;align-items:center;cursor:pointer;font-weight:600}
-    details p{padding-bottom:18px;color:var(--text-secondary);font-size:.88rem}
+    details.source-context{margin-top:22px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    details.source-context summary{min-height:52px;display:flex;align-items:center;cursor:pointer;font-weight:600}
+    details.source-context p{padding-bottom:18px;color:var(--text-secondary);font-size:.88rem}
     .closing{margin-top:clamp(78px,10vw,130px);padding:clamp(48px,7vw,82px) 0;background:var(--measure);color:#FFFFFF}
-    html[data-theme="dark"] .closing{color:#11191D}
-    .closing-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end}
-    .closing h2{max-width:14ch;margin-bottom:16px;font-size:clamp(2.5rem,5.5vw,5.2rem);line-height:1.03}
+    .closing-grid{display:block}
+    .closing h2{max-width:20ch;margin-bottom:16px;font-size:clamp(2.5rem,5.5vw,5.2rem);line-height:1.03}
     .closing p{margin:0;color:inherit;opacity:.88}
-    .closing-rule{font:700 clamp(1.2rem,2.5vw,2rem)/1.5 "JetBrains Mono",monospace;white-space:nowrap;text-align:right}
+    .ship-checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px}
+    .ship-check{padding:22px;background:#FCFCFA;color:#182327;border-radius:14px}
+    .ship-check span{display:block;margin-bottom:8px;color:#686354;font:700 .66rem/1.4 var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
+    .ship-check h3{margin:0 0 8px;font-size:1.28rem}
+    .ship-check p{color:#5F635A;opacity:1;font-size:.9rem;line-height:1.58}
 
     footer{padding:26px 0;color:var(--text-meta);font-size:.75rem}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
@@ -294,30 +422,33 @@
 
     @media(max-width:980px){
       .hero{min-height:auto}.hero-grid{grid-template-columns:1fr 1fr;gap:28px}.hero-copy{min-height:520px}.hero h1{font-size:clamp(3.15rem,8vw,5.5rem)}
-      .section-head{grid-template-columns:1fr;gap:18px}.positioning{grid-template-columns:1fr}.source-link{white-space:normal}
+      .section-head,.spine-head{grid-template-columns:1fr;gap:18px}.positioning{grid-template-columns:1fr}.source-link{white-space:normal}
       .four-grid{grid-template-columns:1fr 1fr}.question:nth-child(2){border-right:0}.question:nth-child(-n+2){border-bottom:1px solid var(--border)}
-      .doc-grid{grid-template-columns:1fr}.doc{border-right:0;border-bottom:1px solid var(--border)}.doc:last-child{border-bottom:0}.doc-purpose{min-height:0}
-      .remember{grid-template-columns:1fr}.chooser-grid{grid-template-columns:1fr}.answer-panel{min-height:0}
-      .example-layout{grid-template-columns:1fr}.role-list{grid-template-columns:1fr 1fr}.role:nth-child(2){border-right:0}.role:nth-child(-n+2){border-bottom:1px solid var(--border)}
-      .resource{grid-template-columns:150px minmax(180px,.8fr) 1.2fr auto}
+      .strategy-tips-head{grid-template-columns:1fr}.strategy-contract{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}
+      .doc-grid{grid-template-columns:1fr}.doc{border-right:0;border-bottom:1px solid var(--border)}.doc:last-child{border-bottom:0}.doc-purpose{min-height:0}.strategy-band-grid{grid-template-columns:1fr}
+      .spine-grid{grid-template-columns:1fr}.spine-template{grid-template-columns:1fr}.remember,.source-design-work{grid-template-columns:1fr}.chooser-grid{grid-template-columns:1fr}.answer-panel{min-height:0}
+      .work-flow{grid-template-columns:1fr}.example-layout{grid-template-columns:1fr}.role-list{grid-template-columns:1fr 1fr}.role:nth-child(2){border-right:0}.role:nth-child(-n+2){border-bottom:1px solid var(--border)}
+      .resource{grid-template-columns:150px minmax(180px,.8fr) 1.2fr auto}.registry-head{display:none}.registry-row{grid-template-columns:1fr 1fr}.registry-product{grid-column:1/-1}
     }
     @media(max-width:720px){
       :root{--header:64px}.wrap{width:min(calc(100% - 28px),var(--max))}.header-label{display:none}.brand-lockup img{width:124px}.utility-controls{gap:6px}.language-toggle,.theme-toggle{padding-inline:10px}.theme-value{font-size:.64rem}
       .hero{padding:32px 0 54px}.hero-grid{grid-template-columns:1fr;gap:26px}.hero-copy{min-height:0;padding:0}.hero h1{font-size:clamp(2.85rem,14.5vw,4.35rem)}
+      html[lang="en"] .hero h1{max-width:14ch;font-size:clamp(2.65rem,11vw,3.8rem)}
       .hero-lede{margin-top:20px;font-size:1rem}.hero-actions{margin-top:22px;align-items:flex-start;flex-direction:column;gap:14px}.brand-line{margin:24px 0 0;padding:0}
       .hero-photo img{aspect-ratio:16/9;border-radius:18px}.hero-photo figcaption{font-size:.62rem}
-      section{padding:72px 0}.section-head{margin-bottom:34px}.section-head h2{font-size:2.65rem}
+      section{padding:72px 0}.section-head,.spine-head{margin-bottom:34px}.section-head h2,.spine-head h2{font-size:2.65rem}
       .model-block+.model-block{margin-top:82px;padding-top:68px}.four-grid{grid-template-columns:1fr}.question{padding:24px 2px;border-right:0;border-bottom:1px solid var(--border)!important}.question:last-child{border-bottom:0!important}
+      .spine-step{padding:24px 18px}.spine-template>div{padding:20px 18px}.strategy-card{padding:24px 18px}.strategy-contract,.strategy-chain{padding:20px 18px}
       .positioning{margin-top:30px;padding-bottom:0}.positioning blockquote{font-size:1.35rem}
       .doc{padding-inline:2px}.remember{gap:2px}.remember p{padding-block:12px}
-      .chooser-grid{gap:34px}.scenario{padding-block:14px}.answer-panel{padding:24px 18px;border-radius:16px}.answer-panel h3{font-size:2.45rem}
-      .example-intro h2{font-size:2.75rem}.brief-grid{grid-template-columns:1fr}.example-column{padding-top:18px}.role-list{grid-template-columns:1fr}.role{padding-inline:2px;border-right:0;border-bottom:1px solid var(--border)!important}.role:last-child{border-bottom:0!important}
-      .source-gaps{grid-template-columns:1fr}.resource{grid-template-columns:1fr auto;gap:5px 16px;padding:17px 0}.resource-type{grid-column:1/-1}.resource p{grid-column:1/-1}.resource-open{grid-column:2;grid-row:2}
-      .closing-grid{grid-template-columns:1fr}.closing-rule{text-align:left;white-space:normal}.footer-inner{display:block}.footer-inner p+p{margin-top:7px}
+      .chooser-grid{gap:34px}.scenario{padding:14px 0}.scenario::after{position:static;display:block;width:auto;max-width:none;margin:3px 0 0 28px;transform:none;text-align:left}.answer-panel{padding:24px 18px;border-radius:16px}.answer-panel h3{font-size:2.45rem}
+      .example-intro h2{font-size:2.75rem}.example-contrast{grid-template-columns:1fr}.brief-grid{grid-template-columns:1fr}.example-column{padding-top:18px}.role-list{grid-template-columns:1fr}.role{padding-inline:2px;border-right:0;border-bottom:1px solid var(--border)!important}.role:last-child{border-bottom:0!important}
+      .resource{grid-template-columns:1fr auto;gap:5px 16px;padding:17px 0}.resource-type{grid-column:1/-1}.resource p{grid-column:1/-1}.resource-open{grid-column:2;grid-row:2}.registry-row{grid-template-columns:1fr;gap:12px}.registry-product{grid-column:auto}.registry-cell{padding-top:10px;border-top:1px solid var(--hair)}
+      .ship-checks{grid-template-columns:1fr}.footer-inner{display:block}.footer-inner p+p{margin-top:7px}
     }
     @media(max-width:360px){body{font-size:1rem}.hero h1{font-size:2.8rem}.primary-action{width:100%}.level-switch{display:grid;grid-template-columns:1fr}.level-switch button{width:100%}.section-head h2,.example-intro h2{font-size:2.35rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.primary-action,.language-toggle,.theme-toggle,.level-switch button,.scenario,.trace-toggle,.statement [data-part]{transition:none!important}}
-    @media print{.site-header,.language-toggle,.theme-toggle,.hero-actions,.level-switch,.scenario-list,.trace-toggle{display:none!important}section{break-inside:avoid}.hero{min-height:auto}.closing{background:#FFFFFF!important;color:#182327!important;border-top:3px solid #1D4497}}
+    @media print{.site-header,.language-toggle,.theme-toggle,.hero-actions,.level-switch,.scenario-list,.trace-toggle{display:none!important}section{break-inside:avoid}.hero{min-height:auto;background:#FFFFFF!important;color:#182327!important}.hero .count{color:#1D4497!important}.hero .eyebrow,.hero .brand-line,.hero figcaption{color:#56676E!important}.hero .hero-lede{color:#33444B!important}.closing{background:#FFFFFF!important;color:#182327!important;border-top:3px solid #1D4497}}
   </style>
 </head>
 <body>
@@ -342,12 +473,12 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div class="hero-copy" data-quiet-field="hero-message">
-          <p class="eyebrow">New joiner · ใช้เวลาประมาณ 5 นาที</p>
-          <h1><span class="count">4</span> คำถาม<br><span class="count">2</span> ระดับ<br><span class="count">1</span> วิธีเล่า</h1>
-          <p class="hero-lede"><strong>Master Brand Brief</strong> เก็บคำตอบระดับ Landometer · <strong>Product Brief</strong> ตกลงคำตอบของหนึ่งผลิตภัณฑ์ · <strong>Product Statement</strong> ย่อสิ่งที่ตกลงแล้วให้คนอื่นเข้าใจตรงกัน</p>
+          <p class="eyebrow">กฎหลักก่อนเริ่มทุกงาน · 5 นาทีสำหรับ new joiner</p>
+          <h1>Product Statement<br> <span class="count">คือ Winning Strategy</span></h1>
+          <p class="hero-lede">Strategy นี้ต้องตามไปในทุก roadmap, PRD, data/design/dev brief, GTM, proposal และ content เพื่อ <strong>ตั้ง target ให้ถูก</strong>และ define <strong>100% success</strong> ก่อนลงมือ</p>
           <div class="hero-actions">
-            <a class="primary-action" href="#four-questions">เริ่มจาก 4 คำถาม</a>
-            <a class="text-action" href="#chooser">หรือเลือกจากงานที่กำลังทำ</a>
+            <a class="primary-action" href="#strategy-spine">ดู Strategy Spine ของทุกงาน</a>
+            <a class="text-action" href="#resources">เปิด document registry</a>
           </div>
           <p class="brand-line" lang="en">Visualize City, Shape Tomorrow.</p>
         </div>
@@ -358,28 +489,183 @@
       </div>
     </section>
 
+    <section class="strategy-spine" id="strategy-spine" aria-labelledby="strategy-spine-title">
+      <div class="wrap">
+        <div class="spine-head">
+          <div>
+            <p class="section-kicker">The rule before any work starts</p>
+            <h2 id="strategy-spine-title">Winning Strategy ต้องกำหนดเป้าของงาน</h2>
+            <p>คำว่า “อยู่ในทุกเอกสาร” ไม่ได้แปลว่าคัดลอก Product Statement ทั้งฉบับ แต่ทุกเอกสารที่กำหนด อนุมัติ หรือส่งต่องานต้อง trace ได้ว่า รับ strategic choice ข้อใดมา แล้วใช้ choice นั้นตั้ง target และตัดสิน 100% success อย่างไร</p>
+          </div>
+          <p><strong>ถ้าเอกสารบอกแค่ว่าจะทำอะไร แต่ไม่บอกว่าช่วยให้ product ชนะอย่างไร งานยังตั้งเป้าไม่ครบ</strong></p>
+        </div>
+        <div class="spine-grid">
+          <article class="spine-step">
+            <span class="doc-number">01 · STRATEGY REF</span>
+            <h3>ยึด Winning Strategy ชุดไหน</h3>
+            <p>อ้าง Product Statement ฉบับปัจจุบันด้วยชื่อ version/link และระบุว่างานนี้สืบทอด choice ข้อใดใน Who · What · Which · How</p>
+            <p><strong>ห้ามเดา:</strong> ถ้าหา source ไม่เจอหรือหลาย version ขัดกัน ให้หยุดถาม Product Owner</p>
+          </article>
+          <article class="spine-step">
+            <span class="doc-number">02 · RIGHT TARGET</span>
+            <h3>งานนี้ต้องเปลี่ยนอะไรให้ใคร</h3>
+            <p>Target ต้องเป็นการเปลี่ยนพฤติกรรม การตัดสินใจ หรือคุณภาพของผลลัพธ์ที่ช่วยให้ product ชนะ ไม่ใช่เพียง output เช่น “ทำ dashboard” หรือ “เพิ่ม traffic”</p>
+            <p><strong>ถามให้จบ:</strong> ถ้างานนี้สำเร็จ strategy ส่วนใดเดินหน้า และอะไรคือ non-goal</p>
+          </article>
+          <article class="spine-step">
+            <span class="doc-number">03 · 100% SUCCESS</span>
+            <h3>ครบทุกเงื่อนไขเมื่อไร</h3>
+            <p>เขียนผลที่สังเกตได้ threshold, evidence/metric, คุณภาพ, boundary, guardrail, owner และ review point ให้ครบก่อนเริ่มงาน</p>
+            <p><strong>100% คือครบตามนิยาม</strong> ไม่ได้แปลว่าผู้ใช้ 100% ต้องทำเหมือนกัน หรือ product ชนะทั้งตลาดแล้ว</p>
+          </article>
+        </div>
+        <div class="spine-template">
+          <div>
+            <strong>ประโยคที่ต้องเขียนให้ได้ก่อนเริ่มงาน</strong>
+            <p>งานนี้สืบทอด [strategic choice] เพื่อทำให้ [Who] เปลี่ยน [พฤติกรรม/การตัดสินใจ] จาก [before] ไปสู่ [target] และสำเร็จ 100% เมื่อ [เงื่อนไขทั้งหมด] ผ่าน โดยตรวจจาก [evidence] ภายใต้ [boundary] — owner คือ [ชื่อ/บทบาท]</p>
+          </div>
+          <div class="outcome-proof">
+            <strong><b>Delivered ≠ Outcome proven</b></strong>
+            <p>ไฟล์เสร็จ code ขึ้น production หรือ KPI ถึงค่า เป็นหลักฐานบางส่วน ถ้ายังไม่ได้ทดสอบผลต่อผู้ใช้ ให้รายงานว่า <b>Delivered · outcome not yet proven</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chooser" id="chooser" aria-labelledby="chooser-title">
+      <div class="wrap chooser-grid">
+        <div class="chooser-copy">
+          <p class="section-kicker">01 · เริ่มจากงานที่อยู่ตรงหน้า</p>
+          <h2 id="chooser-title">วันนี้คุณกำลังทำอะไร?</h2>
+          <p>เมื่อเข้าใจ Strategy Spine แล้ว เลือกสถานการณ์ที่ใกล้ที่สุด ระบบจะบอกว่า <strong>เปิดอะไร · รับ choice ใดมา · ต้องกำหนดอะไรเพิ่มในงานนี้</strong></p>
+          <div class="scenario-list js-only" role="group" aria-label="เลือกสถานการณ์">
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="new-product">กำลังเริ่มผลิตภัณฑ์ หรือ Winning Strategy เปลี่ยน</button>
+            <button class="scenario" type="button" aria-pressed="true" data-scenario="copy">กำลังทำ roadmap, PRD, data, design หรือ development</button>
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="brand">กำลังอธิบายว่า Landometer คือใคร</button>
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="which">กำลังเลือกคู่แข่งหรือ quality bar</button>
+            <button class="scenario" type="button" aria-pressed="false" data-scenario="gtm">กำลังทำ GTM, proposal, sales หรือ content</button>
+          </div>
+          <noscript>
+            <ul class="no-js-list">
+              <li>ทั้งบริษัท — Master Brand Brief</li>
+              <li>หนึ่งผลิตภัณฑ์ — Product Brief ที่มี Product Statement</li>
+              <li>งานปลายน้ำทุกชิ้น — Strategy ref + right target + 100% success</li>
+              <li>ทางเลือก คู่แข่ง และ quality bar — Product Brief แล้วตั้ง target กับ success ของงานเปรียบเทียบ</li>
+              <li>คำอธิบาย — สกัดจาก Product Statement แล้วตั้ง target กับ success ของชิ้นงาน โดยไม่สร้าง claim ใหม่</li>
+            </ul>
+          </noscript>
+        </div>
+        <article class="answer-panel" id="scenarioAnswer" aria-live="polite">
+          <span class="answer-label">เริ่มจาก strategic contract</span>
+          <h3>Strategy ref + target + 100% success</h3>
+          <p class="answer-why">นี่คือกติกาของ roadmap, PRD, data/design/development brief, GTM, proposal และ content ทุกชิ้น ไม่ใช่เฉพาะตอนเริ่มหรือแก้ product</p>
+          <ol class="answer-steps"><li>ยืนยัน exact Product Statement version/link และ owner</li><li>ระบุ strategic choice ที่งานรับมา แล้วเขียน target ว่าต้องเปลี่ยนอะไรให้ใครและช่วยให้ product ชนะอย่างไร</li><li>define 100% success ด้วยเงื่อนไขที่สังเกตได้ evidence/metric, boundary, guardrail, owner และ review point</li></ol>
+          <p class="answer-warning"><strong>ระวัง:</strong> ถ้า output เสร็จแต่ผลต่อผู้ใช้ยังไม่ถูกทดสอบ ให้ระบุ Delivered · outcome not yet proven</p>
+        </article>
+      </div>
+    </section>
+
     <section class="model-section" aria-labelledby="model-title">
       <div class="wrap">
         <div class="model-block" id="four-questions">
           <div class="section-head">
             <div>
-              <p class="section-kicker">01 · คำถามเดียวกัน คนละระดับ</p>
-              <h2 id="model-title">Who · What · Which · How</h2>
+              <p class="section-kicker">02 · Product Statement · Winning Strategy</p>
+              <h2 id="model-title">4 choices ที่ทำให้ product ชนะ</h2>
             </div>
-            <p>สี่คำนี้ไม่ใช่เอกสารสี่ฉบับ และคำตอบระดับ Landometer ใช้แทนคำตอบของผลิตภัณฑ์หนึ่งตัวไม่ได้</p>
+            <p>Who · What · Which · How ไม่ใช่ช่องให้กรอก แต่เป็น choices ที่ใช้เลือกงาน ปฏิเสธงาน และทดสอบวิธีชนะ ถ้ายังทำสามอย่างนี้ไม่ได้ มันยังไม่เป็น strategy</p>
           </div>
           <div class="level-switch js-only" role="group" aria-label="เลือกระดับคำตอบ">
-            <button type="button" aria-pressed="true" data-level="brand">ระดับ Landometer</button>
-            <button type="button" aria-pressed="false" data-level="product">ระดับผลิตภัณฑ์</button>
+            <button type="button" aria-pressed="true" data-level="product">ระดับผลิตภัณฑ์</button>
+            <button type="button" aria-pressed="false" data-level="brand">ระดับ Landometer</button>
           </div>
           <div class="four-grid" id="fourGrid" aria-live="polite">
-            <article class="question"><h3 class="question-word">Who</h3><p class="question-prompt">เราเลือกช่วยใคร และเขาต้องการอะไร</p><p class="question-answer">คนและองค์กรที่ต้องตัดสินใจเกี่ยวกับพื้นที่จริง ซึ่งกระทบเงิน เวลา ความเสี่ยง ชุมชน หรืออนาคตของเมือง พวกเขาต้องการหลักฐานที่มองเห็นและเปรียบเทียบได้ และความมั่นใจว่าการตัดสินใจอธิบายและทบทวนได้</p></article>
-            <article class="question"><h3 class="question-word">What</h3><p class="question-prompt">ผู้ใช้ต้องได้ความก้าวหน้าอะไร</p><p class="question-answer">เปลี่ยนข้อมูลเมืองที่กระจัดกระจายให้เป็นความเข้าใจเชิงพื้นที่ที่มีแหล่งที่มา เพื่อให้ผู้ใช้เห็น เข้าใจ เปรียบเทียบ ตัดสินใจ ลงมือทำ และเรียนรู้จากผลลัพธ์</p></article>
-            <article class="question"><h3 class="question-word">Which</h3><p class="question-prompt">ผู้ใช้มีทางเลือกอะไร และเราตั้งมาตรฐานเทียบกับใคร</p><p class="question-answer">แยกวิธีเดิม ทางเลือกตรงของแต่ละผลิตภัณฑ์ และ aspiring benchmarks ที่ใช้ตั้ง quality bar ด้านความน่าเชื่อถือ ความง่ายในการใช้ intelligence และ workflow โดยไม่เรียกทุก benchmark ว่าคู่แข่งตรง</p></article>
-            <article class="question"><h3 class="question-word">How</h3><p class="question-prompt">เราจะชนะในกรอบ Which ด้วยอะไร</p><p class="question-answer">ชนะด้วยฐานข้อมูลเมืองไทยที่เชื่อม Land · Location · Living, spatial intelligence ที่คนไม่ใช้ GIS ก็เข้าใจได้, visual-first explanation, grounded AI ที่แสดง source และ limitation และ action &amp; learning loop ที่มีหลักฐานรองรับ</p></article>
+            <article class="question"><h3 class="question-word">Who</h3><p class="question-prompt">ใครต้องยอมเปลี่ยน และอะไรอยู่ในใจเขา</p><p class="question-answer">ระบุ primary user, trigger, การตัดสินใจ, พฤติกรรมเดิม, functional need, emotional tension และเสียงในหัว แยก buyer, approver และ beneficiary เมื่อเป็นคนละคน ใช้คำพูดจริงหรือระบุชัดว่าเป็น hypothesis</p></article>
+            <article class="question"><h3 class="question-word">What</h3><p class="question-prompt">เขาต้องก้าวจากอะไรไปสู่อะไร</p><p class="question-answer">เขียน before → after ที่สังเกตได้ พร้อมเวลา คุณภาพ ตัวชี้วัด หลักฐาน และ boundary อย่าใช้รายการ feature หรือสัญญาผลลัพธ์ปลายทางที่ product ควบคุมไม่ได้</p></article>
+            <article class="question"><h3 class="question-word">Which</h3><p class="question-prompt">วันนี้เขาเลือกอะไรแทนเราได้</p><p class="question-answer">รวมวิธีเดิม การไม่ทำอะไร ทางเลือกตรง และคู่แข่งหรือ benchmark ที่ท้าทายและเกี่ยวข้องกับแต่ละมิติ ระบุ win / parity / not compete แล้วเทียบภายใต้ผู้ใช้ โจทย์ input และข้อจำกัดเดียวกัน</p></article>
+            <article class="question"><h3 class="question-word">How</h3><p class="question-prompt">เราจะชนะด้วย choices ที่เสริมกันอย่างไร</p><p class="question-answer">เลือก 3–5 capabilities ที่ reinforce กัน เชื่อม functional และ emotional barrier ไปยัง What และเอาชนะข้อจำกัดของทางเลือกใน Which พร้อม trade-off, non-goal และ durable-advantage hypothesis ที่ทดสอบได้</p></article>
           </div>
-          <noscript><p class="four-note">หน้าแบบไม่ใช้ JavaScript แสดงคำตอบระดับ Landometer ไว้ด้านบน ส่วนตัวอย่างระดับผลิตภัณฑ์อยู่ในหัวข้อ “ตัวอย่างเดียว เห็นครบ” ด้านล่าง</p></noscript>
-          <p class="four-note"><strong>จำสั้น ๆ:</strong> Who ต้องการ What — Which กำหนดทางเลือกและ quality bar — How คือวิธีชนะ Product Statement ไม่ใช่ระดับที่สาม แต่เป็นวิธีเล่าคำตอบระดับผลิตภัณฑ์ให้สั้นลง</p>
+          <noscript><p class="four-note">หน้าแบบไม่ใช้ JavaScript แสดงคำตอบระดับผลิตภัณฑ์ไว้ด้านบน ส่วนคำตอบระดับ Landometer อยู่ใน Master Brand Brief</p></noscript>
+          <p class="four-note"><strong>จำสั้น ๆ:</strong> Product Statement คือ Winning Strategy ของผลิตภัณฑ์: เราเลือก Who คนใด จะทำให้เขาได้ What อะไร เขากำลังเลือกระหว่าง Which อะไร และเราจะชนะด้วย How ใด ทุกเอกสารปลายน้ำต้องนำ strategy นี้ไปใช้ตั้ง target ที่ช่วยให้ product ชนะ และ define 100% success ของงานนั้นให้ตรวจได้—not merely attach a link.</p>
+          <details class="strategy-tips" id="strategy-tips">
+            <summary class="strategy-tips-summary"><span data-lang-copy="th">สำหรับคนที่ต้องร่างหรือแก้ Product Statement<small>เปิดเกณฑ์เขียน Who · What · Which · How แบบลึก พร้อมขนาด working draft และเกณฑ์พร้อมใช้</small></span><span data-lang-copy="en">For people drafting or revising a Product Statement<small>Open the deep-draft guide for Who · What · Which · How, practical size and readiness checks</small></span></summary>
+            <div class="strategy-tips-content">
+            <div data-lang-copy="th">
+              <div class="strategy-tips-head">
+                <div><p class="section-kicker">Tips · ใช้ตอนร่างหรือทบทวน Product Statement</p><h3 id="strategy-tips-title-th">คำตอบสั้นได้<br>แต่เหตุผลต้องลึกพอให้ทีมเลือกและลงมือได้</h3></div>
+                <p class="strategy-tips-intro">Tips ชุดนี้ใช้กับหนึ่งผลิตภัณฑ์ เพราะ emotional need, switching behavior, คู่แข่งตรง และวิธีชนะต้องเฉพาะเจาะจง ระดับ Landometer ใช้กำหนดทิศร่วมและ shared capabilities ที่มีหลักฐานรองรับทั้งพอร์ต</p>
+              </div>
+              <div class="strategy-contract">
+                <p><strong>ทุกคำตอบต้องมี Choice · Evidence · Test · Boundary</strong>เราเลือกอะไร · รู้จากอะไร · อะไรพิสูจน์หรือหักล้างได้ · อะไรยังไม่รู้หรือจงใจไม่ทำ คำตอบที่ยังไม่มีหลักฐานใช้เป็น hypothesis ได้ แต่ต้องติดป้ายและมี next test</p>
+                <p class="strategy-size"><b>ขนาดที่ใช้งานได้จริง</b><br>Product Statement ฉบับทำงานควรอ่านจบใน 1–2 หน้า หรือประมาณ 3–6 ประโยคต่อคำ ส่วน interview, comparison, experiment และหลักฐานเต็มให้อยู่ใน Product Brief หรือ evidence appendix</p>
+              </div>
+              <div class="strategy-grid">
+                <article class="strategy-card">
+                  <span class="strategy-card-word">Who</span>
+                  <h4>ขุดถึงเหตุผลที่คนจะยอมเปลี่ยน</h4>
+                  <p>ระบุ primary user, trigger, การตัดสินใจ, พฤติกรรมเดิม, functional need และ emotional tension “เสียงในหัว” ต้องอธิบายแรงต้าน เช่น กลัวเลือกผิด อธิบายกับผู้อนุมัติไม่ได้ หรือไม่อยากเรียน workflow ใหม่ ใช้คำพูดจริงเมื่อมี; ถ้ายังไม่มีให้ติดป้ายว่าเป็นสมมติฐาน ห้ามแต่ง quote ให้ดูเหมือนงานวิจัย</p>
+                  <dl class="strategy-gate"><dt>ดีพอเมื่อ</dt><dd>คนในทีมระบุผู้ใช้และจังหวะตัดสินใจตรงกัน และตั้งสมมติฐานที่ทดสอบได้ว่าเหตุใดเขาจะอยู่กับวิธีเดิมหรือยอมลองของใหม่</dd><dt>Working draft</dt><dd>เริ่มจากเรื่องการตัดสินใจล่าสุด 3 ราย + workflow หรือ artifact จริง 1 ชุด + อย่างน้อย 1 ประโยคเสียงในหัวที่มีที่มาหรือติดป้าย hypothesis ทั้งหมดนี้ตั้งสมมติฐานได้ แต่ยังไม่ใช่ validation</dd></dl>
+                </article>
+                <article class="strategy-card">
+                  <span class="strategy-card-word">What</span>
+                  <h4>เขียนผลลัพธ์ที่สังเกตได้ ไม่ใช่ feature</h4>
+                  <p>เขียน before → after ใน moment เดียวกับ Who พร้อมคุณภาพ เวลา หรือข้อจำกัดที่สำคัญ และ next action ที่ผู้ใช้ทำได้ อย่าสัญญาผลลัพธ์ปลายทางที่ product ควบคุมไม่ได้ เช่น ยอดขายหรือการอนุมัติลงทุน</p>
+                  <dl class="strategy-gate"><dt>ดีพอเมื่อ</dt><dd>เขียน acceptance test ได้โดยยังไม่ต้องรู้ว่า product จะมี feature อะไร และมีหลักฐานว่าผลลัพธ์สำคัญพอให้ผู้ใช้พิจารณาเปลี่ยนพฤติกรรม</dd><dt>Working draft</dt><dd>1 outcome sentence + baseline ของวิธีเดิม + 2–3 observable measures + 1 boundary ที่บอกสิ่งซึ่ง product ไม่ได้ตัดสินแทน</dd></dl>
+                </article>
+                <article class="strategy-card">
+                  <span class="strategy-card-word">Which</span>
+                  <h4>เลือกคู่ต่อสู้จริง แล้วตั้ง bar ให้สูง</h4>
+                  <p>รวมวิธีเดิม การไม่ทำอะไร ทางเลือกตรงที่ผู้ใช้เลือกจริง และคู่แข่งหรือ benchmark ที่ท้าทายและเกี่ยวข้องกับแต่ละมิติ อย่าเลือกคู่แข่งอ่อนเพื่อให้ชนะบนกระดาษ ระบุว่าเราต้องชนะตรงไหน ตรงไหนต้องได้มาตรฐานอย่างน้อย และจงใจไม่แข่งตรงไหน หากไม่อยู่ใน consideration set ให้เรียกว่า benchmark</p>
+                  <dl class="strategy-gate"><dt>ดีพอเมื่อ</dt><dd>ผู้ใช้ยืนยัน choice set และทีมเทียบภายใต้ผู้ใช้ โจทย์ input และข้อจำกัดเดียวกัน; งานข้อมูลต้องใช้ schema / release เดียวกันเมื่อเกี่ยวข้อง หรือบอก incompatibility</dd><dt>Working draft</dt><dd>ตาราง 3–5 ทางเลือก × 3–5 decisive dimensions พร้อมหลักฐาน win / loss / defer หรือ same-task test คู่แข่งที่เก่งช่วยตั้ง bar; durable advantage ยังเป็น hypothesis ที่ต้องบอกว่าอะไรจะสะสม ภายใต้เงื่อนไขใด และทดสอบอย่างไร</dd></dl>
+                </article>
+                <article class="strategy-card">
+                  <span class="strategy-card-word">How</span>
+                  <h4>ชนะด้วย choices ที่ reinforce กัน</h4>
+                  <p>เขียน 3–5 choices หรือ capabilities ที่เชื่อมทั้ง functional และ emotional barrier ของ Who ไปยัง What และเอาชนะข้อจำกัดของทางเลือกใน Which พร้อม trade-off, non-goal และกลไกที่คาดว่าจะสะสมคุณค่า ห้ามใช้รายการ AI, map, big data หรือ UX แทนวิธีชนะ</p>
+                  <dl class="strategy-gate"><dt>ดีพอเมื่อ</dt><dd>ทีมใช้ How ปฏิเสธ feature ที่น่าสนใจแต่ไม่ช่วยวิธีชนะ และเปลี่ยนสิ่งที่เลือกเป็น roadmap กับ experiment ได้ทันที</dd><dt>Working draft</dt><dd>3–5 choice statements; แต่ละข้อมี owner, next experiment, pass/fail rule, evidence source และ review date พร้อมหลักฐานเปรียบเทียบกับทางเลือกที่ระบุไว้ในมิติที่เลือก</dd></dl>
+                </article>
+              </div>
+              <div class="strategy-chain"><strong>เชื่อมสี่คำให้เป็น Winning Strategy ที่ลงมือได้</strong><p>เมื่อ [trigger] ผู้ใช้หลัก [Who] ซึ่งตอนนี้ใช้ [วิธีเดิม] เพราะ [คำพูดจริง หรือ hypothesis ที่ติดป้าย] ต้องไปจาก [before] ถึง [What] ภายใน [ข้อจำกัด] เขากำลังเลือกระหว่าง [Which] เราจะชนะที่ [มิติสำคัญ] ด้วย [How ที่ reinforce กัน] และจงใจไม่ทำ [non-goal]</p><p><strong>100% success ของงาน:</strong> งานนี้สำเร็จ 100% เมื่อ [Who] สามารถ [พฤติกรรมหรือผลลัพธ์ที่สังเกตได้] ภายใต้ [เงื่อนไข/ข้อจำกัด] โดยตรวจจาก [evidence/metric] และไม่รวม [boundary]</p></div>
+            </div>
+            <div data-lang-copy="en">
+              <div class="strategy-tips-head">
+                <div><p class="section-kicker">Tips · Use when drafting or reviewing a Product Statement</p><h3 id="strategy-tips-title-en">The answers can be brief.<br>The reasoning must guide choices and tests.</h3></div>
+                <p class="strategy-tips-intro">These tips apply to one product. Emotional needs, switching behavior, direct competitors and the way to win must be product-specific. The Landometer level should hold only shared direction and capabilities supported across the portfolio.</p>
+              </div>
+              <div class="strategy-contract">
+                <p><strong>Every answer needs Choice · Evidence · Test · Boundary</strong>What have we chosen? What supports it? What could confirm or disprove it? What remains unknown or deliberately excluded? An unsupported answer may remain a hypothesis, but it needs a label and a next test.</p>
+                <p class="strategy-size"><b>Practical draft size</b><br>A working Product Statement should fit in one or two pages, roughly three to six sentences per question. Keep interviews, comparisons, experiments and full evidence in the Product Brief or evidence appendix.</p>
+              </div>
+              <div class="strategy-grid">
+                <article class="strategy-card">
+                  <span class="strategy-card-word">Who</span>
+                  <h4>Go deep enough to explain switching</h4>
+                  <p>Name the primary user, trigger, decision, current behavior, functional need and emotional tension. Their “inner voice” should explain inertia: fear of a bad decision, inability to defend it, or the cost of learning a new workflow. Use real words when available; otherwise label the line as a hypothesis. Never present invented dialogue as research.</p>
+                  <dl class="strategy-gate"><dt>Deep enough when</dt><dd>The team identifies the same user and moment, then forms a testable explanation of why that person will stay with the old way or try the new one.</dd><dt>Working draft</dt><dd>Start with three recent decision stories + one real workflow artifact + at least one traceable inner-voice line or clearly labelled hypothesis. This forms a working hypothesis, not validation.</dd></dl>
+                </article>
+                <article class="strategy-card">
+                  <span class="strategy-card-word">What</span>
+                  <h4>State observable progress, not a feature</h4>
+                  <p>Describe before → after in the same moment as Who. Include the quality, time or constraint that matters and the next action the user can take. Do not promise downstream results the product cannot control, such as sales or final investment approval.</p>
+                  <dl class="strategy-gate"><dt>Deep enough when</dt><dd>The team can write an acceptance test without knowing the feature set, and evidence shows the outcome matters enough for the user to consider changing behavior.</dd><dt>Working draft</dt><dd>One outcome sentence + the current baseline + two or three observable measures + one boundary naming what the product does not decide.</dd></dl>
+                </article>
+                <article class="strategy-card">
+                  <span class="strategy-card-word">Which</span>
+                  <h4>Face the real alternative and set a demanding bar</h4>
+                  <p>Include the current workflow, doing nothing, direct alternatives users genuinely consider, and a demanding, relevant competitor or benchmark for each decisive dimension. Do not choose a weak rival to win on paper. State where to win, where parity is enough and where not to compete. If it is not in the consideration set, call it a benchmark.</p>
+                  <dl class="strategy-gate"><dt>Deep enough when</dt><dd>Users recognize the choice set and the team compares the same user, task, input and constraints; for data-dependent claims, use the same schema / release where relevant or state the incompatibility.</dd><dt>Working draft</dt><dd>A 3–5 choice × 3–5 dimension table, backed by win / loss / defer evidence or a same-task test. A formidable rival raises the bar; durable advantage remains a hypothesis that names what should accumulate, under which conditions and how it will be tested.</dd></dl>
+                </article>
+                <article class="strategy-card">
+                  <span class="strategy-card-word">How</span>
+                  <h4>Win through reinforcing choices</h4>
+                  <p>State three to five choices or capabilities that connect Who’s functional and emotional barriers to What and address the limitations of the alternatives named in Which. Include trade-offs, non-goals and a mechanism expected to accumulate value. A list of AI, maps, big data or intuitive UX is not a way to win.</p>
+                  <dl class="strategy-gate"><dt>Deep enough when</dt><dd>The team can reject an attractive feature that does not support the way to win, then turn the chosen capabilities into a roadmap and experiments.</dd><dt>Working draft</dt><dd>Three to five choice statements; each has an owner, next experiment, pass/fail rule, evidence source and review date, plus comparative evidence on the selected dimensions.</dd></dl>
+                </article>
+              </div>
+              <div class="strategy-chain"><strong>Turn the four answers into an executable winning strategy</strong><p>When [trigger] occurs, [Who], who currently uses [the old way] because [a real user statement or labelled hypothesis], needs to move from [before] to [What] within [constraint]. They are choosing among [Which]. We will win on [decisive dimensions] through [reinforcing How choices] and deliberately exclude [non-goal].</p><p><strong>100% success for the work:</strong> This work reaches 100% success when [Who] can [observable behavior or outcome] under [conditions/constraints], verified by [evidence/metric], excluding [boundary].</p></div>
+            </div>
+            </div>
+          </details>
           <div class="positioning">
             <div>
               <blockquote lang="en">Landometer is the decision-intelligence layer between raw urban data and real local action.</blockquote>
@@ -392,11 +678,17 @@
         <div class="model-block" id="three-docs">
           <div class="section-head">
             <div>
-              <p class="section-kicker">02 · เอกสาร 3 ฉบับ</p>
-              <h2>ทำงานต่อกัน<br>แต่ไม่ทำงานแทนกัน</h2>
+              <p class="section-kicker">03 · ต้นทาง 2 ระดับ · Winning Strategy 1 ชุด</p>
+              <h2>อยู่ใน Product Brief<br>และตามไปในทุกงาน</h2>
             </div>
-            <p>ถ้าจำได้เพียงอย่างเดียว ให้จำว่าเรากำลังตัดสินเรื่องทั้งบริษัท หนึ่งผลิตภัณฑ์ หรือกำลังอธิบายสิ่งที่ตกลงแล้ว</p>
+            <p>Master Brand Brief กำหนดทิศระดับบริษัท Product Brief เก็บการตัดสินใจและหลักฐานระดับผลิตภัณฑ์ ส่วน Product Statement คือ strategic contract ที่ทุกงานปลายน้ำต้องอ้าง</p>
           </div>
+          <article class="strategy-band">
+            <div class="strategy-band-grid">
+              <div><span class="doc-number">WINNING STRATEGY IN EVERY WORK ITEM</span><h3>Product Statement</h3></div>
+              <div><p><strong>Product Statement คือ Winning Strategy ของ product</strong> ไม่ใช่ copy สั้นและไม่ใช่เอกสารชั้นที่สาม ทุกงานต้องระบุ version/link, strategic choice ที่รับมา, target ที่ช่วยให้ product ชนะ, 100% success, evidence/boundary และ owner</p><p class="strategy-band-rule">การแปะลิงก์อย่างเดียวไม่พอ Strategy ต้องเปลี่ยนสิ่งที่ทีมเลือกทำและเกณฑ์ที่ใช้ตัดสินว่างานสำเร็จ</p></div>
+            </div>
+          </article>
           <div class="doc-grid">
             <article class="doc">
               <span class="doc-rule" aria-hidden="true"></span><span class="doc-number">01 · WHOLE COMPANY</span>
@@ -411,78 +703,52 @@
             <article class="doc">
               <span class="doc-rule" aria-hidden="true"></span><span class="doc-number">02 · ONE PRODUCT</span>
               <h3>Product Brief</h3>
-              <p class="doc-purpose"><strong>ตกลงความจริงของหนึ่งผลิตภัณฑ์</strong> — ผู้ใช้และความต้องการ ผลลัพธ์ ทางเลือกและ quality bar วิธีชนะ ข้อมูล ขอบเขต และวิธีวัดผล</p>
+              <p class="doc-purpose"><strong>เก็บการตัดสินใจและหลักฐานของหนึ่งผลิตภัณฑ์</strong> — Product Statement, research, comparison, data, scope, experiment, change log และรายละเอียดที่ใช้ทบทวน strategy</p>
               <dl>
                 <div><dt>เปิดเมื่อ</dt><dd>เริ่ม product, วาง roadmap, UX, data, development หรือเมื่อ user, value, scope, workflow และ release เปลี่ยน</dd></div>
-                <div><dt>ช่วยอะไร</dt><dd>ทำให้ Product, Data, Design, Development, Marketing และ Sales กำลังสร้างผลิตภัณฑ์เดียวกัน</dd></div>
-                <div><dt>ไม่ใช้แทน</dt><dd>หน้าเว็บหรือ sales copy สำเร็จรูป และไม่ใช่ความจริงระดับ Landometer ทั้งหมด</dd></div>
-              </dl>
-            </article>
-            <article class="doc">
-              <span class="doc-rule" aria-hidden="true"></span><span class="doc-number">03 · EXPLAIN IT</span>
-              <h3>Product Statement</h3>
-              <p class="doc-purpose"><strong>พูดความจริงนั้นให้สั้น</strong> — คำอธิบาย 1–3 ประโยคจากแหล่งความจริงระดับผลิตภัณฑ์ที่อนุมัติแล้ว</p>
-              <dl>
-                <div><dt>เปิดเมื่อ</dt><dd>เขียนหน้าเว็บ deck, proposal, sales brief, campaign brief หรือแนะนำผลิตภัณฑ์</dd></div>
-                <div><dt>ช่วยอะไร</dt><dd>ทำให้ทุกช่องทางอธิบายผลิตภัณฑ์ตรงกัน โดยไม่ให้ผู้ฟังต้องอ่าน Product Brief ทั้งฉบับ</dd></div>
-                <div><dt>ไม่ใช้แทน</dt><dd>การตัดสินใจเรื่องผู้ใช้ คุณค่า กลไก หรือขอบเขต และห้ามเติม promise ที่ต้นทางไม่รองรับ</dd></div>
+                <div><dt>ช่วยอะไร</dt><dd>ทำให้ทีมตรวจที่มา เหตุผล ขอบเขต และการเปลี่ยนของ Product Statement ได้ ไม่ใช่แค่จำประโยคสรุป</dd></div>
+                <div><dt>ไม่ใช้แทน</dt><dd>work brief หรือ definition of done ของงานแต่ละชิ้น และไม่ใช่ความจริงระดับ Landometer ทั้งหมด</dd></div>
               </dl>
             </article>
           </div>
           <div class="remember" role="group" aria-label="กฎจำสามบรรทัด">
-            <p><strong>ทั้ง Landometer</strong>Master Brand Brief</p>
-            <p><strong>หนึ่งผลิตภัณฑ์</strong>Product Brief</p>
-            <p><strong>หนึ่งคำอธิบาย</strong>Product Statement</p>
+            <p><strong>ทิศระดับบริษัท</strong>Master Brand Brief</p>
+            <p><strong>หลักฐานระดับผลิตภัณฑ์</strong>Product Brief</p>
+            <p><strong>Winning Strategy ในทุกงาน</strong>Strategy ref + right target + 100% success</p>
+          </div>
+          <div class="source-design-work" role="group" aria-label="แยกหน้าที่ของต้นทาง Design System และ work brief">
+            <p><strong>Brand / Product source</strong>บอกว่าอะไรจริง และ strategy ใดกำกับงาน</p>
+            <p><strong>Design System</strong>บอกว่าจะสื่อและออกแบบสิ่งนั้นอย่างไร</p>
+            <p><strong>Work brief</strong>บอกว่างานชิ้นนี้สำเร็จ 100% เมื่ออะไรผ่านครบ</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="chooser" id="chooser" aria-labelledby="chooser-title">
-      <div class="wrap chooser-grid">
-        <div class="chooser-copy">
-          <p class="section-kicker">03 · เลือกจากงานที่อยู่ตรงหน้า</p>
-          <h2 id="chooser-title">วันนี้คุณกำลังทำอะไร?</h2>
-          <p>เลือกสถานการณ์หนึ่งข้อ แล้วดูว่าควรเปิดเอกสารไหน เหตุผลคืออะไร และทำอะไรต่อ</p>
-          <div class="scenario-list js-only" role="group" aria-label="เลือกสถานการณ์">
-            <button class="scenario" type="button" aria-pressed="true" data-scenario="new-product">กำลังเริ่มผลิตภัณฑ์ หรือสมมติฐานหลักเปลี่ยน</button>
-            <button class="scenario" type="button" aria-pressed="false" data-scenario="copy">กำลังเขียนหน้าเว็บ deck หรือ proposal</button>
-            <button class="scenario" type="button" aria-pressed="false" data-scenario="brand">กำลังอธิบายว่า Landometer คือใคร</button>
-            <button class="scenario" type="button" aria-pressed="false" data-scenario="which">กำลังเลือกคู่แข่งหรือ quality bar</button>
-            <button class="scenario" type="button" aria-pressed="false" data-scenario="gtm">กำลังเลือกช่องทาง ราคา หรือ funnel</button>
-          </div>
-          <noscript>
-            <ul class="no-js-list">
-              <li>ทั้งบริษัท — Master Brand Brief</li>
-              <li>หนึ่งผลิตภัณฑ์ — Product Brief</li>
-              <li>อธิบายสิ่งที่ตกลงแล้ว — Product Statement</li>
-              <li>ทางเลือก คู่แข่ง และ quality bar — Product Brief</li>
-              <li>ช่องทาง ราคา และ funnel — GTM plan ที่ใช้อยู่</li>
-            </ul>
-          </noscript>
-        </div>
-        <article class="answer-panel" id="scenarioAnswer" aria-live="polite">
-          <span class="answer-label">ควรเปิดก่อน</span>
-          <h3>Product Brief</h3>
-          <p class="answer-why">เพราะทีมกำลังตัดสินว่าใครต้องได้ผลลัพธ์อะไร จะเทียบกับทางเลือกและ quality bar ใด และจะชนะอย่างไร</p>
-          <ol class="answer-steps"><li>เปิด Master Brand Brief เพื่อตรวจว่าผลิตภัณฑ์เหมาะกับทิศของ Landometer</li><li>ตกลง Who และ needs, What, current/direct/aspirational choices, How-to-win, ขอบเขต หลักฐาน และวิธีวัดผล</li><li>เมื่อทีมอนุมัติแล้ว ค่อยย่อเป็น Product Statement</li></ol>
-          <p class="answer-warning"><strong>ระวัง:</strong> อย่าเริ่มจากตั้ง tagline แล้วค่อยย้อนหาว่า product ทำได้จริงหรือไม่</p>
-        </article>
       </div>
     </section>
 
     <section class="example" id="example" aria-labelledby="example-title">
       <div class="wrap">
         <div class="example-intro">
-          <p class="section-kicker">04 · ตัวอย่างเดียว เห็นครบ</p>
-          <h2 id="example-title">สมมติทีมจะสร้าง “เครื่องมือคัดกรองทำเล”</h2>
-          <p>ทีมพัฒนาธุรกิจมีทำเล 30 แห่ง และต้องเลือก 3 แห่งที่ควรลงพื้นที่ตรวจต่อ</p>
-          <span class="teaching-status">ตัวอย่างเพื่อสอน · ไม่ใช่ Product Statement ที่อนุมัติแล้ว</span>
+          <p class="section-kicker">04 · หนึ่งงาน จาก Strategy ถึง Done</p>
+          <h2 id="example-title">“ทำ prototype คัดกรองทำเลให้หน่อย”</h2>
+          <p>โจทย์นี้ยังไม่พอให้ทีมลงมือ เพราะยังไม่รู้ว่าอ้าง strategy ใด งานนี้เปลี่ยนอะไร และเงื่อนไขครบถ้วนของคำว่า “สำเร็จ” คืออะไร</p>
+          <span class="teaching-status">ยังไม่พอ · feature request ยังไม่ใช่ work target</span>
         </div>
+        <div class="example-contrast" role="group" aria-label="เปรียบเทียบวิธีเริ่มงานที่หลุดกับวิธีที่ถูก">
+          <article class="contrast-card"><b>ถ้าเริ่มจาก feature หรือ copy</b><p>ทีมจะคุยว่าต้องสร้างอะไร ก่อนตกลงว่ากำลังเปลี่ยนพฤติกรรมใคร ชนะทางเลือกใด และงานนี้ผ่านเมื่อไร</p></article>
+          <article class="contrast-card"><b>ลำดับที่ใช้ได้จริง</b><p>Current Product Statement · strategic choice ที่รับมา · target ที่ช่วยให้ product ชนะ · 100% success + evidence + boundary + owner</p></article>
+        </div>
+        <div class="work-flow" role="group" aria-label="สามขั้นจาก strategy ถึง definition of done">
+          <article class="work-step"><span class="doc-number">01 · STRATEGY REF</span><h3>ยึด Winning Strategy ชุดไหน</h3><p>Location screening · teaching example v0 · not authoritative — Who คือทีมพัฒนาธุรกิจ, What คือ shortlist ที่อธิบายได้, Which คือวิธีเดิม/GIS/consultant, How คือเกณฑ์ พื้นที่ และ data release เดียวกัน</p></article>
+          <article class="work-step"><span class="doc-number">02 · THIS WORK’S TARGET</span><h3>งานนี้ต้องเปลี่ยนอะไร</h3><p>สร้าง prototype ที่ช่วยผู้ใช้คัด 30 ทำเลเหลือ 3 ด้วยกติกาเดียวกัน พร้อมเห็นเหตุผล source สัญญาณที่เห็นต่าง และข้อมูลที่ยังขาด</p></article>
+          <article class="work-step"><span class="doc-number">03 · 100% SUCCESS</span><h3>ครบเมื่ออะไรเกิดขึ้น</h3><p>ผู้ใช้เป้าหมายอย่างน้อย 4 ใน 5 คนทำ flow เสร็จภายใน 45 นาที อธิบาย shortlist และ gaps ได้ โดยขอ analyst help ไม่เกิน 1 ครั้ง ตรวจจาก task test, decision log และ observation note</p></article>
+        </div>
+        <p class="success-meaning"><strong>100% ไม่ได้แปลว่า metric ต้องเท่ากับ 100% และไม่เท่ากับ “ส่งของแล้ว”</strong> แต่หมายถึงเงื่อนไขทั้งหมดที่ตกลงไว้สำหรับนับว่างานนี้สำเร็จ—รวม user outcome, threshold, evidence, boundary, guardrail, owner และ review point หาก output เสร็จแต่ผลต่อผู้ใช้ยังไม่ถูกทดสอบ ให้ระบุ <b>Delivered · outcome not yet proven</b></p>
+        <details class="example-deep">
+          <summary>ดูฉบับเต็ม · Who · What · Which · How และ work brief</summary>
         <div class="example-layout">
           <article class="example-column">
-            <p class="section-kicker">Product Brief · ตกลงให้ครบ</p>
-            <h3>สี่คำตอบ และหนึ่งขอบเขต</h3>
+            <p class="section-kicker">Product Statement · Winning Strategy</p>
+            <h3>สี่คำตอบและขอบเขตของ product</h3>
             <div class="brief-grid">
               <div class="brief-item"><b>Who</b><p>ทีมพัฒนาธุรกิจต้องคัด 30 ทำเลก่อนลงพื้นที่ และต้องมั่นใจว่าอธิบาย shortlist ต่อผู้บริหารได้ ผู้บริหารการลงทุนเป็นผู้อนุมัติ ไม่ใช่ผู้ใช้หลัก</p></div>
               <div class="brief-item"><b>What</b><p>ได้ shortlist 3 ทำเลที่ควรลงพื้นที่ต่อ พร้อมเหตุผล หลักฐาน และข้อมูลที่ยังต้องตรวจ</p></div>
@@ -492,23 +758,26 @@
             <p class="boundary"><strong>ขอบเขต:</strong> ใช้ประกอบการตัดสินใจ ไม่อนุมัติการลงทุนแทนคน และไม่รับประกันยอดขาย</p>
           </article>
           <article class="example-column">
-            <p class="section-kicker">Product Statement · เล่าให้สั้น</p>
-            <h3>ความจริงเดิม ในภาษาที่อ่านเร็วขึ้น</h3>
-            <p class="statement" id="workedStatement">เครื่องมือคัดกรองทำเลช่วย <span data-part="who">ทีมพัฒนาธุรกิจ</span> <span data-part="what">คัด 30 ทำเลให้เหลือ 3 ทำเลที่ควรลงพื้นที่ต่อ</span> <span data-part="how">โดยใช้เกณฑ์ ขอบเขตพื้นที่ และข้อมูลรุ่นเดียวกันกับทุกทำเล พร้อมแสดงเหตุผล หลักฐาน และข้อมูลที่ยังต้องตรวจ</span> <span data-part="boundary">ผลลัพธ์ใช้ประกอบการตัดสินใจ ไม่ใช่คำอนุมัติลงทุนหรือการรับประกันยอดขาย</span></p>
+            <p class="section-kicker">Downstream work brief · งานหนึ่งชิ้น</p>
+            <h3>อ้าง strategy แล้ว define 100% success</h3>
+            <p class="boundary"><strong>Product Statement ref:</strong> Location screening · teaching example v0 · not authoritative</p>
+            <p class="statement" id="workedStatement">งาน prototype รอบนี้จะทำให้ <span data-part="who">ทีมพัฒนาธุรกิจ</span> <span data-part="what">คัด 30 ทำเลให้เหลือ 3 ทำเลที่ควรลงพื้นที่ต่อ</span> <span data-part="how">ด้วยเกณฑ์ ขอบเขตพื้นที่ และ data release เดียวกัน พร้อมเห็นเหตุผล แหล่งที่มา สัญญาณที่เห็นต่าง และข้อมูลที่ยังขาด</span> <span data-part="boundary">งานนี้ไม่อนุมัติการลงทุนและไม่รับประกันยอดขาย</span></p>
+            <p class="success-contract"><strong>100% success ของงานนี้</strong>ผู้ใช้เป้าหมายอย่างน้อย 4 ใน 5 คนทำ flow ข้างต้นเสร็จภายใน 45 นาที อธิบาย shortlist และข้อมูลที่ยังขาดได้ โดยขอความช่วยเหลือจาก analyst ไม่เกิน 1 ครั้ง ตรวจจาก task test, decision log และ observation note; owner คือ Product + Design และ review หลัง test รอบแรก</p>
             <button class="trace-toggle js-only" id="traceToggle" type="button" aria-pressed="false" aria-controls="workedStatement traceLegend">ดูว่าแต่ละส่วนมาจากไหน</button>
             <ul class="trace-legend" id="traceLegend">
               <li><span aria-hidden="true"></span>Who · What · How</li>
               <li><span aria-hidden="true"></span>ขอบเขต</li>
             </ul>
-            <div class="downstream"><h4>Which ไม่ได้หายไปไหน</h4><p>ประโยคสั้นนี้ไม่ยกทางเลือกและ quality bar มาพูด จึงเก็บ Which ไว้ใน Product Brief ส่วน Landing page, sales deck และ campaign จะเพิ่ม Which ได้เมื่อช่วยการตัดสินใจและมีหลักฐานรองรับ</p></div>
+            <div class="downstream"><h4>ทุกเอกสารปลายน้ำต้องมี Strategy Spine เดียวกัน</h4><p>roadmap, PRD, data/design/dev spec, GTM, proposal และ communication ต้อง trace กลับไปยัง Product Statement ฉบับเดียวกัน ระบุ strategic choice ที่รับมา แล้วตั้ง target กับ 100% success ที่เหมาะกับงานนั้น คำอธิบายสั้นเป็น derived communication ไม่ใช่ Product Statement อีกฉบับ และห้ามเปลี่ยน strategy หรือสร้าง promise ใหม่</p></div>
           </article>
         </div>
         <div class="role-list" role="group" aria-label="วิธีใช้ตามบทบาท">
           <article class="role"><b>Brand · Leadership</b><h3>รักษาทิศร่วม</h3><p>ใช้ Master Brand Brief ตัดสินว่าเรื่องใดพูดในนาม Landometer ได้</p></article>
-          <article class="role"><b>Product · Data · Design</b><h3>สร้างของชิ้นเดียวกัน</h3><p>ใช้ Product Brief เพื่อให้เข้าใจผู้ใช้ ข้อมูล ขอบเขต หลักฐาน และสิ่งที่ผลิตภัณฑ์ไม่ทำตรงกัน</p></article>
-          <article class="role"><b>Development</b><h3>ไม่เดาขอบเขตจากหน้าเว็บ</h3><p>ตรวจ requirement กับ Product Brief ไม่ใช้ข้อความสื่อสารเป็น specification</p></article>
-          <article class="role"><b>Marketing · Sales</b><h3>เล่าโดยไม่เกินจริง</h3><p>เริ่มจาก Product Statement แล้วเปิด Product Brief เมื่อต้องอธิบายผู้ใช้ หลักฐาน วิธีทำงาน หรือข้อจำกัดเพิ่ม</p></article>
+          <article class="role"><b>Product · Data · Design</b><h3>ตั้ง target จาก strategy</h3><p>อ้าง Product Statement version ปัจจุบัน ระบุ choice ที่งานรับมา แล้วนิยาม target, 100% success, evidence และ boundary ของงานแต่ละชิ้น</p></article>
+          <article class="role"><b>Development</b><h3>ไม่เดาขอบเขตจากหน้าเว็บ</h3><p>ตรวจ requirement กับ Product Statement / Product Brief และ definition of done ของงาน ไม่ใช้ derived copy เป็น specification</p></article>
+          <article class="role"><b>Marketing · Sales</b><h3>สกัด ไม่แต่ง strategy ใหม่</h3><p>อ้าง Product Statement ฉบับปัจจุบัน แล้วเขียนคำอธิบายตามผู้ฟังโดยรักษา claim, evidence และ boundary</p></article>
         </div>
+        </details>
       </div>
     </section>
 
@@ -516,33 +785,89 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="section-kicker">05 · เปิดต้นทาง ไม่เดาจากความจำ</p>
-            <h2 id="resources-title">เอกสารและตัวอย่างที่เปิดได้</h2>
+            <p class="section-kicker">05 · Per-product document registry</p>
+            <h2 id="resources-title">ลิงก์ต้นทางอยู่ที่นี่ที่เดียว</h2>
           </div>
-          <p>แยกเอกสารที่กำกับงานปัจจุบันออกจากตัวอย่างการใช้งาน และบอกตรง ๆ เมื่อยังไม่มีลิงก์ฉบับหลัก</p>
+          <p>หากพบ Product Brief หรือ Product Statement link ลอยอยู่ใน chat หรือ deck ให้ลงทะเบียนและยืนยันกับ owner ที่นี่ก่อนใช้</p>
         </div>
-        <div class="source-gaps" role="group" aria-label="ลิงก์ฉบับหลักที่ยังขาด">
-          <article class="source-gap"><span class="status-label">ยังไม่มี public canonical link</span><b>Master Brand Brief ฉบับหลัก</b><p>กรอบ Who · What · Which · How ในหน้านี้ได้รับการยืนยันจาก Brand Owner แล้ว แต่ยังไม่มีลิงก์ public ของ brief ฉบับหลัก ให้ถาม Brand Owner ก่อนเปลี่ยนคำตอบระดับบริษัท</p></article>
-          <article class="source-gap"><span class="status-label">ยืนยันกับ Product Owner</span><b>Product Brief / Product Statement ฉบับหลัก</b><p>แต่ละผลิตภัณฑ์ต้องยืนยันฉบับที่มีผลใช้งานกับ Product Owner ไม่ควรเดาจากหน้าเว็บหรือ deck รุ่นเก่า</p></article>
+        <p class="registry-intro">นี่คือที่เดียวที่เก็บลิงก์เอกสารที่กำกับ strategy ของแต่ละ product หน้า product, demo, deck, prompt, Design System หรือ dataset view อยู่ช่อง related reference เท่านั้น และห้ามใส่แทน Product Brief / Product Statement ที่ระบุ Registry ช่วยให้ Strategy ref ถูกต้องเท่านั้น; ทุกงานยังต้องตั้ง right target และ define 100% success ของตนเอง</p>
+        <aside class="restricted-access-notice" aria-label="ขอบเขตการเข้าถึงเอกสารต้นทาง">
+          <strong>หน้านี้เป็นสาธารณะ · เอกสาร Drive ทั้ง 4 รายการจำกัดสิทธิ์</strong>
+          <p>เปิดได้เฉพาะบัญชี @landometer.com ที่อยู่ใน named viewer allowlist และ owner บัญชี JLifeCenter เท่านั้น นี่ไม่ใช่สิทธิ์ทั้งโดเมน; ผู้ใช้ใหม่ต้องขอเพิ่มเป็นรายบัญชี และการพบลิงก์ไม่เท่ากับยืนยันว่าเอกสาร authoritative</p>
+        </aside>
+        <div class="registry-meta" id="registry-policy">
+          <p><strong>ตรวจล่าสุด 6 ส.ค. 2026</strong> · ยังไม่มีรายการใดยืนยันเป็น authoritative</p>
+          <p class="registry-link-scope"><strong>Public page · restricted destinations:</strong> ลิงก์เปิดได้เฉพาะ named viewers; สถานะ authority ไม่เปลี่ยน</p>
         </div>
-        <div class="resource-list">
-          <a class="resource" href="https://montri-th.github.io/Landometer/" target="_blank" rel="noopener"><span class="resource-type">Design authority</span><strong>Design System v0.8.8</strong><p>Living reference ปัจจุบันสำหรับ visual, voice, evidence boundary และการนำความจริงไปสื่อสาร; [POSITION-01] ยังรอปรับ framing ให้ตรงกับ brief ปัจจุบัน</p><span class="resource-open">เปิด ↗</span></a>
-          <a class="resource" href="https://montri-th.github.io/Landometer/assets/downloads/landometer-design-system-v0.8.8.md" target="_blank" rel="noopener"><span class="resource-type">Markdown source</span><strong>Design System v0.8.8 · .md</strong><p>ไฟล์อ่านและค้นหาได้โดยตรง ใช้ดู [POSITION-01] และกฎต้นทางตามเลขข้อ</p><span class="resource-open">อ่าน ↗</span></a>
-          <a class="resource" href="https://montri-th.github.io/CityMETER/#evidence" target="_blank" rel="noopener"><span class="resource-type">Product-brief-derived example</span><strong>CityMETER explainer</strong><p>ตัวอย่างหน้าอธิบายที่จัดโครงจาก Product Brief v6 ไม่ใช่ตัว Product Brief และไม่ใช้แทนฉบับหลัก</p><span class="resource-open">ดูตัวอย่าง ↗</span></a>
-          <a class="resource" href="https://landometer.com/intro/products" target="_blank" rel="noopener"><span class="resource-type">Published context</span><strong>ภาพรวมผลิตภัณฑ์ Landometer</strong><p>ใช้ดูคำอธิบายที่เผยแพร่แล้วและบริบทของพอร์ต ต้องตรวจสถานะปัจจุบันก่อนนำข้อความไปใช้ต่อ</p><span class="resource-open">เปิด ↗</span></a>
-          <a class="resource" href="https://landometer.com/v3/citymeter" target="_blank" rel="noopener"><span class="resource-type">Live product</span><strong>CityMETER</strong><p>ดูผลิตภัณฑ์ที่เปิดใช้งานจริง แยก capability ปัจจุบันออกจากตัวอย่างหรือ roadmap</p><span class="resource-open">ลองใช้ ↗</span></a>
-          <a class="resource" href="https://github.com/montri-th/Landometer-in-Brief/blob/main/docs/New-Joiner-Guide-Brand-and-Product-Documents.md" target="_blank" rel="noopener"><span class="resource-type">Companion guide</span><strong>คู่มือเวอร์ชัน Markdown</strong><p>ใช้ค้นข้อความ คัดลอก checklist และอ่านโดยไม่ต้องใช้ interaction</p><span class="resource-open">อ่าน ↗</span></a>
+        <div class="registry-table" role="table" aria-label="ทะเบียนเอกสารรายผลิตภัณฑ์">
+          <div class="registry-head" role="row"><span role="columnheader">Product · required document</span><span role="columnheader">Authority status</span><span role="columnheader">Canonical document · owner</span><span role="columnheader">Related public reference</span></div>
+          <article class="registry-row" role="row">
+            <div class="registry-product" role="cell"><strong>Landometer (master)</strong><span>Master Brand Brief v0.5.2 · 29 Jun 2026</span></div>
+            <div class="registry-cell" role="cell"><span class="status-label candidate">candidate · รอ Brand Owner ยืนยัน</span><p>พบ exact file ใน project knowledge และไฟล์ระบุตนเองว่า source of truth แต่ยังไม่มี approval record หรือลิงก์ canonical</p></div>
+            <div class="registry-cell" role="cell"><span class="registry-link-unavailable">canonical link pending</span><p>Owner: Brand Owner · ห้ามใช้ Umbrella Product Brief Draft v0.1 แทน</p></div>
+            <div class="registry-cell" role="cell"><div class="registry-reference-list"><a href="https://landometer.com/" target="_blank" rel="noopener">Landometer homepage ↗</a></div><p>Company marketing · ไม่ใช่ Master Brand Brief</p></div>
+          </article>
+          <article class="registry-row" role="row">
+            <div class="registry-product" role="cell"><strong>CityMETER</strong><span>Product Brief · Landometer-aligned v6 · 30 Jun 2026</span></div>
+            <div class="registry-cell" role="cell"><span class="status-label candidate">candidate · รอ Product Owner ยืนยัน</span><p>พบ exact file ใน 01_ACTIVE_SOURCES; ชื่อ version และเนื้อหาตรงกับ public source fingerprint แต่ยังไม่มี owner approval record</p></div>
+            <div class="registry-cell" role="cell"><a class="registry-link" data-doc-key="citymeter" href="https://drive.google.com/file/d/1W4xcVfYBgbibDqTNX5Kfi1HGuX8AvOOg/view" target="_blank" rel="noopener noreferrer">เปิด restricted candidate · named viewers only — ยังไม่ authoritative ↗</a><p>Owner: Product Owner TBD · verified 6 Aug 2026</p></div>
+            <div class="registry-cell" role="cell"><div class="registry-reference-list"><a href="https://montri-th.github.io/CityMETER/#evidence" target="_blank" rel="noopener">Product-brief-derived explainer ↗</a><a href="https://landometer.com/v3/citymeter" target="_blank" rel="noopener">Live CityMETER ↗</a></div><p>ทั้งสองรายการไม่ใช่ governing brief</p></div>
+          </article>
+          <article class="registry-row" role="row">
+            <div class="registry-product" role="cell"><strong>CityWiki</strong><span>Product Brief</span></div>
+            <div class="registry-cell" role="cell"><span class="status-label missing">missing · ไม่พบ governing copy</span><p>พบ prompt/spec และ profile context เท่านั้น จึงไม่ยกมาใช้แทน Product Brief</p></div>
+            <div class="registry-cell" role="cell"><span class="registry-link-unavailable">required document link pending</span><p>Owner: Product Owner TBD · verified 6 Aug 2026</p></div>
+            <div class="registry-cell" role="cell"><span class="registry-link-unavailable">no qualifying public reference</span><p>CityStory มี public route แต่ยังไม่มีหลักฐานว่าเท่ากับหรือเปลี่ยนชื่อมาจาก CityWiki</p></div>
+          </article>
+          <article class="registry-row" role="row">
+            <div class="registry-product" role="cell"><strong>CityChat</strong><span>Product Brief v4</span></div>
+            <div class="registry-cell" role="cell"><span class="status-label candidate">candidate · รอ Product Owner ยืนยัน</span><p>พบ exact file ใน 01_ACTIVE_SOURCES; archive มีสำเนาซ้ำ byte-for-byte แต่ registry ชี้เฉพาะ active source</p></div>
+            <div class="registry-cell" role="cell"><a class="registry-link" data-doc-key="citychat" href="https://drive.google.com/file/d/1Yz7NpRRtIkzo4mxh5Qphp4WpSNwqEWN0/view" target="_blank" rel="noopener noreferrer">เปิด restricted candidate · named viewers only — ยังไม่ authoritative ↗</a><p>Owner: Product Owner TBD · verified 6 Aug 2026</p></div>
+            <div class="registry-cell" role="cell"><span class="registry-link-unavailable">no qualifying public reference</span><p>CityChat public route ที่ตรวจพบเป็น 404</p></div>
+          </article>
+          <article class="registry-row" role="row">
+            <div class="registry-product" role="cell"><strong>ijji</strong><span>Current Product Brief · later source cites v1.9</span></div>
+            <div class="registry-cell" role="cell"><span class="status-label historical">historical · พบ Draft v1.8 เท่านั้น</span><p>v1.8 อยู่ใน active folder แต่ implementation source รุ่นหลังอ้าง v1.9 ซึ่งยังหาไฟล์ไม่พบ จึงห้ามใช้ v1.8 กำกับงานใหม่</p></div>
+            <div class="registry-cell" role="cell"><span class="registry-link-unavailable">current v1.9 link pending</span><br><a class="registry-link" data-doc-key="ijji" href="https://drive.google.com/file/d/1_rWU6d-gYSjEK3TNPIu0pFcuIIxOs_Kz/view" target="_blank" rel="noopener noreferrer">เปิด historical Draft v1.8 · named viewers only — ห้ามใช้กำกับงานใหม่ ↗</a><p>Owner: Product Owner TBD · verified 6 Aug 2026</p></div>
+            <div class="registry-cell" role="cell"><div class="registry-reference-list"><a href="https://ijji.landometer.com/" target="_blank" rel="noopener">Live ijji ↗</a></div><p>Live application · ไม่ใช่ Product Brief</p></div>
+          </article>
+          <article class="registry-row" role="row">
+            <div class="registry-product" role="cell"><strong>Land / property tools</strong><span>Product Brief · row ต้องแยกเป็นราย product</span></div>
+            <div class="registry-cell" role="cell"><span class="status-label missing">missing · scope ยังไม่ชัด</span><p>Portfolio, PropertyINFO, LocationPOST, Buildable และ tools อื่นเป็นหลายผลิตภัณฑ์เกินกว่าจะใช้ brief/owner เดียวโดยไม่ยืนยัน portfolio structure</p></div>
+            <div class="registry-cell" role="cell"><span class="registry-link-unavailable">required document links pending</span><p>Owner: Portfolio / Product Owners TBD · verified 6 Aug 2026</p></div>
+            <div class="registry-cell" role="cell"><div class="registry-reference-list"><a href="https://landometer.com/intro/products" target="_blank" rel="noopener">Published product catalogue ↗</a></div><p>Marketing overview · ไม่ใช่ Product Brief</p></div>
+          </article>
+          <article class="registry-row" role="row">
+            <div class="registry-product" role="cell"><strong>Locale Insight</strong><span>Product Statement · parent product unresolved</span></div>
+            <div class="registry-cell" role="cell"><span class="status-label missing">missing · Product Statement not found</span><p>active Venue Locale directory และ implementation plan เป็น governance/supporting material ไม่ใช่ Product Statement; parent product ยังไม่ยืนยัน</p></div>
+            <div class="registry-cell" role="cell"><span class="registry-link-unavailable">required Product Statement link pending</span><p>Owner / parent product: TBD · verified 6 Aug 2026</p></div>
+            <div class="registry-cell" role="cell"><div class="registry-reference-list"><a href="https://landometer.com/v3/citymeter?d=localeInsights" target="_blank" rel="noopener">CityMETER · Locale Insights view ↗</a><a class="registry-link" data-doc-key="locale" href="https://drive.google.com/file/d/1x-TFAB0cLPeyw93R3twmve_Un11B89g2/view" target="_blank" rel="noopener noreferrer">เปิด Venue Locale active directory · named viewers only — ไม่ใช่ Product Statement ↗</a></div><p>ทั้งสองรายการไม่ตัดสินว่า Locale Insight อยู่ใต้ product ใด</p></div>
+          </article>
         </div>
-        <details>
-          <summary>เอกสารที่ใช้เป็นบริบท แต่ไม่ได้เผยแพร่ซ้ำจากหน้านี้</summary>
+        <p class="registry-note">สถานะมีสี่แบบเท่านั้น: authoritative = owner-approved และมีผลใช้ · candidate = พบแต่รอยืนยัน · historical = ใช้ดูที่มา ห้ามกำกับงานใหม่ · missing = ยังไม่มี governing document ที่ใช้ได้ หากพบลิงก์ใน chat/deck ให้ลงทะเบียนพร้อม filename, version และ owner ก่อนใช้</p>
+        <details class="supporting-resources">
+          <summary>Supporting references · ไม่ใช่ canonical product authority</summary>
+          <div class="resource-list">
+            <a class="resource" href="https://montri-th.github.io/Landometer/" target="_blank" rel="noopener"><span class="resource-type">Design authority</span><strong>Design System v0.8.8</strong><p>กฎ visual, voice และ evidence boundary; ไม่ใช่ Product Brief หรือ Product Statement ของผลิตภัณฑ์ใด</p><span class="resource-open">เปิด ↗</span></a>
+            <a class="resource" href="https://landometer.com/intro/products" target="_blank" rel="noopener"><span class="resource-type">Published context</span><strong>ภาพรวมผลิตภัณฑ์ Landometer</strong><p>ดูคำอธิบายที่เผยแพร่แล้วได้ แต่ห้ามใช้แทน strategy source หรือ authority record</p><span class="resource-open">เปิด ↗</span></a>
+            <a class="resource" href="https://landometer.com/v3/citymeter" target="_blank" rel="noopener"><span class="resource-type">Live product</span><strong>CityMETER</strong><p>ดู capability ที่เปิดใช้งานจริง แยก observed behavior ออกจาก roadmap และ governing strategy</p><span class="resource-open">ลองใช้ ↗</span></a>
+            <a class="resource" href="https://github.com/montri-th/Landometer-in-Brief/blob/main/docs/New-Joiner-Guide-Brand-and-Product-Documents.md" target="_blank" rel="noopener"><span class="resource-type">Companion guide</span><strong>คู่มือเวอร์ชัน Markdown</strong><p>ใช้ค้นข้อความ คัดลอก checklist และอ่านโดยไม่ต้องใช้ interaction</p><span class="resource-open">อ่าน ↗</span></a>
+          </div>
+        </details>
+        <details class="source-context">
+          <summary>เอกสารบริบทที่ไม่ได้ใช้แทน authority</summary>
           <p>Onboarding 260111, Brand Visual Guidelines 2025, Landometer Introduction 250606, Location · Location · Location และ GTM Explore · Execute · Elevate ช่วยตรวจที่มาและความหมาย แต่ไม่ได้เป็น canonical Master Brand Brief หรือ Product Brief และไม่ได้ถูกคัดลอกไป public Pages โดยอัตโนมัติ</p>
         </details>
-        <p class="source-note">เอกสารที่หน้านี้ยังเข้าถึงไม่ครบระบุไว้ด้านบน หน้านี้ไม่เก็บข้อมูลผู้ใช้ และจะเปิดลิงก์ภายนอกเมื่อคุณกดเท่านั้น</p>
+        <p class="source-note">หน้านี้ไม่เก็บข้อมูลผู้ใช้ และจะเปิดลิงก์ภายนอกเมื่อคุณกดเท่านั้น</p>
       </div>
       <div class="closing" id="closing">
         <div class="wrap closing-grid">
-          <div><p class="section-kicker">สรุปก่อนเริ่มงาน</p><h2>เริ่มจากระดับที่กำลังตัดสินใจ</h2><p>ใช้ทิศเดียวกัน ตกลงความจริงให้ชัด แล้วอธิบายให้คนอื่นเข้าใจตรงกัน</p></div>
-          <div class="closing-rule" role="group" aria-label="กฎจำสามบรรทัด">ทั้งบริษัท / Master Brand Brief<br>หนึ่งผลิตภัณฑ์ / Product Brief<br>หนึ่งคำอธิบาย / Product Statement</div>
+          <div><p class="section-kicker">ก่อนปล่อยงานทุกชิ้น</p><h2>เช็ก 3 ข้อ</h2><p>ถ้าหา Product Statement ที่กำกับงานไม่เจอ ให้หยุดแล้วถาม owner ห้ามเขียนต่อจากความจำ</p></div>
+          <div class="ship-checks" role="group" aria-label="สามข้อที่ต้องเช็กก่อนปล่อยงาน">
+            <article class="ship-check"><span>Check 01</span><h3>Strategy</h3><p>ยืนยัน Product Statement version/link และ choice ที่งานนี้รับมาแล้วหรือยัง?</p></article>
+            <article class="ship-check"><span>Check 02</span><h3>Target</h3><p>งานนี้ต้องทำให้ใครเปลี่ยนจากอะไรไปสู่อะไร และช่วยให้ product ชนะอย่างไร?</p></article>
+            <article class="ship-check"><span>Check 03</span><h3>100% success</h3><p>เงื่อนไขทั้งหมดสังเกตและตรวจได้ พร้อม evidence, boundary, guardrail, owner และ review point หรือยัง?</p></article>
+          </div>
         </div>
       </div>
     </section>
@@ -550,7 +875,7 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <p>Landometer in Brief · New joiner field guide · 5 สิงหาคม 2026</p>
+      <p>Landometer in Brief · New joiner field guide · 6 สิงหาคม 2026</p>
       <p>ตัวอย่างผลิตภัณฑ์ใช้สอน ไม่ใช่ข้อความที่อนุมัติแล้ว · <a href="https://github.com/montri-th/Landometer-in-Brief" target="_blank" rel="noopener">Source repository</a></p>
     </div>
   </footer>
@@ -559,108 +884,184 @@
     const writeStored=(key,value)=>{try{localStorage.setItem(key,value)}catch{/* current session remains usable */}};
     const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
     let currentLocale=window.__ldmLocale || "th";
-    let currentLevel="brand";
-    let currentScenario="new-product";
+    let currentLevel="product";
+    let currentScenario="copy";
 
     const fourData={
       th:{
         brand:[
           {q:"Who",p:"เราเลือกช่วยใคร และเขาต้องการอะไร",a:"คนและองค์กรที่ต้องตัดสินใจเกี่ยวกับพื้นที่จริง ซึ่งกระทบเงิน เวลา ความเสี่ยง ชุมชน หรืออนาคตของเมือง พวกเขาต้องการหลักฐานที่มองเห็นและเปรียบเทียบได้ และความมั่นใจว่าการตัดสินใจอธิบายและทบทวนได้"},
-          {q:"What",p:"ผู้ใช้ต้องได้ความก้าวหน้าอะไร",a:"เปลี่ยนข้อมูลเมืองที่กระจัดกระจายให้เป็นความเข้าใจเชิงพื้นที่ที่มีแหล่งที่มา เพื่อให้ผู้ใช้เห็น เข้าใจ เปรียบเทียบ ตัดสินใจ ลงมือทำ และเรียนรู้จากผลลัพธ์"},
+          {q:"What",p:"ผู้ใช้ต้องได้ความก้าวหน้าอะไร",a:"เปลี่ยนข้อมูลเมืองที่กระจัดกระจายให้เป็นความเข้าใจเชิงพื้นที่ที่มีแหล่งที่มา เพื่อให้ผู้ใช้เห็น เข้าใจ เปรียบเทียบ ตัดสินใจ และลงมือทำ"},
           {q:"Which",p:"ผู้ใช้มีทางเลือกอะไร และเราตั้งมาตรฐานเทียบกับใคร",a:"แยกวิธีเดิม ทางเลือกตรงของแต่ละผลิตภัณฑ์ และ aspiring benchmarks ที่ใช้ตั้ง quality bar ด้านความน่าเชื่อถือ ความง่ายในการใช้ intelligence และ workflow โดยไม่เรียกทุก benchmark ว่าคู่แข่งตรง"},
-          {q:"How",p:"เราจะชนะในกรอบ Which ด้วยอะไร",a:"ชนะด้วยฐานข้อมูลเมืองไทยที่เชื่อม Land · Location · Living, spatial intelligence ที่คนไม่ใช้ GIS ก็เข้าใจได้, visual-first explanation, grounded AI ที่แสดง source และ limitation และ action & learning loop ที่มีหลักฐานรองรับ"}
+          {q:"How",p:"เราจะชนะในกรอบ Which ด้วยอะไร",a:"ทิศร่วมคือการเชื่อม Land · Location · Living ให้คนเห็น เข้าใจ ตัดสินใจ และลงมือทำ ส่วน data foundation, spatial intelligence, visual explanation, grounded AI และ learning loop จะนับเป็น shared capability ได้ต่อเมื่อมีหลักฐานรองรับข้ามผลิตภัณฑ์"}
         ],
         product:[
-          {q:"Who",p:"ผู้ใช้คือใคร และเขาต้องการอะไร",a:"ระบุผู้ใช้หลัก trigger moment การตัดสินใจ และ functional / emotional needs แยก buyer, approver และ beneficiary หากไม่ใช่คนเดียวกับผู้ใช้"},
-          {q:"What",p:"ผู้ใช้ต้องได้ความก้าวหน้าอะไร",a:"ระบุผลลัพธ์ที่ผลิตภัณฑ์สัญญากับผู้ใช้ พร้อมตัวชี้วัดหรือหลักฐานที่จะบอกว่าผลลัพธ์เกิดขึ้นแล้ว ไม่ใช้รายการ feature แทนคำตอบ"},
-          {q:"Which",p:"ผู้ใช้มีทางเลือกอะไร และใครตั้ง quality bar",a:"ระบุ workflow เดิม ทางเลือกตรง และ aspiring competitors / benchmarks ที่เลือกมาโดยเฉพาะ พร้อมข้อจำกัดของแต่ละทางเลือกและมิติที่ใช้ตั้งระดับคุณภาพ"},
-          {q:"How",p:"เราจะชนะในกรอบ Which ด้วยอะไร",a:"ระบุ unique insight ข้อได้เปรียบด้านข้อมูลหรือวิธีการ UX, action path และหลักฐานที่ทำให้ผู้ใช้ได้ What ดีกว่า Which พร้อม limitation และ non-goals"}
+          {q:"Who",p:"ใครต้องยอมเปลี่ยน และอะไรอยู่ในใจเขา",a:"ระบุ primary user, trigger, การตัดสินใจ, พฤติกรรมเดิม, functional need, emotional tension และเสียงในหัว แยก buyer, approver และ beneficiary เมื่อเป็นคนละคน ใช้คำพูดจริงหรือระบุชัดว่าเป็น hypothesis"},
+          {q:"What",p:"เขาต้องก้าวจากอะไรไปสู่อะไร",a:"เขียน before → after ที่สังเกตได้ พร้อมเวลา คุณภาพ ตัวชี้วัด หลักฐาน และ boundary อย่าใช้รายการ feature หรือสัญญาผลลัพธ์ปลายทางที่ product ควบคุมไม่ได้"},
+          {q:"Which",p:"วันนี้เขาเลือกอะไรแทนเราได้",a:"รวมวิธีเดิม การไม่ทำอะไร ทางเลือกตรง และคู่แข่งหรือ benchmark ที่ท้าทายและเกี่ยวข้องกับแต่ละมิติ ระบุ win / parity / not compete แล้วเทียบภายใต้ผู้ใช้ โจทย์ input และข้อจำกัดเดียวกัน; งานข้อมูลใช้ schema / release เดียวกันเมื่อเกี่ยวข้อง"},
+          {q:"How",p:"เราจะชนะด้วย choices ที่เสริมกันอย่างไร",a:"เลือก 3–5 capabilities ที่ reinforce กัน เชื่อมทั้ง functional และ emotional barrier ไปยัง What และเอาชนะข้อจำกัดของทางเลือกใน Which พร้อม trade-off, non-goal, comparative evidence และ durable-advantage hypothesis ที่ทดสอบได้"}
         ]
       },
       en:{
         brand:[
           {q:"Who",p:"Who are we choosing to help, and what do they need?",a:"People and organizations making consequential decisions about real places. They need relevant evidence they can see and compare, and confidence that the decision can be explained and reviewed."},
-          {q:"What",p:"What progress must they make?",a:"Turn fragmented city data into source-grounded spatial understanding, so users can see, understand, compare, decide, act and learn from outcomes."},
+          {q:"What",p:"What progress must they make?",a:"Turn fragmented city data into source-grounded spatial understanding, so users can see, understand, compare, decide and act."},
           {q:"Which",p:"What are their choices, and whose quality bar will we aim for?",a:"Separate current workarounds, direct alternatives for each product, and aspirational benchmarks that set the bar for trust, ease of use, intelligence and workflow. A benchmark is not automatically a direct competitor."},
-          {q:"How",p:"How will we win within the Which frame?",a:"Win with a Thailand-first data foundation across Land, Location and Living; spatial intelligence non-GIS users can use; visual-first explanation; grounded AI with visible sources and limits; and an evidence-backed action-and-learning loop."}
+          {q:"How",p:"How will we win within the Which frame?",a:"The shared direction is to connect Land, Location and Living so people can see, understand, decide, act and learn. A data foundation, spatial intelligence, visual explanation, grounded AI or learning loop counts as a shared capability only when evidence supports it across products."}
         ],
         product:[
-          {q:"Who",p:"Who is the user, and what do they need?",a:"Name the primary user, trigger and decision, plus functional and emotional needs. Separate the buyer, approver and beneficiary when they differ from the user."},
-          {q:"What",p:"What progress must the user make?",a:"State the outcome the product promises, with the measure or evidence that will show it happened. Do not substitute a feature list."},
-          {q:"Which",p:"What are the choices, and who sets the quality bar?",a:"Name the current workflow, direct alternatives and specific aspirational competitors or benchmarks. State what each lacks and which dimension sets the quality bar."},
-          {q:"How",p:"How will we win within the Which frame?",a:"State the distinctive insight, data or method advantage, user experience, action path and proof that deliver What better than Which—plus limits and non-goals."}
+          {q:"Who",p:"Who must switch, and what is holding them back?",a:"Name the primary user, trigger, decision, current behavior, functional need, emotional tension and inner voice. Separate buyer, approver and beneficiary when they differ. Use real words or label the line as a hypothesis."},
+          {q:"What",p:"What progress must they make?",a:"Describe observable before → after progress, including time, quality, measures, evidence and a boundary. Do not substitute a feature list or promise downstream results the product cannot control."},
+          {q:"Which",p:"What can they choose instead of us?",a:"Include the status quo, doing nothing, direct alternatives and a demanding, relevant competitor or benchmark for each decisive dimension. State win / parity / not compete, then compare the same user, task, input and constraints; use the same schema / release where data-dependent."},
+          {q:"How",p:"How will reinforcing choices help us win?",a:"Choose three to five reinforcing capabilities that connect functional and emotional barriers to What and address the alternatives’ limits, with trade-offs, non-goals, comparative evidence and a testable durable-advantage hypothesis."}
         ]
       }
     };
 
     const scenarios={
       th:{
-        "new-product":{label:"ควรเปิดก่อน",title:"Product Brief",why:"เพราะทีมกำลังตัดสินว่าใครต้องได้ผลลัพธ์อะไร จะเทียบกับทางเลือกและ quality bar ใด และจะชนะอย่างไร",steps:["เปิด Master Brand Brief เพื่อตรวจว่าผลิตภัณฑ์เหมาะกับทิศของ Landometer","ตกลง Who และ needs, What, current/direct/aspirational choices, How-to-win, ขอบเขต หลักฐาน และวิธีวัดผล","เมื่อทีมอนุมัติแล้ว ค่อยย่อเป็น Product Statement"],warning:"อย่าเริ่มจาก tagline แล้วค่อยย้อนหาว่าผลิตภัณฑ์ทำได้จริงหรือไม่"},
-        copy:{label:"ใช้เป็นต้นทางของ copy",title:"Product Statement",why:"เพราะงานนี้กำลังอธิบายสิ่งที่ทีมตกลงแล้วให้ผู้ฟังเฉพาะกลุ่มเข้าใจ",steps:["เริ่มจาก Product Statement ฉบับอนุมัติ","เปิด Product Brief เมื่อต้องขยายผู้ใช้ needs, proof, Which, How หรือ limitation","ตรวจ Master Brand Brief เมื่อข้อความพูดแทน Landometer ทั้งบริษัท"],warning:"ถ้า copy ใหม่ต้องเปลี่ยนผู้ใช้ คุณค่า วิธีชนะ หรือขอบเขต ให้หยุดและย้อนกลับไปแก้ Product Brief"},
-        brand:{label:"คำตอบระดับบริษัท",title:"Master Brand Brief",why:"เพราะคำถามนี้ครอบคลุมทั้งพอร์ต Land · Location · Living และทุกผลิตภัณฑ์",steps:["ใช้ Who · What · Which · How และขอบเขตการกล่าวอ้างฉบับปัจจุบัน","แยกตัวอย่างของผลิตภัณฑ์ออกจาก claim ระดับ Landometer","เมื่อต้องพูดผลิตภัณฑ์ใดต่อ ให้เปลี่ยนไปใช้ Product Statement ของผลิตภัณฑ์นั้น"],warning:"สิ่งที่จริงใน CityMETER, CityWiki, ijji หรืองานลูกค้าหนึ่งราย ไม่ได้จริงกับ Landometer ทั้งหมดโดยอัตโนมัติ"},
-        which:{label:"แก้ใน Product Brief",title:"Which → How-to-win",why:"Which เป็นการตัดสินใจระดับผลิตภัณฑ์ ไม่ใช่เพียงรายชื่อคู่แข่งใน GTM",steps:["เริ่มจาก Who และ What เพื่อรู้ว่าผู้ใช้กำลังเลือกอะไร","แยกวิธีเดิม ทางเลือกตรง และ aspiring benchmarks พร้อมมิติที่ตั้ง quality bar","ใช้หลักฐานกำหนด How-to-win แล้วบันทึกกลับใน Product Brief"],warning:"aspiring benchmark ไม่ได้แปลว่าเป็นคู่แข่งตรง และไม่ควรลอก feature list มาเป็นกลยุทธ์"},
-        gtm:{label:"ใช้เอกสารอีกชุดหนึ่ง",title:"GTM plan ที่ใช้อยู่",why:"ช่องทาง ราคา และ funnel เป็นการตัดสินใจด้าน route-to-market หลังจากรู้ Who, What, Which และ How-to-win แล้ว",steps:["ยืนยันผู้ใช้ คุณค่า และ positioning จาก Product Brief","ใช้ GTM plan ที่ Product Owner และ Business Owner อนุมัติ","ถ้าการทดลองตลาดเปลี่ยน Who, What, Which, How หรือ scope ให้ย้อนกลับไปแก้ Product Brief"],warning:"อย่าใช้ How ใน GTM แทน How-to-win ของผลิตภัณฑ์"}
+        "new-product":{label:"ควรเปิดก่อน",title:"Product Brief + Product Statement",why:"เพราะทีมกำลังตั้งหรือเปลี่ยน Winning Strategy ของผลิตภัณฑ์ ไม่ใช่เพียงเริ่มเขียนเอกสารหนึ่งฉบับ",steps:["เปิด registry เพื่อยืนยัน Product Brief / Product Statement ฉบับปัจจุบันและ owner","ตกลง Choice · Evidence · Test · Boundary ของ Who, What, Which และ How-to-win ใน Product Brief","version Product Statement แล้วกำหนด Strategy Spine ของ work item ถัดไป: choice ที่รับมา, right target และ 100% success พร้อมหลักฐานและ owner"],warning:"อย่าเริ่มจาก tagline หรือ feature list แล้วค่อยย้อนหาว่ากำลังชนะใครและเพื่ออะไร"},
+        copy:{label:"เริ่มจาก strategic contract",title:"Strategy ref + target + 100% success",why:"นี่คือกติกาของ roadmap, PRD, data/design/development brief, GTM, proposal และ content ทุกชิ้น ไม่ใช่เฉพาะตอนเริ่มหรือแก้ product",steps:["ยืนยัน exact Product Statement version/link และ owner","ระบุ strategic choice ที่งานรับมา แล้วเขียน target ว่าต้องเปลี่ยนอะไรให้ใครและช่วยให้ product ชนะอย่างไร","define 100% success ด้วยเงื่อนไขที่สังเกตได้ evidence/metric, boundary, guardrail, owner และ review point"],warning:"ถ้า output เสร็จแต่ผลต่อผู้ใช้ยังไม่ถูกทดสอบ ให้ระบุ Delivered · outcome not yet proven"},
+        brand:{label:"คำตอบระดับบริษัท",title:"Master Brand Brief + work target",why:"เพราะคำถามนี้ครอบคลุมทั้งพอร์ต Land · Location · Living และทุกผลิตภัณฑ์ แต่งานสื่อสารหรือการตัดสินใจแต่ละชิ้นยังต้องมี target และ 100% success ของตนเอง",steps:["ยืนยัน Master Brand Brief และขอบเขต Who · What · Which · How ระดับบริษัท","ตั้ง target ว่างานนี้ต้องเปลี่ยนความเข้าใจหรือการตัดสินใจของใคร โดยแยก product example ออกจาก claim ระดับ Landometer","define 100% success, evidence/boundary และ owner; เมื่อลงรายละเอียดหนึ่ง product ให้เปลี่ยนไปใช้ Product Statement ของ product นั้น"],warning:"สิ่งที่จริงใน CityMETER, CityWiki, ijji หรืองานลูกค้าหนึ่งราย ไม่ได้จริงกับ Landometer ทั้งหมดโดยอัตโนมัติ"},
+        which:{label:"แก้ใน Product Brief",title:"Which → How-to-win + work success",why:"Which เป็นการตัดสินใจระดับผลิตภัณฑ์ ไม่ใช่เพียงรายชื่อคู่แข่งใน GTM และงานเปรียบเทียบเองต้องมี target กับเกณฑ์สำเร็จ",steps:["เริ่มจาก Who และ What เพื่อรู้ว่าผู้ใช้กำลังเลือกอะไรจริง","รวมวิธีเดิม ทางเลือกตรง และคู่แข่งหรือ benchmark ที่ท้าทายในมิติสำคัญ แล้วระบุ win / parity / not compete","กำหนด target ของการเปรียบเทียบ, How และ durable-advantage hypothesis แล้ว define 100% success ด้วย same-task evidence, boundary และ owner"],warning:"คู่แข่งที่เก่งช่วยตั้ง bar แต่ไม่ได้สร้าง durable advantage เอง; benchmark ที่ไม่ได้อยู่ใน choice set ก็ไม่ใช่คู่แข่งตรง"},
+        gtm:{label:"เปิด strategy ก่อน",title:"Product Statement + Strategy Spine",why:"GTM, proposal, sales และ content ต้องสกัดจาก Winning Strategy เดียวกัน และกำหนด target กับ 100% success ของชิ้นงานนั้น",steps:["ยืนยัน Product Statement version/link และ strategic choice ที่นำมาใช้","ตั้ง target ว่าผู้ฟังต้องเข้าใจหรือตัดสินใจอะไร พร้อม claim/evidence/boundary ที่ส่งต่อ","define 100% success ของงาน แล้วจึงเขียน derived product description ที่ไม่สร้าง strategy หรือ promise ใหม่"],warning:"ถ้า copy ต้องเปลี่ยน Who · What · Which · How ให้หยุดและย้อนกลับไปถาม owner; อย่าแก้ strategy ใน deck"}
       },
       en:{
-        "new-product":{label:"Open this first",title:"Product Brief",why:"The team is deciding who needs what outcome, which choices and quality bar matter, and how the product will win.",steps:["Check the Master Brand Brief for fit with Landometer","Agree Who and needs, What, current/direct/aspirational choices, How-to-win, scope, evidence and measures","After approval, condense the truth into a Product Statement"],warning:"Do not start with a tagline and work backward to find out whether the product can support it."},
-        copy:{label:"Use as the copy source",title:"Product Statement",why:"This task explains an approved product truth to a specific audience.",steps:["Start with the approved Product Statement","Open the Product Brief when you need the user needs, proof, Which, How or limits","Check the Master Brand Brief when the copy speaks for Landometer as a whole"],warning:"If the copy changes the user, value, way to win or scope, stop and return to the Product Brief."},
-        brand:{label:"Company-level answer",title:"Master Brand Brief",why:"The question spans Land, Location and Living, plus the whole product portfolio.",steps:["Use the current Who, What, Which, How and claim boundary","Keep product examples separate from Landometer-level claims","When you move to one product, use that product's approved Product Statement"],warning:"What is true for CityMETER, CityWiki, ijji or one client project is not automatically true for all of Landometer."},
-        which:{label:"Resolve it in the Product Brief",title:"Which → How-to-win",why:"Which is a product decision, not merely a competitor list in a GTM plan.",steps:["Start from Who and What to define the user's real choice","Separate workarounds, direct alternatives and aspirational benchmarks, then name the quality dimensions","Use evidence to define How-to-win and record it in the Product Brief"],warning:"An aspirational benchmark is not automatically a direct competitor, and a copied feature list is not a strategy."},
-        gtm:{label:"Use a separate document",title:"The current GTM plan",why:"Channels, pricing and the funnel are route-to-market decisions made after Who, What, Which and How-to-win are clear.",steps:["Confirm the user, value and position from the Product Brief","Use the GTM plan approved by the Product Owner and Business Owner","If market learning changes Who, What, Which, How or scope, update the Product Brief"],warning:"Do not use GTM How as a substitute for the product's How-to-win."}
+        "new-product":{label:"Open these first",title:"Product Brief + Product Statement",why:"The team is setting or changing the product's winning strategy, not merely starting a document.",steps:["Open the registry to confirm the current Product Brief / Product Statement and owner","Resolve Choice · Evidence · Test · Boundary for Who, What, Which and How-to-win in the Product Brief","Version the Product Statement, then define the next work item's Strategy Spine: choice carried forward, right target and 100% success with evidence and owner"],warning:"Do not start with a tagline or feature list and work backward to invent whom the product is beating and why."},
+        copy:{label:"Start from the strategic contract",title:"Strategy ref + target + 100% success",why:"This rule applies to every roadmap, PRD, data/design/development brief, GTM plan, proposal and piece of content—not only when a product is created or revised.",steps:["Confirm the exact Product Statement version/link and owner","Name the strategic choice carried into this work, then state what must change for whom and how that helps the product win","Define 100% success as complete observable conditions with evidence/metric, boundaries, guardrails, owner and review point"],warning:"If the output is finished but the intended user outcome has not been tested, report Delivered · outcome not yet proven."},
+        brand:{label:"Company-level answer",title:"Master Brand Brief + work target",why:"The question spans Land, Location and Living, plus the whole product portfolio, but each communication or decision still needs its own target and 100% success.",steps:["Confirm the Master Brand Brief and company-level Who · What · Which · How boundary","Set the target: whose understanding or decision must change, while separating product examples from Landometer-level claims","Define 100% success, evidence/boundaries and owner; when moving to one product, use that product's Product Statement"],warning:"What is true for CityMETER, CityWiki, ijji or one client project is not automatically true for all of Landometer."},
+        which:{label:"Resolve it in the Product Brief",title:"Which → How-to-win + work success",why:"Which is a product decision, not merely a competitor list in a GTM plan, and the comparison work needs its own target and success conditions.",steps:["Start from Who and What to define the user's real choice","Include the status quo, direct alternatives and demanding competitors or benchmarks on decisive dimensions; state win / parity / not compete","Set the comparison target, How and durable-advantage hypothesis, then define 100% success with same-task evidence, boundaries and owner"],warning:"A formidable rival raises the bar but does not create durable advantage by itself; a benchmark outside the choice set is not a direct competitor."},
+        gtm:{label:"Open the strategy first",title:"Product Statement + Strategy Spine",why:"GTM, proposals, sales and content must derive from one winning strategy and define the target and 100% success for that work.",steps:["Confirm the Product Statement version/link and strategic choice carried forward","Set the target: what the audience must understand or decide, with the claims/evidence/boundaries carried forward","Define 100% success for the work, then write a derived product description without inventing a new strategy or promise"],warning:"If the copy must change Who · What · Which · How, stop and return to the owner; do not edit the strategy inside a deck."}
       }
     };
+
+    const restrictedRegistryLinks={
+      citymeter:"https://drive.google.com/file/d/1W4xcVfYBgbibDqTNX5Kfi1HGuX8AvOOg/view",
+      citychat:"https://drive.google.com/file/d/1Yz7NpRRtIkzo4mxh5Qphp4WpSNwqEWN0/view",
+      ijji:"https://drive.google.com/file/d/1_rWU6d-gYSjEK3TNPIu0pFcuIIxOs_Kz/view",
+      locale:"https://drive.google.com/file/d/1x-TFAB0cLPeyw93R3twmve_Un11B89g2/view"
+    };
+    const registryData=[
+      {
+        id:"landometer",product:"Landometer (master)",required:{th:"Master Brand Brief v0.5.2 · 29 Jun 2026",en:"Master Brand Brief v0.5.2 · 29 Jun 2026"},state:"candidate",
+        status:{th:"candidate · รอ Brand Owner ยืนยัน",en:"candidate · awaiting Brand Owner confirmation"},
+        note:{th:"พบ exact file ใน project knowledge และไฟล์ระบุตนเองว่า source of truth แต่ยังไม่มี approval record หรือลิงก์ canonical",en:"An exact file exists in project knowledge and calls itself the source of truth, but no approval record or canonical URL was found."},
+        canonical:{th:"canonical link pending",en:"canonical link pending"},owner:{th:"Owner: Brand Owner · ห้ามใช้ Umbrella Product Brief Draft v0.1 แทน",en:"Owner: Brand Owner · do not substitute Umbrella Product Brief Draft v0.1"},
+        refs:[{href:"https://landometer.com/",label:{th:"Landometer homepage",en:"Landometer homepage"}}],refNote:{th:"Company marketing · ไม่ใช่ Master Brand Brief",en:"Company marketing · not the Master Brand Brief"}
+      },
+      {
+        id:"citymeter",product:"CityMETER",required:{th:"Product Brief · Landometer-aligned v6 · 30 Jun 2026",en:"Product Brief · Landometer-aligned v6 · 30 Jun 2026"},state:"candidate",docKey:"citymeter",
+        status:{th:"candidate · รอ Product Owner ยืนยัน",en:"candidate · awaiting Product Owner confirmation"},
+        note:{th:"พบ exact file ใน 01_ACTIVE_SOURCES; ชื่อ version และเนื้อหาตรงกับ public source fingerprint แต่ยังไม่มี owner approval record",en:"An exact file is in 01_ACTIVE_SOURCES. Its version and content match the public source fingerprint, but no owner approval record was found."},
+        canonical:{th:"restricted candidate · ต้องมีสิทธิ์เข้าถึง",en:"restricted candidate · access required"},owner:{th:"Owner: Product Owner TBD",en:"Owner: Product Owner TBD"},
+        refs:[{href:"https://montri-th.github.io/CityMETER/#evidence",label:{th:"Product-brief-derived explainer",en:"Product-brief-derived explainer"}},{href:"https://landometer.com/v3/citymeter",label:{th:"Live CityMETER",en:"Live CityMETER"}}],refNote:{th:"ทั้งสองรายการไม่ใช่ governing brief",en:"Neither item is the governing brief."}
+      },
+      {
+        id:"citywiki",product:"CityWiki",required:{th:"Product Brief",en:"Product Brief"},state:"missing",supportKey:"citywiki",supportLabel:{th:"เปิด CityWiki normative profile — ไม่ใช่ Product Brief",en:"Open the CityWiki normative profile — not the Product Brief"},
+        status:{th:"missing · ไม่พบ governing copy",en:"missing · no governing copy found"},
+        note:{th:"พบ prompt/spec และ profile context เท่านั้น จึงไม่ยกมาใช้แทน Product Brief",en:"Only prompts, specs and profile context were found; none is substituted for the Product Brief."},
+        canonical:{th:"required document link pending",en:"required document link pending"},owner:{th:"Owner: Product Owner TBD",en:"Owner: Product Owner TBD"},refs:[],
+        refNote:{th:"CityStory มี public route แต่ยังไม่มีหลักฐานว่าเท่ากับหรือเปลี่ยนชื่อมาจาก CityWiki",en:"CityStory has a public route, but there is no evidence that it equals or replaced CityWiki."}
+      },
+      {
+        id:"citychat",product:"CityChat",required:{th:"Product Brief v4",en:"Product Brief v4"},state:"candidate",docKey:"citychat",
+        status:{th:"candidate · รอ Product Owner ยืนยัน",en:"candidate · awaiting Product Owner confirmation"},
+        note:{th:"พบ exact file ใน 01_ACTIVE_SOURCES; archive มีสำเนาซ้ำ byte-for-byte แต่ registry ชี้เฉพาะ active source",en:"An exact file is in 01_ACTIVE_SOURCES. A byte-identical archive copy exists, but the registry points only to the active source."},
+        canonical:{th:"restricted candidate · ต้องมีสิทธิ์เข้าถึง",en:"restricted candidate · access required"},owner:{th:"Owner: Product Owner TBD",en:"Owner: Product Owner TBD"},refs:[],
+        refNote:{th:"ไม่พบ qualifying public reference; CityChat public route ที่ตรวจพบเป็น 404",en:"No qualifying public reference was found; the checked CityChat public route returns 404."}
+      },
+      {
+        id:"ijji",product:"ijji",required:{th:"Current Product Brief · later source cites v1.9",en:"Current Product Brief · later source cites v1.9"},state:"historical",docKey:"ijji",
+        status:{th:"historical · พบ Draft v1.8 เท่านั้น",en:"historical · only Draft v1.8 located"},
+        note:{th:"v1.8 อยู่ใน active folder แต่ implementation source รุ่นหลังอ้าง v1.9 ซึ่งยังหาไฟล์ไม่พบ จึงห้ามใช้ v1.8 กำกับงานใหม่",en:"v1.8 is in an active folder, but a later implementation source cites v1.9, which was not located. v1.8 must not govern new work."},
+        canonical:{th:"current v1.9 link pending",en:"current v1.9 link pending"},docLabel:{th:"เปิด historical Draft v1.8 · ต้องมีสิทธิ์เข้าถึง — ห้ามใช้กำกับงานใหม่",en:"Open historical Draft v1.8 · access required — do not govern new work"},owner:{th:"Owner: Product Owner TBD",en:"Owner: Product Owner TBD"},
+        refs:[{href:"https://ijji.landometer.com/",label:{th:"Live ijji",en:"Live ijji"}}],refNote:{th:"Live application · ไม่ใช่ Product Brief",en:"Live application · not the Product Brief"}
+      },
+      {
+        id:"landtools",product:"Land / property tools",required:{th:"Product Brief · row ต้องแยกเป็นราย product",en:"Product Brief · row must be split by product"},state:"missing",supportKey:"landtools",supportLabel:{th:"เปิด Landometer Umbrella Draft v0.1 — ecosystem summary only",en:"Open Landometer Umbrella Draft v0.1 — ecosystem summary only"},
+        status:{th:"missing · scope ยังไม่ชัด",en:"missing · scope unresolved"},
+        note:{th:"Portfolio, PropertyINFO, LocationPOST, Buildable และ tools อื่นเป็นหลายผลิตภัณฑ์เกินกว่าจะใช้ brief/owner เดียวโดยไม่ยืนยัน portfolio structure",en:"Portfolio, PropertyINFO, LocationPOST, Buildable and other tools span too many products for one brief or owner without confirming the portfolio structure."},
+        canonical:{th:"required document links pending",en:"required document links pending"},owner:{th:"Owner: Portfolio / Product Owners TBD",en:"Owner: Portfolio / Product Owners TBD"},
+        refs:[{href:"https://landometer.com/intro/products",label:{th:"Published product catalogue",en:"Published product catalogue"}}],refNote:{th:"Marketing overview · ไม่ใช่ Product Brief",en:"Marketing overview · not a Product Brief"}
+      },
+      {
+        id:"locale",product:"Locale Insight",required:{th:"Product Statement · parent product unresolved",en:"Product Statement · parent product unresolved"},state:"missing",supportKey:"locale",supportLabel:{th:"เปิด Venue Locale active directory — ไม่ใช่ Product Statement",en:"Open the active Venue Locale directory — not a Product Statement"},
+        status:{th:"missing · Product Statement not found",en:"missing · Product Statement not found"},
+        note:{th:"active Venue Locale directory และ implementation plan เป็น governance/supporting material ไม่ใช่ Product Statement; parent product ยังไม่ยืนยัน",en:"The active Venue Locale directory and implementation plan are governance/supporting material, not a Product Statement; the parent product remains unresolved."},
+        canonical:{th:"required Product Statement link pending",en:"required Product Statement link pending"},owner:{th:"Owner / parent product: TBD",en:"Owner / parent product: TBD"},
+        refs:[{href:"https://landometer.com/v3/citymeter?d=localeInsights",label:{th:"CityMETER · Locale Insights view",en:"CityMETER · Locale Insights view"}}],refNote:{th:"Public view และ active directory ไม่ตัดสินว่า Locale Insight อยู่ใต้ product ใด",en:"The public view and active directory do not resolve the parent product."}
+      }
+    ];
 
     const enStaticCopy=[
       [".skip","Skip to main content"],
       [".header-label","New joiner field guide"],
-      [".eyebrow","New joiner · About 5 minutes"],
-      [".hero h1",'<span class="count">4</span> questions<br><span class="count">2</span> levels<br><span class="count">1</span> way to explain'],
-      [".hero-lede",'<strong>Master Brand Brief</strong> holds the Landometer-level answers · <strong>Product Brief</strong> resolves one product · <strong>Product Statement</strong> explains the approved product truth briefly'],
-      [".primary-action","Start with the 4 questions"],
-      [".text-action","Or choose the work in front of you"],
-      ["#four-questions .section-kicker","01 · Same questions, different levels"],
-      ["#four-questions .section-head > p","These are not four documents, and Landometer-level answers cannot replace the answers for one product."],
+      [".eyebrow","The rule before any work starts · five minutes for a new joiner"],
+      [".hero h1",'Product Statement<br> <span class="count">is the Winning Strategy</span>'],
+      [".hero-lede",'This strategy must carry into every roadmap, PRD, data/design/development brief, GTM plan, proposal and piece of content: <strong>set the right target</strong> and define <strong>100% success</strong> before work begins.'],
+      [".primary-action","See the Strategy Spine for every work item"],
+      [".text-action","Open the document registry"],
+      [".spine-head .section-kicker","The rule before any work starts"],
+      ["#strategy-spine-title","The winning strategy must set the work target"],
+      [".spine-head > div > p:last-child",'“Carried into every document” does not mean pasting the full Product Statement. Every document that defines, approves or hands off work must trace which strategic choice it carries, how that choice sets the target, and how 100% success will be judged.'],
+      [".spine-head > p",'<strong>If a document says only what to make but not how the work helps the product win, its target is incomplete.</strong>'],
+      [".spine-grid",'<article class="spine-step"><span class="doc-number">01 · STRATEGY REF</span><h3>Which winning strategy governs?</h3><p>Name the current Product Statement by version/link and the choice in Who · What · Which · How that this work carries forward.</p><p><strong>Do not guess:</strong> if the source is missing or versions conflict, stop and ask the Product Owner.</p></article><article class="spine-step"><span class="doc-number">02 · RIGHT TARGET</span><h3>What must change for whom?</h3><p>The target is a change in behavior, decision or outcome quality that helps the product win—not merely an output such as “build a dashboard” or “increase traffic.”</p><p><strong>Finish the thought:</strong> which part of the strategy advances if this work succeeds, and what is the non-goal?</p></article><article class="spine-step"><span class="doc-number">03 · 100% SUCCESS</span><h3>When are all conditions met?</h3><p>Define the observable outcome, threshold, evidence/metric, quality, boundaries, guardrails, owner and review point before work starts.</p><p><strong>100% means the full definition is met.</strong> It does not mean every user behaves the same way or that the product has won the whole market.</p></article>'],
+      [".spine-template",'<div><strong>Write this sentence before work starts</strong><p>This work carries [strategic choice] to help [Who] change [behavior/decision] from [before] to [target]. It reaches 100% success when [all conditions] pass, verified by [evidence] within [boundary] — owned by [name/role].</p></div><div class="outcome-proof"><strong><b>Delivered ≠ Outcome proven</b></strong><p>A finished file, production release or KPI is supporting evidence. If the intended user outcome has not been tested, report <b>Delivered · outcome not yet proven</b>.</p></div>'],
+      ["#four-questions > .section-head .section-kicker","02 · Product Statement · Winning Strategy"],
+      ["#four-questions .section-head h2","Four choices by which the product will win"],
+      ["#four-questions .section-head > p","Who, What, Which and How are not fields to fill. They help the team choose work, reject work and test how the product will win. If they cannot do those jobs, they are not yet strategy."],
       ["[data-level='brand']","Landometer level"],
       ["[data-level='product']","Product level"],
-      ["#four-questions > .four-note",'<strong>In one line:</strong> Who needs What. Which defines the choices and quality bar. How is the way to win. A Product Statement is not a third level; it is the short form of approved product truth.'],
+      ["#four-questions > .four-note",'<strong>In one line:</strong> The Product Statement is the product’s winning strategy: which Who we choose, the What they must achieve, the Which they are choosing among, and the How by which we will win. Every downstream document must use that strategy to set a target that helps the product win and define observable 100% success—not merely attach a link.'],
       [".positioning p","This page follows the current Master Brand Brief and the Brand Owner's 6 August 2026 clarification. [POSITION-01] in Design System v0.8.8 still uses the earlier framing and needs a later update."],
       [".positioning .source-link","Open [POSITION-01] to compare ↗"],
-      ["#three-docs .section-kicker","02 · Three documents"],
-      ["#three-docs .section-head h2","They work together<br>but do not replace one another"],
-      ["#three-docs .section-head > p","Ask whether you are deciding for the whole company, one product, or explaining something already agreed."],
-      [".doc-grid",`<article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">01 · WHOLE COMPANY</span><h3>Master Brand Brief</h3><p class="doc-purpose"><strong>Sets direction for Landometer</strong> — purpose, promise, portfolio, shared capabilities and what may be said for the brand.</p><dl><div><dt>Open when</dt><dd>Naming a product, choosing a partnership, explaining the company or testing whether work belongs under Landometer.</dd></div><div><dt>What it resolves</dt><dd>Keeps Land · Location · Living aligned without turning one product's truth into a company-wide claim.</dd></div><div><dt>Not a substitute for</dt><dd>A product's features, data release, workflow or metric.</dd></div></dl></article><article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">02 · ONE PRODUCT</span><h3>Product Brief</h3><p class="doc-purpose"><strong>Resolves one product's truth</strong> — user and needs, outcome, choices and quality bar, way to win, data, scope and measures.</p><dl><div><dt>Open when</dt><dd>Starting a product or changing the user, value, Which, How-to-win, scope, workflow or release.</dd></div><div><dt>What it resolves</dt><dd>Keeps Product, Data, Design, Development, Marketing and Sales building the same product.</dd></div><div><dt>Not a substitute for</dt><dd>Finished web or sales copy, or the truth of Landometer as a whole.</dd></div></dl></article><article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">03 · EXPLAIN IT</span><h3>Product Statement</h3><p class="doc-purpose"><strong>Explains that truth briefly</strong> — one to three sentences drawn from an approved product source.</p><dl><div><dt>Open when</dt><dd>Writing a web page, deck, proposal, sales brief, campaign brief or product introduction.</dd></div><div><dt>What it resolves</dt><dd>Keeps product explanations aligned without asking every reader to open the full Product Brief.</dd></div><div><dt>Not a substitute for</dt><dd>Decisions about user, value, way to win or scope. Never add a promise the source cannot support.</dd></div></dl></article>`],
-      [".remember",'<p><strong>All of Landometer</strong>Master Brand Brief</p><p><strong>One product</strong>Product Brief</p><p><strong>One explanation</strong>Product Statement</p>'],
-      [".chooser .section-kicker","03 · Start from the work in front of you"],
+      ["#three-docs .section-kicker","03 · Two authority levels · one winning strategy"],
+      ["#three-docs .section-head h2","Held in the Product Brief<br>and carried into every piece of work"],
+      ["#three-docs .section-head > p","The Master Brand Brief sets company direction. The Product Brief holds product decisions and evidence. The Product Statement is the strategic contract every downstream document must cite."],
+      [".doc-grid",`<article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">01 · WHOLE COMPANY</span><h3>Master Brand Brief</h3><p class="doc-purpose"><strong>Sets direction for Landometer</strong> — purpose, promise, portfolio, shared capabilities and what may be said for the brand.</p><dl><div><dt>Open when</dt><dd>Naming a product, choosing a partnership, explaining the company or testing whether work belongs under Landometer.</dd></div><div><dt>What it resolves</dt><dd>Keeps Land · Location · Living aligned without turning one product's truth into a company-wide claim.</dd></div><div><dt>Not a substitute for</dt><dd>A product's features, data release, workflow or metric.</dd></div></dl></article><article class="doc"><span class="doc-rule" aria-hidden="true"></span><span class="doc-number">02 · ONE PRODUCT</span><h3>Product Brief</h3><p class="doc-purpose"><strong>Holds one product’s decisions and evidence</strong> — the Product Statement, research, comparisons, data, scope, experiments, change history and detail needed to review the strategy.</p><dl><div><dt>Open when</dt><dd>Starting a product or changing the user, value, Which, How-to-win, scope, workflow or release.</dd></div><div><dt>What it resolves</dt><dd>Lets the team inspect the sources, reasoning, limits and changes behind the Product Statement.</dd></div><div><dt>Not a substitute for</dt><dd>A work brief or definition of done for each work item, or the truth of Landometer as a whole.</dd></div></dl></article>`],
+      [".strategy-band",'<div class="strategy-band-grid"><div><span class="doc-number">WINNING STRATEGY IN EVERY WORK ITEM</span><h3>Product Statement</h3></div><div><p><strong>The Product Statement is the product’s winning strategy</strong>, not short copy or a third document layer. Every work item must name its version/link, the strategic choice carried forward, the target that helps the product win, observable 100% success, evidence/boundary and owner.</p><p class="strategy-band-rule">A citation alone is not enough. Strategy must change what the team chooses to do and how it decides the work has succeeded.</p></div></div>'],
+      [".remember",'<p><strong>Company direction</strong>Master Brand Brief</p><p><strong>Product evidence</strong>Product Brief</p><p><strong>Winning strategy in every work item</strong>Strategy ref + right target + 100% success</p>'],
+      [".source-design-work",'<p><strong>Brand / Product source</strong>Defines what is true and which strategy governs.</p><p><strong>Design System</strong>Defines how that truth should be expressed and designed.</p><p><strong>Work brief</strong>Defines when this piece of work has reached 100% success.</p>'],
+      [".chooser .section-kicker","01 · Start from the work in front of you"],
       ["#chooser-title","What are you working on today?"],
-      [".chooser-copy > p:not(.section-kicker)","Choose one situation to see which source to open, why it fits and what to do next."],
-      ["[data-scenario='new-product']","Starting a product, or a core assumption changed"],
-      ["[data-scenario='copy']","Writing a web page, deck or proposal"],
+      [".chooser-copy > p:not(.section-kicker)",'Once the Strategy Spine is clear, choose the closest situation. The answer will show what to <strong>open first · carry forward · define for this work</strong>.'],
+      ["[data-scenario='new-product']","Starting a product, or the winning strategy changed"],
+      ["[data-scenario='copy']","Working on a roadmap, PRD, data, design or development"],
       ["[data-scenario='brand']","Explaining who Landometer is"],
       ["[data-scenario='which']","Choosing competitors or a quality bar"],
-      ["[data-scenario='gtm']","Choosing channels, pricing or a funnel"],
-      [".example-intro .section-kicker","04 · One example, end to end"],
-      ["#example-title",'Suppose the team is creating a “location-screening tool”'],
-      [".example-intro > p:not(.section-kicker)","A business development team has 30 sites and must choose the three worth visiting next."],
-      [".teaching-status","Teaching example · Not an approved Product Statement"],
-      [".example-column:first-child .section-kicker","Product Brief · Resolve the full truth"],
-      [".example-column:first-child h3","Four answers and one boundary"],
+      ["[data-scenario='gtm']","Working on GTM, a proposal, sales or content"],
+      [".example-intro .section-kicker","04 · One task, from strategy to done"],
+      ["#example-title",'“Build a location-screening prototype for me.”'],
+      [".example-intro > p:not(.section-kicker)","That request is not yet actionable. It does not say which strategy governs it, what this work must change, or the complete conditions for calling it successful."],
+      [".teaching-status","Too vague · a feature request is not a work target"],
+      [".example-contrast",'<article class="contrast-card"><b>If the team starts from a feature or copy</b><p>It debates what to build before agreeing whose behavior should change, which alternative must be beaten, or when this work passes.</p></article><article class="contrast-card"><b>A usable sequence</b><p>Current Product Statement · strategic choice carried forward · target that helps the product win · 100% success + evidence + boundary + owner</p></article>'],
+      [".work-flow",'<article class="work-step"><span class="doc-number">01 · STRATEGY REF</span><h3>Which winning strategy governs?</h3><p>Location screening · teaching example v0 · not authoritative — Who is the business-development team; What is a defensible shortlist; Which includes current workarounds, GIS and consultants; How uses consistent criteria, area definitions and one data release.</p></article><article class="work-step"><span class="doc-number">02 · THIS WORK’S TARGET</span><h3>What must this work change?</h3><p>Build a prototype that helps users reduce 30 sites to three under one rule set while seeing reasons, sources, counter-signals and remaining gaps.</p></article><article class="work-step"><span class="doc-number">03 · 100% SUCCESS</span><h3>What completes the contract?</h3><p>At least four of five target users finish within 45 minutes, explain the shortlist and gaps, and ask an analyst for help no more than once. Verify with task tests, decision logs and observation notes.</p></article>'],
+      [".success-meaning",'<strong>100% does not mean the metric must equal 100%, and it does not mean “delivered.”</strong> It means every agreed condition for calling this work successful is met—including the user outcome, threshold, evidence, boundary, guardrails, owner and review point. If the output is finished but the user outcome has not been tested, report <b>Delivered · outcome not yet proven</b>.'],
+      [".example-deep > summary","Open the full version · Who · What · Which · How and the work brief"],
+      [".example-column:first-child .section-kicker","Product Statement · Winning strategy"],
+      [".example-column:first-child h3","Four answers and the product boundary"],
       [".brief-grid",'<div class="brief-item"><b>Who</b><p>Business development teams need to screen 30 sites and feel confident they can defend the shortlist. The investment executive approves but is not the primary user.</p></div><div class="brief-item"><b>What</b><p>Produce a shortlist of three sites worth visiting next, with reasons, evidence and remaining data gaps.</p></div><div class="brief-item"><b>Which</b><p>The workaround is separate spreadsheets, maps and reports; GIS and consultants are direct alternatives; Google Maps and Placer.ai set dimension-specific quality bars.</p></div><div class="brief-item"><b>How</b><p>Win with the same criteria, area definitions and data release for all 30 sites, plus visible sources, counter-signals, missing evidence and limits.</p></div>'],
       [".example-column:first-child .boundary",'<strong>Boundary:</strong> Supports the decision. It does not approve an investment or guarantee sales.'],
-      [".example-column:last-child .section-kicker","Product Statement · Explain it briefly"],
-      [".example-column:last-child h3","The same truth, easier to scan"],
+      [".example-column:last-child .section-kicker","Downstream work brief · one piece of work"],
+      [".example-column:last-child h3","Cite the strategy, then define 100% success"],
+      [".example-column:last-child .boundary",'<strong>Product Statement ref:</strong> Location screening · teaching example v0 · not authoritative'],
+      [".example-column:last-child .success-contract",'<strong>100% success for this work</strong>At least four of five target users complete the flow within 45 minutes, explain the shortlist and remaining gaps, and ask an analyst for help no more than once. Verify with a task test, decision log and observation notes; Product + Design own the work and review it after the first test.'],
       [".trace-legend li:last-child","<span aria-hidden=\"true\"></span>Boundary"],
-      [".downstream h4","Which has not disappeared"],
-      [".downstream p","This short statement does not name alternatives or quality benchmarks, so Which stays in the Product Brief. Add it to a landing page, sales deck or campaign only when it helps the decision and the evidence supports it."],
-      [".role-list",'<article class="role"><b>Brand · Leadership</b><h3>Hold the shared direction</h3><p>Use the Master Brand Brief to decide what may be said for Landometer.</p></article><article class="role"><b>Product · Data · Design</b><h3>Build the same product</h3><p>Use the Product Brief to align on users, needs, data, scope, evidence and non-goals.</p></article><article class="role"><b>Development</b><h3>Do not infer scope from web copy</h3><p>Check requirements against the Product Brief; communication copy is not a specification.</p></article><article class="role"><b>Marketing · Sales</b><h3>Explain without overclaiming</h3><p>Start with the Product Statement, then open the Product Brief for needs, proof, Which, How or limits.</p></article>'],
-      [".resources .section-kicker","05 · Open the source; do not work from memory"],
-      ["#resources-title","Documents and examples you can open"],
-      [".resources .section-head > p","Separate current governing sources from examples, and say plainly when a canonical link is unavailable."],
-      [".source-gaps",'<article class="source-gap"><span class="status-label">No public canonical link</span><b>Current Master Brand Brief</b><p>The Brand Owner has confirmed the framework on this page, but the governing brief has no public link. Ask the Brand Owner before changing company-level answers.</p></article><article class="source-gap"><span class="status-label">Confirm with the Product Owner</span><b>Current Product Brief / Product Statement</b><p>Each product must identify the approved version in force. Do not reconstruct it from an old web page or deck.</p></article>'],
-      [".resource-list",'<a class="resource" href="https://montri-th.github.io/Landometer/" target="_blank" rel="noopener"><span class="resource-type">Design authority</span><strong>Design System v0.8.8</strong><p>Current visual, voice and evidence-boundary reference. [POSITION-01] still awaits the framing update described on this page.</p><span class="resource-open">Open ↗</span></a><a class="resource" href="https://montri-th.github.io/Landometer/assets/downloads/landometer-design-system-v0.8.8.md" target="_blank" rel="noopener"><span class="resource-type">Markdown source</span><strong>Design System v0.8.8 · .md</strong><p>Searchable source for the current design rules and numbered sections.</p><span class="resource-open">Read ↗</span></a><a class="resource" href="https://montri-th.github.io/CityMETER/#evidence" target="_blank" rel="noopener"><span class="resource-type">Product-brief-derived example</span><strong>CityMETER explainer</strong><p>An explanation derived from Product Brief v6, not the governing brief itself.</p><span class="resource-open">View ↗</span></a><a class="resource" href="https://landometer.com/intro/products" target="_blank" rel="noopener"><span class="resource-type">Published context</span><strong>Landometer product overview</strong><p>Published portfolio context. Check the current product state before reusing its wording.</p><span class="resource-open">Open ↗</span></a><a class="resource" href="https://landometer.com/v3/citymeter" target="_blank" rel="noopener"><span class="resource-type">Live product</span><strong>CityMETER</strong><p>Inspect the live product and keep current capabilities separate from examples or roadmap.</p><span class="resource-open">Try ↗</span></a><a class="resource" href="https://github.com/montri-th/Landometer-in-Brief/blob/main/docs/New-Joiner-Guide-Brand-and-Product-Documents.md" target="_blank" rel="noopener"><span class="resource-type">Thai companion guide</span><strong>Searchable Markdown guide</strong><p>Use it to search, copy the checklist and read the Thai source without interaction.</p><span class="resource-open">Read ↗</span></a>'],
-      ["details summary","Context sources that this page does not republish"],
-      ["details p","Onboarding 260111, Brand Visual Guidelines 2025, Landometer Introduction 250606, Location · Location · Location and GTM Explore · Execute · Elevate helped establish context. They are not the canonical Master Brand Brief or Product Brief and are not copied to public Pages."],
-      [".source-note","The unavailable sources are labelled above. This page stores no user content and opens external links only when you choose them."],
-      [".closing-grid",'<div><p class="section-kicker">Before you begin</p><h2>Start at the level you are deciding</h2><p>Keep one direction, resolve the product truth, then explain it clearly.</p></div><div class="closing-rule" role="group" aria-label="Three-line rule">Whole company / Master Brand Brief<br>One product / Product Brief<br>One explanation / Product Statement</div>'],
+      [".downstream h4","Every downstream document carries the same Strategy Spine"],
+      [".downstream p","Roadmaps, PRDs, data/design/development specs, GTM plans, proposals and communications trace back to the same Product Statement, name the strategic choice carried forward, then set the target and 100% success for that work. A short description is derived communication—not another Product Statement—and must not change the strategy or add a promise."],
+      [".role-list",'<article class="role"><b>Brand · Leadership</b><h3>Hold the shared direction</h3><p>Use the Master Brand Brief to decide what may be said for Landometer.</p></article><article class="role"><b>Product · Data · Design</b><h3>Set the target from strategy</h3><p>Cite the current Product Statement, name the choice carried forward, then define the target, 100% success, evidence and boundaries for each work item.</p></article><article class="role"><b>Development</b><h3>Do not infer scope from web copy</h3><p>Check requirements against the Product Statement / Product Brief and the work definition of done; derived copy is not a specification.</p></article><article class="role"><b>Marketing · Sales</b><h3>Derive; do not rewrite the strategy</h3><p>Cite the current Product Statement, then adapt the explanation while preserving claims, evidence and boundaries.</p></article>'],
+      [".resources .section-kicker","05 · Per-product document registry"],
+      ["#resources-title","The one place for source links"],
+      [".resources .section-head > p","If a Product Brief or Product Statement link appears in chat or a deck, register it here and verify it with the owner before using it."],
+      [".registry-intro","This is the only place canonical product-authority links belong. Product pages, demos, decks, prompts, design systems and dataset registries may support the evidence, but they cannot replace the required document type. The registry completes only the Strategy Ref; every work item must still set its right target and define 100% success."],
+      [".restricted-access-notice",'<strong>This page is public · all four Drive destinations are restricted</strong><p>Only approved named @landometer.com viewers and the JLifeCenter account that owns the copies can open them. This is not domain-wide access; each new viewer must be granted access individually. A located link does not confirm authority.</p>'],
+      [".registry-note","Authority has four states only: authoritative = owner-approved and in force · candidate = located but awaiting confirmation · historical = provenance only, never for governing new work · missing = no usable governing document. Register any link found in chat or a deck with filename, version and owner before use."],
+      [".supporting-resources > summary","Supporting references · not canonical product authority"],
+      [".resource-list",'<a class="resource" href="https://montri-th.github.io/Landometer/" target="_blank" rel="noopener"><span class="resource-type">Design authority</span><strong>Design System v0.8.8</strong><p>Visual, voice and evidence-boundary rules; not a Product Brief or Product Statement for any product.</p><span class="resource-open">Open ↗</span></a><a class="resource" href="https://landometer.com/intro/products" target="_blank" rel="noopener"><span class="resource-type">Published context</span><strong>Landometer product overview</strong><p>Published descriptions may provide context, but they cannot replace a strategy source or authority record.</p><span class="resource-open">Open ↗</span></a><a class="resource" href="https://landometer.com/v3/citymeter" target="_blank" rel="noopener"><span class="resource-type">Live product</span><strong>CityMETER</strong><p>Inspect observed capability while keeping it separate from roadmap and governing strategy.</p><span class="resource-open">Try ↗</span></a><a class="resource" href="https://github.com/montri-th/Landometer-in-Brief/blob/main/docs/New-Joiner-Guide-Brand-and-Product-Documents.md" target="_blank" rel="noopener"><span class="resource-type">Thai companion guide</span><strong>Searchable Markdown guide</strong><p>Use it to search the method and copy the checklist without interaction.</p><span class="resource-open">Read ↗</span></a>'],
+      [".source-context summary","Context sources that do not replace authority"],
+      [".source-context p","Onboarding 260111, Brand Visual Guidelines 2025, Landometer Introduction 250606, Location · Location · Location and GTM Explore · Execute · Elevate helped establish context. They are not the canonical Master Brand Brief or Product Brief and are not copied to public Pages."],
+      [".source-note","This page stores no user content and opens external links only when you choose them."],
+      [".closing-grid",'<div><p class="section-kicker">Before anything ships</p><h2>Run three checks</h2><p>If you cannot find the Product Statement governing the work, stop and ask the owner. Never continue from memory.</p></div><div class="ship-checks" role="group" aria-label="Three checks before shipping"><article class="ship-check"><span>Check 01</span><h3>Strategy</h3><p>Have you confirmed the Product Statement version/link and the choice this work carries forward?</p></article><article class="ship-check"><span>Check 02</span><h3>Target</h3><p>Who must move from what to what, and how does that help the product win?</p></article><article class="ship-check"><span>Check 03</span><h3>100% success</h3><p>Are all conditions observable and verifiable, with evidence, boundaries, guardrails, owner and review point?</p></article></div>'],
       [".footer-inner",'<p>Landometer in Brief · New joiner field guide · 6 August 2026</p><p>Product examples teach the method; they are not approved product statements · <a href="https://github.com/montri-th/Landometer-in-Brief" target="_blank" rel="noopener">Source repository</a></p>']
     ].map(([selector,en])=>({selector,en,th:document.querySelector(selector)?.innerHTML||""}));
 
@@ -672,6 +1073,8 @@
     const languageToggle=document.getElementById("languageToggle");
     const themeToggle=document.getElementById("themeToggle");
     const themeValue=document.getElementById("themeValue");
+    const registryTable=document.querySelector(".registry-table");
+    const registryScope=document.querySelector(".registry-link-scope");
     const heroImage=document.querySelector(".hero-photo img");
     const thaiHeroAlt=heroImage.alt;
     const thaiStatement=statement.innerHTML;
@@ -691,14 +1094,40 @@
       currentScenario=key;
       const item=scenarios[currentLocale][key];
       const warningLabel=currentLocale==="th"?"ระวัง:":"Watch for:";
-      scenarioAnswer.innerHTML=`<span class="answer-label">${item.label}</span><h3>${item.title}</h3><p class="answer-why">${item.why}</p><ol class="answer-steps">${item.steps.map(step=>`<li>${step}</li>`).join("")}</ol><p class="answer-warning"><strong>${warningLabel}</strong> ${item.warning}</p>`;
+      const stepLabels=currentLocale==="th"?["เปิดก่อน","ดึงมาใช้","เพิ่มในงานนี้"]:["Open first","Carry forward","Define for this work"];
+      scenarioAnswer.innerHTML=`<span class="answer-label">${item.label}</span><h3>${item.title}</h3><p class="answer-why">${item.why}</p><ol class="answer-steps">${item.steps.map((step,index)=>`<li><span><strong>${stepLabels[index]}</strong><br>${step}</span></li>`).join("")}</ol><p class="answer-warning"><strong>${warningLabel}</strong> ${item.warning}</p>`;
       if(animate)animateState(scenarioAnswer);
+    }
+
+    function renderRegistry(locale){
+      const en=locale==="en";
+      const hasRestrictedLinks=Object.keys(restrictedRegistryLinks).length>0;
+      const header=["Product · required document","Authority status","Canonical document · owner","Related public reference"];
+      const rows=registryData.map(item=>{
+        const docHref=item.docKey?restrictedRegistryLinks[item.docKey]:null;
+        let canonicalHtml=`<span class="registry-link-unavailable">${item.canonical[locale]}</span>`;
+        if(docHref){
+          const linkLabel=item.docLabel?.[locale]||`${item.canonical[locale]} — ${en?"not yet authoritative":"ยังไม่ authoritative"}`;
+          canonicalHtml=item.docLabel?`${canonicalHtml}<br><a class="registry-link" href="${docHref}" target="_blank" rel="noopener noreferrer">${linkLabel} ↗</a>`:`<a class="registry-link" href="${docHref}" target="_blank" rel="noopener noreferrer">${linkLabel} ↗</a>`;
+        }else if(item.docKey){
+          canonicalHtml+=`<p>${en?"Restricted link unavailable; ask the document owner.":"restricted link ไม่พร้อมใช้งาน; ติดต่อ document owner"}</p>`;
+        }
+        const refs=item.refs.map(ref=>`<a href="${ref.href}" target="_blank" rel="noopener">${ref.label[locale]} ↗</a>`);
+        const supportHref=item.supportKey?restrictedRegistryLinks[item.supportKey]:null;
+        if(supportHref)refs.push(`<a href="${supportHref}" target="_blank" rel="noopener noreferrer">${item.supportLabel?.[locale]||(en?"Open restricted supporting source":"เปิด restricted supporting source")} ↗</a>`);
+        const refsHtml=refs.length?`<div class="registry-reference-list">${refs.join("")}</div>`:`<span class="registry-link-unavailable">no qualifying public reference</span>`;
+        return `<article class="registry-row" role="row"><div class="registry-product" role="cell"><strong>${item.product}</strong><span>${item.required[locale]}</span></div><div class="registry-cell" role="cell"><span class="status-label ${item.state}">${item.status[locale]}</span><p>${item.note[locale]}</p></div><div class="registry-cell" role="cell">${canonicalHtml}<p>${item.owner[locale]}<br>verified 6 Aug 2026</p></div><div class="registry-cell" role="cell">${refsHtml}<p>${item.refNote[locale]}</p></div></article>`;
+      }).join("");
+      registryTable.innerHTML=`<div class="registry-head" role="row">${header.map(label=>`<span role="columnheader">${label}</span>`).join("")}</div>${rows}`;
+      registryTable.setAttribute("aria-label",en?"Per-product governing-document registry":"ทะเบียนเอกสารที่กำกับงานรายผลิตภัณฑ์");
+      document.querySelector(".registry-meta").firstElementChild.innerHTML=en?"<strong>Checked 6 Aug 2026</strong> · no row is confirmed authoritative":"<strong>ตรวจล่าสุด 6 ส.ค. 2026</strong> · ยังไม่มีรายการใดยืนยันเป็น authoritative";
+      registryScope.innerHTML=hasRestrictedLinks?(en?"<strong>Public page · restricted destinations:</strong> links open only for named viewers; authority status is unchanged":"<strong>Public page · restricted destinations:</strong> ลิงก์เปิดได้เฉพาะ named viewers; สถานะ authority ไม่เปลี่ยน"):(en?"<strong>Registry links unavailable:</strong> ask the document owner":"<strong>Registry links unavailable:</strong> ติดต่อ document owner");
     }
 
     function updateTraceCopy(){
       const active=traceToggle.getAttribute("aria-pressed")==="true";
       traceToggle.textContent=currentLocale==="th"?(active?"ซ่อนที่มาของแต่ละส่วน":"ดูว่าแต่ละส่วนมาจากไหน"):(active?"Hide the source parts":"Show where each part comes from");
-      statement.innerHTML=currentLocale==="th"?thaiStatement:'The location-screening tool helps <span data-part="who">business development teams</span> <span data-part="what">narrow 30 sites to the three worth visiting next</span> <span data-part="how">by using the same criteria, area definitions and data release for every site, while showing the reasons, evidence and remaining gaps</span>. <span data-part="boundary">It supports the decision; it does not approve the investment or guarantee sales.</span>';
+      statement.innerHTML=currentLocale==="th"?thaiStatement:'This prototype will enable <span data-part="who">business development teams</span> <span data-part="what">to narrow 30 sites to the three worth visiting next</span> <span data-part="how">using the same criteria, area definitions and data release, with visible reasons, sources, counter-signals and remaining gaps</span>. <span data-part="boundary">This work does not approve an investment or guarantee sales.</span>';
       statement.classList.toggle("annotated",active);
     }
 
@@ -717,7 +1146,7 @@
       document.querySelector(".scenario-list").setAttribute("aria-label",en?"Choose a situation":"เลือกสถานการณ์");
       document.querySelector(".remember")?.setAttribute("aria-label",en?"Three-line rule":"กฎจำสามบรรทัด");
       document.querySelector(".role-list")?.setAttribute("aria-label",en?"How each role uses the documents":"วิธีใช้ตามบทบาท");
-      document.querySelector(".source-gaps")?.setAttribute("aria-label",en?"Canonical links that remain unavailable":"ลิงก์ฉบับหลักที่ยังขาด");
+      registryTable?.setAttribute("aria-label",en?"Per-product governing-document registry":"ทะเบียนเอกสารที่กำกับงานรายผลิตภัณฑ์");
       updateThemeUI();
     }
 
@@ -726,12 +1155,13 @@
       document.documentElement.lang=locale;
       document.documentElement.dataset.locale=locale;
       enStaticCopy.forEach(item=>{const node=document.querySelector(item.selector);if(node)node.innerHTML=locale==="en"?item.en:item.th});
+      renderRegistry(locale);
       heroImage.alt=locale==="en"?"Landometer team members present Hack Land Value to an audience":thaiHeroAlt;
       document.querySelector(".hero-photo figcaption").textContent=locale==="en"?"The Landometer team presenting Hack Land Value":"ทีม Landometer ระหว่างนำเสนอผลงาน Hack Land Value";
-      document.title=locale==="en"?"Landometer in Brief — Start at the right level":"Landometer in Brief — เริ่มงานให้ถูกระดับ";
-      const description=locale==="en"?"A five-minute guide for new joiners to Master Brand Briefs, Product Briefs and Product Statements through Who · What · Which · How":"คู่มือ 5 นาทีสำหรับ new joiners: แยก Master Brand Brief, Product Brief และ Product Statement ด้วย Who · What · Which · How";
-      const socialTitle=locale==="en"?"4 questions · 2 levels · 1 way to explain":"4 คำถาม · 2 ระดับ · 1 วิธีเล่า";
-      const socialDescription=locale==="en"?"Choose the right source before creating or explaining Landometer work":"เลือกเอกสารให้ถูกระดับ ก่อนเริ่มสร้างหรืออธิบายงานของ Landometer";
+      document.title=locale==="en"?"Landometer in Brief — Product Statement = Winning Strategy":"Landometer in Brief — Product Statement = Winning Strategy";
+      const description=locale==="en"?"A five-minute guide for new joiners: cite the current Product Statement, set the right work target and define observable 100% success":"คู่มือ 5 นาทีสำหรับ new joiners: ยึด Product Statement ซึ่งเป็น Winning Strategy ตั้งเป้างานให้ถูก และนิยาม 100% success ที่ตรวจได้";
+      const socialTitle=locale==="en"?"Product Statement = the winning strategy every work item must carry":"Product Statement = Winning Strategy ที่ทุกงานต้องยึด";
+      const socialDescription=locale==="en"?"Cite the current Product Statement, set the right work target and define observable 100% success":"ยึด Product Statement ฉบับปัจจุบัน ตั้งเป้างานให้ถูก และนิยาม 100% success ที่ตรวจได้";
       const socialAlt=locale==="en"?"The Landometer team presenting Hack Land Value":"ทีม Landometer นำเสนอผลงาน Hack Land Value";
       setMeta("description",description);setMeta("og:title",socialTitle,true);setMeta("og:description",socialDescription,true);setMeta("og:locale",locale==="en"?"en_US":"th_TH",true);setMeta("og:image:alt",socialAlt,true);setMeta("twitter:title",socialTitle);setMeta("twitter:description",socialDescription);setMeta("twitter:image:alt",socialAlt);
       renderFour(currentLevel);
