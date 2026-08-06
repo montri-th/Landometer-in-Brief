@@ -7,7 +7,7 @@ Evidence status: `source_limited`
 
 ## Release decision
 
-PASS for publication of the public-safe package. The page is intentionally `noindex` while the current Master Brand Brief and each product's approved Product Brief / Product Statement lack public canonical links. The artifact claims authoring alignment with Design System v0.8.8; machine conformance remains pending.
+PASS for the public-safe source release on `main`; HOLD for the GitHub Pages site until the repository owner enables **Settings → Pages → Source → GitHub Actions**. The page is intentionally `noindex` while the current Master Brand Brief and each product's approved Product Brief / Product Statement lack public canonical links. The artifact claims authoring alignment with Design System v0.8.8; machine conformance remains pending.
 
 The public package excludes the supplied onboarding, GTM, company and methodology PDFs, plus the internal Wiki × Landometer planning file.
 
@@ -80,6 +80,8 @@ An automated DOM interaction run covered `th/en × brand/product` and confirmed:
 
 The packaged Playwright library was available but its browser binary was not, and the controlled download endpoint returned an invalid/502 response. Therefore this record does not carry forward the previous release's viewport, zoom, visual collision, color-contrast or browser axe claims. Those checks must be performed against the exact GitHub Pages bytes after deployment; results will be added only when observed.
 
+The canonical GitHub Pages URL was opened on 6 August 2026 and returned GitHub's `Site not found` 404 because the Pages site has not yet been enabled.
+
 ## Asset and privacy review
 
 - Official horizontal logo SHA-256: `f6ed8748d32d11514c94ce6a639491120489ce8c3ab6fff073d7ca9638a87535`.
@@ -94,3 +96,4 @@ The packaged Playwright library was available but its browser binary was not, an
 - GitHub Pages workflow uses the official checkout, configure-pages, upload-pages-artifact and deploy-pages actions.
 - `.nojekyll` is present so self-hosted assets are served directly.
 - The site has no analytics, authentication, form submission or external side effect.
+- Workflow run `31060167493` attempted first-time enablement with `pages: write` and `enablement: true`; GitHub returned `Resource not accessible by integration`. This confirms the remaining step is the repository-owner Pages setting, not a source or workflow error.
